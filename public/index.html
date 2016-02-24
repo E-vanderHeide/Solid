@@ -56,7 +56,7 @@
                     b: b
                 };
                 return colors;
-            };
+            }; 
         }
         
         function hexToRgb(hex) {
@@ -212,7 +212,22 @@
               .on("mouseout", function() {
                       $(this).attr("fill-opacity", "1.0");
                       $("#tooltip-container").hide();
-                  });
+                  })
+
+              //action when clicking with the mouse on a country
+              .on("click", function(d){
+                  //CHANGE THIS CODE FOR WHAT REALLY HAPPENS WHE CLICKING. LINKING TO THE SECOUND VISUALIZATION
+                  //Make an SVG Container
+                  var svgContainer = d3.select("body").append("svg")
+                                     .attr("width", 200)
+                                     .attr("height", 200);
+ 
+                  //Draw the Circle
+                  var circle = svgContainer.append("circle")
+                          .attr("cx", 30)
+                          .attr("cy", 30)
+                         .attr("r", 20);
+              });
           
           g.append("path")
               .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
@@ -223,6 +238,7 @@
         });
         
         d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+
       });
 
     </script>
