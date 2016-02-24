@@ -14,8 +14,8 @@
   <body>
     <!-- The code for the map -->
 
-    <div class="container-fluid center-block">
-      <div class="row">
+    <div class="container-fluid">
+      <div class="row-fluid">
          <div class ="col-md-6" id="canvas-map"></div>
           <div class ="col-md-6" id="canvas-bubbles"></div>
       </div>
@@ -32,7 +32,7 @@
 
         var config = {"data0":"Country","data1":"D Transport accidents",
                     "label0":"label 0","label1":"label 1","color0":"#99ccff","color1":"#0050A1",
-                    "width":960,"height":960}
+                    "width":850,"height":850}
         
         var width = config.width,
             height = config.height;
@@ -248,6 +248,7 @@
       });
 
     </script>
+    <script  type="text/javascript" src="app/components/bubbles/bubbleController.js"></script>
   </body>
 </html>
 

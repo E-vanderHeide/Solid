@@ -1,4 +1,4 @@
-Country,D Transport accidents,D Falls,D Accidental drowning and submersion,D Exposure to smoke,D Accidental poisoning by and exposure to noxious substances,D Intentional self-harm,D Assault,M Transport accidents,M Falls,M Accidental drowning and submersion,M Exposure to smoke,M Accidental poisoning by and exposure to noxious substances,M Intentional self-harm,M Assault
+Country,D01,D02,D03,D04,D05,D06,D07,M01,M02,M03,M04,M05,M06,M07
 Spain,2125,2672,422,140,872,3873,315,1500,300,500,200,750,2000,500
 Netherlands,588,2174,84,39,135,1856,126,300,3000,180,40,400,600,3000
 Sweden,302,967,83,64,437,1230,80,400,1500,50,70,700,300,1000
