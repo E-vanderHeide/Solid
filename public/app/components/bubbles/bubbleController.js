@@ -10,7 +10,7 @@ var svg = d3.select("#canvas-bubbles").append("svg")
   .attr("class", "bubble");
 
   d3.json("assets/Data/flare.json", function(data) {
-    var valuesForCountry =  getDataForCountry("Spain",data );
+    var valuesForCountry =  getDataForCountry("Netherlands",data );
     $.each(valuesForCountry.data, function(index, value){
       var enter = svg.selectAll("circle").data(valuesForCountry.data).enter();
       enter.append("circle")
