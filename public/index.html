@@ -102,7 +102,7 @@ var countries = [];
       d3.json("assets/Data/flare.json", function(err, data) {
 
         countries = getDataForCountries(data);
-        
+
         var config = {"data0":"name",
                       "data1": "1",
                       "label0":"label 0",
@@ -315,6 +315,7 @@ var countries = [];
                       .attr("cy", 60)
                       .style("stroke", "red")
                       .style("stroke-width", "3")
+                      .style("fill-opacity","0.5")
                       .attr("cx", function(d, i) { return i * 100 + 30; })
                       .attr("r", function(d) 
                         {
