@@ -26,7 +26,7 @@
    <div id="tooltip-container"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.1.0/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script>
@@ -85,10 +85,13 @@
     }
 
 
+var selectedCountry;
+
 var countries = [];
       d3.json("assets/Data/flare.json", function(err, data) {
 
         countries = getDataForCountries(data);
+
 
         var config = {"data0":"name","data1": "1",
                     "label0":"label 0","label1":"label 1","color0":"#99ccff","color1":"#0050A1",
@@ -289,17 +292,48 @@ var countries = [];
 
               //action when clicking with the mouse on a country
               .on("click", function(d){
-                  //CHANGE THIS CODE FOR WHAT REALLY HAPPENS WHE CLICKING. LINKING TO THE SECOUND VISUALIZATION
-                  //Make an SVG Container
-                  var svgContainer = d3.select("body").append("svg")
-                                     .attr("width", 200)
-                                     .attr("height", 200);
- 
-                  //Draw the Circle
-                  var circle = svgContainer.append("circle")
-                          .attr("cx", 30)
-                          .attr("cy", 30)
-                         .attr("r", 20);
+                  selectedCountry = getCountryByName(countries, d.properties.name);
+                  
+                  var circle= bubbleSvg.selectAll("circle");
+                  var data = circle.data(selectedCountry.data);
+                  var enter = data.enter();
+
+                  enter.append("circle")
+                      .attr("class", "deathBubble")
+                      .attr("cy", 60)
+                      .attr("cx", function(d, i) { return i * 100 + 30; })
+                      .attr("r", function(d){
+                          //size based on percentage
+                          return maxCircleDiameter * (d.D/selectedCountry.getTotalAmountOfDeaths());
+                        });
+                  enter.append("circle")
+                      .attr("class", "mediaBubble")
+                      .attr("cy", 60)
+                      .style("stroke", "red")
+                      .style("stroke-width", "3")
+                      .attr("cx", function(d, i) { return i * 100 + 30; })
+                      .attr("r", function(d) 
+                        {
+                          //size based on percentage
+                          return maxCircleDiameter * (d.M/selectedCountry.getTotalAmountOfMedia()); 
+                        });  
+
+
+                  var deathBubbles= bubbleSvg.selectAll(".deathBubble");
+
+                  deathBubbles.transition().duration(500)
+                      .attr("r", function(d){
+                             return maxCircleDiameter * (d.D/selectedCountry.getTotalAmountOfDeaths());
+                        });
+
+                  var mediaBubbles= bubbleSvg.selectAll(".mediaBubble");
+
+                  mediaBubbles.transition().duration(500)
+                      .attr("r", function(d){
+                            return maxCircleDiameter * (d.M/selectedCountry.getTotalAmountOfMedia()); 
+                        });
+            
+                               
               });
           
           g.append("path")
