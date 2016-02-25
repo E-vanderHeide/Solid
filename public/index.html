@@ -206,14 +206,14 @@ var countries = [];
 
 
         
-        // var quantize = d3.scale.quantize()
-        //     .domain([0, 1.0])
-        //     .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
+        var quantize = d3.scale.quantize()
+            .domain([0, 1.0])
+            .range(d3.range(COLOR_COUNTS).map(function(i) { return i }));
         
-        // quantize.domain([d3.min(countries, function(d){
-        //     return (+d.data[0].D) }),
-        //   d3.max(countries, function(d){
-        //     return (+d.data[0].D) })]);
+        quantize.domain([d3.min(countries, function(d){
+            return (+d.data[0].D) }),
+          d3.max(countries, function(d){
+            return (+d.data[0].D) })]);
        
         //After this it's all about drawing the map (borders and so on)
         d3.json("https://s3-us-west-2.amazonaws.com/vida-public/geo/world-topo-min.json", function(error, world) {
@@ -240,6 +240,23 @@ var countries = [];
               .attr("title", function(d) { return d.properties.name; })
               .style("fill", function(d) {
                 var matchedCountry = getCountryByName(countries, d.properties.name);
+                if(matchedCountry)
+                {
+                 //   var h = (1.0 - matchedCountry.getCorrelation()) * 240;
+
+                    // var c = quantize(matchedCountry)
+                  //   var color = colors[c].getColors();
+                    
+                      return d.properties.color;//"rgb(" + color.r + "," + color.g +                          "," + color.b + ")";
+                    } else {
+                      return "#ccc";
+                    }
+                   // var color = "hsl(" + h + ", 100%, 50%)";
+                    //return color;
+
+                
+
+              
                 // if(matchedCountry){
                 //   var c = quantize(matchedCountry)
 
