@@ -54,9 +54,20 @@
             total += value.M;
           });
           return total;
-        }
+        }, 
+         getCorrelation : function(){
+          var correlation = 0;
+          var sum = 0;
+          var counter = 0;
+          $.each(this.data, function(index, value){
+            sum += Math.abs(value.D - value.M);
+            counter++;
+          });
+          correlation = sum / counter;
+          return Math.round(correlation); 
+         }
       };
-      countryData.name= data.Country;
+      countryData.name = data.Country;
       countryData.data.push({Cause:"01", D:parseInt(data.D01), M:parseInt(data.M01)});
       countryData.data.push({Cause:"02", D:parseInt(data.D02), M:parseInt(data.M02)});
       countryData.data.push({Cause:"03", D:parseInt(data.D03), M:parseInt(data.M03)});
@@ -199,9 +210,11 @@ var countries = [];
           return Math.log(val);
         }
         
-        // countries.forEach(function(d) {
-        //   valueHash[d.name] = +d.data.D;
-        // });
+         //countries.forEach(function(d) {
+         //  valueHash[d.name] = +d.data.D;
+         //});
+
+
         
         // var quantize = d3.scale.quantize()
         //     .domain([0, 1.0])
@@ -262,7 +275,7 @@ var countries = [];
                   html += d.properties.name;
                   html += "</span>";
                   html += "<span class=\"tooltip_value\">";
-                  html += matchedCountry ? valueFormat(matchedCountry.data[0].D) : "";
+                  html += matchedCountry ? valueFormat(matchedCountry.getCorrelation()) : "";
                   html += "";
                   html += "</span>";
                   html += "</div>";
