@@ -152,18 +152,6 @@ var countries = [];
             } : null;
         }
         
-        function valueFormat(d) {
-          if (d > 1000000000) {
-            return Math.round(d / 1000000000 * 10) / 10 + "B";
-          } else if (d > 1000000) {
-            return Math.round(d / 1000000 * 10) / 10 + "M";
-          } else if (d > 1000) {
-            return Math.round(d / 1000 * 10) / 10 + "K";
-          } else {
-            return d;
-          }
-        }
-        
         var COLOR_FIRST = config.color0, COLOR_LAST = config.color1;
         
         var rgb = hexToRgb(COLOR_FIRST);
@@ -275,7 +263,7 @@ var countries = [];
                   html += d.properties.name;
                   html += "</span>";
                   html += "<span class=\"tooltip_value\">";
-                  html += matchedCountry ? valueFormat(matchedCountry.getCorrelation()) : "";
+                  html += matchedCountry ? matchedCountry.getCorrelation() : "";
                   html += "";
                   html += "</span>";
                   html += "</div>";
