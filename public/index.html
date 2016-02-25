@@ -90,12 +90,19 @@ var countries = [];
 
         countries = getDataForCountries(data);
 
-        var config = {"data0":"name","data1": "1",
-                    "label0":"label 0","label1":"label 1","color0":"#99ccff","color1":"#0050A1",
-                    "width":850,"height":850}
+        var config = {"data0":"name",
+                      "data1": "1",
+                      "label0":"label 0",
+                      "label1":"label 1",
+                      "color0":"#99ccff",
+                      "color1":"#0050A1",
+                      "width":850,
+                      "height":850}
         
         var width = config.width,
-            height = config.height;
+            height = config.height,
+            MAP_KEY = config.data0,
+            MAP_VALUE = config.data1;
         
         var COLOR_COUNTS = 9;
         
@@ -166,9 +173,6 @@ var countries = [];
           var b = Interpolate(startColors.b, endColors.b, COLOR_COUNTS, i);
           colors.push(new Color(r, g, b));
         }
-        
-        var MAP_KEY = config.data0;
-        var MAP_VALUE = config.data1;
         
         var projection = d3.geo.mercator()
             .scale((width + 1) / 2 / Math.PI)
