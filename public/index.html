@@ -241,12 +241,21 @@
     .attr("title", function(d) { return d.properties.name; })
     .style("fill", function(d) {
       var matchedCountry = getCountryByName(countries, d.properties.name);
+
       if(matchedCountry)
       {
-            return d.properties.color;//"rgb(" + color.r + "," + color.g +                          "," + color.b + ")";
-      }else {
+        //make this domain dynamic
+        var c = d3.scale.threshold().domain([100,200,300,400,500,600,700,800,900]).range(colors);
+        console.log(matchedCountry.getCorrelation());
+
+        var co =  c(matchedCountry.getCorrelation()).getColors();  
+
+        return "rgb("+co.r + ","+co.g+","+co.b+")";
+
+       } 
+       else {
         return "#ccc";
-      }
+       }
             
     })
 
