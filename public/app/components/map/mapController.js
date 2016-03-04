@@ -209,9 +209,9 @@ d3.json("assets/Data/mock.json", function(err, data) {
     .attr("cy", 60)
     .attr("cx", function(d, i) { return i * 100 + 30; })
     .attr("r", function(d){
-              //size based on percentage
-              return maxCircleDiameter * (d.D/selectedCountry.getTotalAmountOfDeaths());
-            });
+      //size based on percentage
+      return maxCircleDiameter * (d.D/selectedCountry.getTotalAmountOfDeaths());
+    });
     enter.append("circle")
     .attr("class", "mediaBubble")
     .attr("cy", 60)
@@ -221,9 +221,9 @@ d3.json("assets/Data/mock.json", function(err, data) {
     .attr("cx", function(d, i) { return i * 100 + 30; })
     .attr("r", function(d) 
     {
-              //size based on percentage
-              return maxCircleDiameter * (d.M/selectedCountry.getTotalAmountOfMedia()); 
-            });  
+      //size based on percentage
+      return maxCircleDiameter * (d.M/selectedCountry.getTotalAmountOfMedia()); 
+    });  
 
 
     var deathBubbles= bubbleSvg.selectAll(".deathBubble");
@@ -252,4 +252,4 @@ d3.json("assets/Data/mock.json", function(err, data) {
   });
 
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
-  });
+});
