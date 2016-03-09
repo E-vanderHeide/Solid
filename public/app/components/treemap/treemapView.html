@@ -102,6 +102,7 @@ var paint = function(nodes){
  stroke_delta = (stroke_max - stroke_min) * 1.0 / stroke_levels;
 
  // coloring, when we want to use our color scheme this has to be changed
+ // I think we could remove this later!!
  var select_color = d3.select("#select_color").node().value;
  if (select_color == "linear") {
   var nodes_all_depths = nodes.map(function(x) {return x.depth});
@@ -131,12 +132,18 @@ var paint = function(nodes){
    selected_node_list.push(node);
   }
  }
+
+ // Draw the lines of the polygon
  var polylines = svg_container.append("g").selectAll("path").data(selected_node_list);
  polylines.enter().append("path")
  .attr("d", function(d) {return make_d3_poly(d.polygon);})
  .attr("stroke-width", function(d) { return Math.max(stroke_max - stroke_delta*d.depth, stroke_min) + "px";})
  .attr("stroke", "black")
- .attr("fill", color_func);
+ .attr("fill", color_func)
+ // Click to update the world map  according to the clicked desis. 
+ .on("click", function(d){
+  console.log("test");
+ });
  polylines.exit().remove();
 }
 

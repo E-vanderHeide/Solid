@@ -361,18 +361,7 @@ var ConvexHull = {
         for (var i = 0; i < sites.length; i++){
             this.points[i] = new Vertex(sites[i].x, sites[i].y, sites[i].z, null, sites[i], false);
         }
-        
-        
-        // var temppoints = boundingSites.map(function(a) {return new Vertex(a[0], a[1], a[2], null, new Vertex(a[0], a[1], a[2], null, null, true), true);});
-
-//        this.points = this.points.concat(temppoints);
         this.points = this.points.concat(boundingSites);
-
-
-//         for (var i = 0; i < this.points.length; i++){
-//             var p = this.points[i];            
-        //            console.log(p.x + ", " + p.y + ", " + p.z)
-//         }
 
     },
 
