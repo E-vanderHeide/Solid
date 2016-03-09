@@ -77,6 +77,10 @@ function drawMap(){
   .scale((width + 1) / 2 / Math.PI)
   .translate([width / 2, height / 2])
   .precision(.1);
+  
+   var zoom = d3.behavior.zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", zoomed);
 
   var path = d3.geo.path()
   .projection(projection);
@@ -94,6 +98,13 @@ if(!svg)
   .datum(graticule)
   .attr("class", "graticule")
   .attr("d", path);
+  
+  //for the zoooming & paning
+   var g = svg.append("g");
+   
+   svg
+    .call(zoom)
+    .call(zoom.event);
 
     function log10(val) {
       return Math.log(val);
@@ -122,11 +133,7 @@ if(!svg)
     .datum(graticule)
     .attr("class", "choropleth")
     .attr("d", path);
-
-    var g = svg.append("g");
-    // var oldCountries = g.selectAll(".country").data([]);
-    // oldCountries.exit().remove();
-
+    
     g.append("path")
     .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
     .attr("class", "equator")
@@ -216,6 +223,23 @@ if(!svg)
 
   svg.attr("height", config.height * 2.2 / 3);
   });
+  
+  //function that zooms and pan with limits (cannot go outside the map)
+   function zoomed() {
+	   var t = d3.event.translate;
+	   var s = d3.event.scale;
+	   
+	   var w_max = 0;
+	   var w_min = width * (1 - s);
+	   var h_max = height < s*width/1.25 ? s*(width/1.25-height)/1.25 : (1-s)*height/1.25;
+	   var h_min = height < s*width/1.25 ? -s*(width/1.25-height)/2-(s-1)*height : (1-s)*height/1.25;
+		
+		//mark the limits of the translate
+	   t[0] = Math.min(w_max, Math.max(w_min, t[0]));
+	   t[1] = Math.min(h_max, Math.max(h_min, t[1]));
+	   zoom.translate(t);
 
+	   g.attr("transform", "translate(" + t + ")scale(" + s + ")");
+}
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
 }
