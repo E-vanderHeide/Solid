@@ -545,11 +545,11 @@ var ConvexHull = {
         while(this.current < this.points.length){
             var next = this.points[this.current];
 
-            if (next.conflicts.empty()){ //No conflict, point in hull
+            if (next.conflicts.empty()){ 
 		this.current++;
 		continue;
 	    }
-	    this.created = [];// TODO: make sure this is okay and doesn't dangle references
+	    this.created = [];
 	    this.horizon = []; 
 	    this.visible = [];
 	    //The visible faces are also marked

@@ -18,19 +18,6 @@
  <div>
   <button type="button" id="button_compute">Compute Diagram!</button>
 
-  <br><br>
-
-  &nbsp;&nbsp;
-
-  Color: 
-  <select id="select_color">
-   <option value="linear">Linear</option>
-   <option value="name">Name</option>
-   <option value="none">None</option>
-  </select>
-
-  &nbsp;&nbsp;
-
   Max depth to show: 
   <select id="select_max_depth">
    <option value="none">None</option>
@@ -70,7 +57,6 @@
  return result;
 }
 
-// here we set up the svg
 var width = 1000;
 var height = 800;
 var border = 10;
@@ -81,6 +67,11 @@ var svg_container = d3.select("body").append("svg")
 
 function make_d3_poly(d) {
  return "M" + d.join("L") + "Z";
+}
+
+// Function for when clicking on treemap area the map should update
+function updateMap(){
+ console.log("test");
 }
 
 var paint = function(nodes){
@@ -101,23 +92,14 @@ var paint = function(nodes){
  stroke_levels = 3,
  stroke_delta = (stroke_max - stroke_min) * 1.0 / stroke_levels;
 
- // coloring, when we want to use our color scheme this has to be changed
- // I think we could remove this later!!
- var select_color = d3.select("#select_color").node().value;
- if (select_color == "linear") {
-  var nodes_all_depths = nodes.map(function(x) {return x.depth});
-  var nodes_max_depth = Math.max.apply(null, nodes_all_depths);
-  var color_d3_linear = d3.scale.linear().domain([0, nodes_max_depth]).range(["blue","lightblue"]);
-  var color_func = function(d) { return color_d3_linear(d.depth); };
- }
- else if (select_color == "name") {
-  var color_d3 = d3.scale.category20c();
-  var color_func = function(d) { return d.children ? color_d3(d.name) : "none"; };
- }
- else {
-  var color_func = "lightblue"; 
- }
- 
+//Coloring the treemap
+ var nodes_all_depths = nodes.map(function(x) {return x.depth});
+ var nodes_max_depth = Math.max.apply(null, nodes_all_depths);
+ var colorScheme = ["#226600","#4ce600","#99ff66","#ddffcc"];
+ var color_d3_linear = d3.scale.linear().domain([0, nodes_max_depth]).range(colorScheme);
+ var color_func = function(d) { return color_d3_linear(d.depth); };
+
+
  var select_max_depth = d3.select("#select_max_depth").node().value;
  var max_depth = 3; 
  if (select_max_depth != "none") {
@@ -141,13 +123,12 @@ var paint = function(nodes){
  .attr("stroke", "black")
  .attr("fill", color_func)
  // Click to update the world map  according to the clicked desis. 
- .on("click", function(d){
-  console.log("test");
- });
+ .on("click", function(d){updateMap()});
  polylines.exit().remove();
 }
 
 var newnodes;
+//there should be a input to "compute" with the json file, since the data to visualize will be different
 function compute() {
  var vt = d3.layout.voronoitreemap()
  .root_polygon(make_regular_polygon(width, height, border, 100))
@@ -158,15 +139,10 @@ function compute() {
  paint(newnodes);
 }
 
-
-
 compute();
-d3.select("#select_color").on("change", function() {paint(newnodes)});
 d3.select("#select_max_depth").on("change", function() {paint(newnodes)});
-
 d3.select("#button_compute").on("click", function() {compute();});
 
 </script>
 </body>
 </html>
-

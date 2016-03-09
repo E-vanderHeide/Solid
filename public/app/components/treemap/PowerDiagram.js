@@ -63,7 +63,7 @@ function getFacesOfDestVertex(edge) {
     var site = first.originalObject;
     var neighbours = [];
     do {
-	previous = previous.twin.prev;
+            previous = previous.twin.prev;
 
 	// add neighbour to the neighbourlist
 	var siteOrigin = previous.orig.originalObject;
@@ -157,13 +157,11 @@ function computePowerDiagramIntegrated(sites, boundingSites, clippingPolygon){
                         if (clippedPoly.length > 0){
 			    polygons.push(clippedPoly);
                         }
-
 		    }
 		}
 	    }
 	}
     } 
-
     return polygons;
 }
 
