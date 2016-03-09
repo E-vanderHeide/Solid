@@ -1,22 +1,15 @@
-d3.json("assets/Data/mock.json", function(err, data) {
+var colorCriterium = "D01";
+var mapCountries;
+  var COLOR_COUNTS = 11;
+   var colors = [];
+drawMap();
+var svg;
+function drawMap(){
+  d3.json("assets/Data/mock.json", function(err, data) {
 
-  countries = getDataForCountries(data);
+  countries = getDataForCountries(data);  
+});
 
-  var config = {"data0":"name",
-  "data1": "1",
-  "label0":"label 0",
-  "label1":"label 1",
-  "color0":"#99ccff",
-  "color1":"#0050A1",
-  "width":850,
-  "height":850}
-
-  var width = config.width,
-  height = config.height,
-  MAP_KEY = config.data0,
-  MAP_VALUE = config.data1;
-
-  var COLOR_COUNTS = 9;
 
   function Interpolate(start, end, steps, count) {
     var s = start,
@@ -52,6 +45,14 @@ d3.json("assets/Data/mock.json", function(err, data) {
       b: parseInt(result[3], 16)
     } : null;
   }
+   var config = {
+  "color0":"#99ccff",
+  "color1":"#0050A1",
+  "width":850,
+  "height":850}
+  
+  var width = config.width,
+  height = config.height;
 
   var COLOR_FIRST = config.color0, COLOR_LAST = config.color1;
 
@@ -65,7 +66,7 @@ d3.json("assets/Data/mock.json", function(err, data) {
   var startColors = COLOR_START.getColors(),
   endColors = COLOR_END.getColors();
 
-  var colors = [];
+ 
   for (var i = 0; i < COLOR_COUNTS; i++) {
     var r = Interpolate(startColors.r, endColors.r, COLOR_COUNTS, i);
     var g = Interpolate(startColors.g, endColors.g, COLOR_COUNTS, i);
@@ -81,25 +82,22 @@ d3.json("assets/Data/mock.json", function(err, data) {
   .projection(projection);
 
   var graticule = d3.geo.graticule();
-
-  var svg = d3.select("#canvas-map").append("svg")
+  
+if(!svg)
+{
+  svg = d3.select("#canvas-map").append("svg")
   .attr("width", width)
   .attr("height", height);
+}
 
   svg.append("path")
   .datum(graticule)
   .attr("class", "graticule")
   .attr("d", path);
 
-    //var valueHash = {};
-    
     function log10(val) {
       return Math.log(val);
     }
-    
-     //countries.forEach(function(d) {
-     //  valueHash[d.name] = +d.data.D;
-     //});
 
   var quantize = d3.scale.quantize()
   .domain([0, 1.0])
@@ -118,7 +116,7 @@ d3.json("assets/Data/mock.json", function(err, data) {
 
   //After this it's all about drawing the map (borders and so on)
   d3.json("https://s3-us-west-2.amazonaws.com/vida-public/geo/world-topo-min.json", function(error, world) {
-    var mapCountries = topojson.feature(world, world.objects.countries).features;
+    mapCountries = topojson.feature(world, world.objects.countries).features;
 
     svg.append("path")
     .datum(graticule)
@@ -126,6 +124,8 @@ d3.json("assets/Data/mock.json", function(err, data) {
     .attr("d", path);
 
     var g = svg.append("g");
+    // var oldCountries = g.selectAll(".country").data([]);
+    // oldCountries.exit().remove();
 
     g.append("path")
     .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
@@ -144,11 +144,15 @@ d3.json("assets/Data/mock.json", function(err, data) {
 
       if(matchedCountry)
       {
+        // var extreme = $.grep(extremes, function(e){ return e.Cause == "02"})[0];
+        // console.log("Extreme: " + extreme.D);
+        // var domain = generateColorScale(0, extreme.D+1 ,9);
+        // console.log("Domain: " + domain);
         //make this domain dynamic
-        var c = d3.scale.threshold().domain([100,200,300,400,500,600,700,800,900]).range(colors);
-        console.log(matchedCountry.getCorrelation());
-
-        var co =  c(matchedCountry.getCorrelation()).getColors();  
+        //var c = d3.scale.threshold().domain(domain).range(colors);
+        var c = d3.scale.threshold().domain(generateColorScale(0, 1 , COLOR_COUNTS)).range(colors);
+        var co =  c(matchedCountry.getColorCriteriumValue(colorCriterium)).getColors();
+        d.properties.color = co;
 
         return "rgb("+co.r + ","+co.g+","+co.b+")";
 
@@ -214,4 +218,4 @@ d3.json("assets/Data/mock.json", function(err, data) {
   });
 
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
-});
+}
