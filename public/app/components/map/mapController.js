@@ -78,7 +78,7 @@ d3.json("assets/Data/mock.json", function(err, data) {
   .precision(.1);
   
    var zoom = d3.behavior.zoom()
-    .scaleExtent([1, 8])
+    .scaleExtent([1, 25])
     .on("zoom", zoomed);
 
   var path = d3.geo.path()
@@ -222,8 +222,22 @@ d3.json("assets/Data/mock.json", function(err, data) {
   svg.attr("height", config.height * 2.2 / 3);
   });
   
+  //function that zooms and pan with limits (cannot go outside the map)
    function zoomed() {
-  g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+	   var t = d3.event.translate;
+	   var s = d3.event.scale;
+	   
+	   var w_max = 0;
+	   var w_min = width * (1 - s);
+	   var h_max = height < s*width/2 ? s*(width/2-height)/2 : (1-s)*height/2;
+	   var h_min = height < s*width/2 ? -s*(width/2-height)/2-(s-1)*height : (1-s)*height/2;
+		
+		//mark the limits of the translate
+	   t[0] = Math.min(w_max, Math.max(w_min, t[0]));
+	   t[1] = Math.min(h_max, Math.max(h_min, t[1]));
+	   zoom.translate(t);
+
+	   g.attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
 });
