@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <script src="http://d3js.org/d3.v3.min.js" charset = "utf-8" ></script>
+  
+  </head>
+
+  <body>  
+    <script type="text/javascript">
+    //the name of the item has been changed, so create a new csv file
+    d3.csv("../ExtCausesMockData2014-1.csv", type, function(csvdata){  
+        dataArray(csvdata);
+        // console.log(csvdata);           
+    });  
+
+
+    function type(d){
+        d.D_Transport_accidents = +d.D_Transport_accidents;
+        d.D_Falls = +d.D_Falls;
+        d.D_Accidental_drowning_and_submersion = +d.D_Accidental_drowning_and_submersion;
+        d.D_Exposure_to_smoke = +d.D_Exposure_to_smoke;
+        d.D_Accidental_poisoning_by_and_exposure_to_noxious_substances = +d.D_Accidental_poisoning_by_and_exposure_to_noxious_substances;
+        d.D_Intentional_self_harm = +d.D_Intentional_self_harm;
+        d.D_Assault = +d.D_Assault;
+
+        d.M_Transport_accidents = +d.M_Transport_accidents;
+        d.M_Falls = +d.M_Falls;
+        d.M_Accidental_drowning_and_submersion = +d.M_Accidental_drowning_and_submersion;
+        d.M_Exposure_to_smoke = +d.M_Exposure_to_smoke;
+        d.M_Accidental_poisoning_by_and_exposure_to_noxious_substances = +d.M_Accidental_poisoning_by_and_exposure_to_noxious_substances;
+        d.M_Intentional_self_harm = +d.M_Intentional_self_harm;
+        d.M_Assault = +d.M_Assault;
+
+        return d;
+    }
+
+    //transform origin data into array
+    function dataArray(csvdata){
+        // var count = 0;
+        var numberOfItems = 7; //the number of varieties
+
+        var D = []; //death data
+        var M = []; //media coverage data
+        var P;      //Pearson Correlation
+
+        csvdata.forEach(function(d){
+            var data = [];
+                D = [];
+                M = [];
+                data.push(d.Country);
+                data.push(d.D_Transport_accidents);
+                data.push(d.D_Falls);      
+                data.push(d.D_Accidental_drowning_and_submersion);
+                data.push(d.D_Exposure_to_smoke);
+                data.push(d.D_Accidental_poisoning_by_and_exposure_to_noxious_substances);
+                data.push(d.D_Intentional_self_harm);
+                data.push(d.D_Assault);
+                data.push(d.M_Transport_accidents);
+                data.push(d.M_Falls);      
+                data.push(d.M_Accidental_drowning_and_submersion);
+                data.push(d.M_Exposure_to_smoke);
+                data.push(d.M_Accidental_poisoning_by_and_exposure_to_noxious_substances);
+                data.push(d.M_Intentional_self_harm);
+                data.push(d.M_Assault);
+
+        
+                for(var i=0; i<numberOfItems; i++){ 
+
+                    D.push(data[i+1]);
+                    M.push(data[i+1+numberOfItems]);
+                    // D[count++] = data[i+1];
+                    // M[count++] = data[i+1+numberOfItems];
+                }
+
+                P = getPearsonCorrelation(D,M);
+                console.log(data[0]);
+                console.log(D);
+                console.log(M);     
+                console.log("P:"+P);           
+
+
+        });
+
+
+    }
+
+    //calculate Pearson Correlation
+	function getPearsonCorrelation (x, y) {
+            
+            var shortestArrayLength = 0;
+            if(x.length == y.length) {
+                shortestArrayLength = x.length;
+            } else if(x.length > y.length) {
+                shortestArrayLength = y.length;
+                console.error('x has more items in it, the last ' + (x.length - shortestArrayLength) + ' item(s) will be ignored');
+            } else {
+                shortestArrayLength = x.length;
+                console.error('y has more items in it, the last ' + (y.length - shortestArrayLength) + ' item(s) will be ignored');
+            }
+          
+            var xy = [];
+            var x2 = [];
+            var y2 = [];
+          
+            for(var i=0; i<shortestArrayLength; i++) {
+                xy.push(x[i] * y[i]);
+                x2.push(x[i] * x[i]);
+                y2.push(y[i] * y[i]);
+            }
+          
+            var sum_x = 0;
+            var sum_y = 0;
+            var sum_xy = 0;
+            var sum_x2 = 0;
+            var sum_y2 = 0;
+          
+            for(var i=0; i< shortestArrayLength; i++) {
+                sum_x += x[i];
+                sum_y += y[i];
+                sum_xy += xy[i];
+                sum_x2 += x2[i];
+                sum_y2 += y2[i];
+            }
+          
+            var step1 = (shortestArrayLength * sum_xy) - (sum_x * sum_y);
+            var step2 = (shortestArrayLength * sum_x2) - (sum_x * sum_x);
+            var step3 = (shortestArrayLength * sum_y2) - (sum_y * sum_y);
+            var step4 = Math.sqrt(step2 * step3);
+            var answer = step1 / step4;
+          	
+            return answer;
+	}	
+
+	</script>
+	
+  </body>
+</html>
