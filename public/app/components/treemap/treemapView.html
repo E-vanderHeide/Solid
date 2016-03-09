@@ -1,84 +1,165 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
+ <title>Project 4</title>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script language="javascript" type="text/javascript" src="d3.js"></script>
+ <script language="javascript" type="text/javascript" src="ConvexHull.js"></script>
+ <script language="javascript" type="text/javascript" src="PowerDiagram.js"></script>
+ <script language="javascript" type="text/javascript" src="VoronoiTreemap.js"></script>
+ <script language="javascript" type="text/javascript" src="VoronoiTreemapD3.js"></script>
+ <script language="javascript" type="text/javascript" src="flare.js"></script>
+</head>
+<body>
+
+ <div>
+  <button type="button" id="button_compute">Compute Diagram!</button>
+
+  <br><br>
+
+  &nbsp;&nbsp;
+
+  Color: 
+  <select id="select_color">
+   <option value="linear">Linear</option>
+   <option value="name">Name</option>
+   <option value="none">None</option>
+  </select>
+
+  &nbsp;&nbsp;
+
+  Max depth to show: 
+  <select id="select_max_depth">
+   <option value="none">None</option>
+   <option value="1">1</option>
+   <option value="2">2</option>
+   <option value="3">3</option>
+  </select>
+ </div>
+
+ <script language="javascript">
+ function make_regular_polygon(width, height, border, sides) {
+  var center = [width*0.5, height*0.5],
+  width_radius = (width - 2*border) * 0.5,
+  height_radius = (height - 2*border) * 0.5,
+  radius = Math.min( width_radius, height_radius ),
+  angle_radians = 2*Math.PI / sides,
+  initial_angle = sides%2==0 ? -Math.PI/2 -angle_radians*0.5 : -Math.PI/2, // subtract angles
+  result = [],
+  somevariable = 0;
+
+ // special case few sides
+ if (sides == 3) {
+  center[1] += height_radius / 3.0; 
+
+  radius_for_width = width_radius * 2 / Math.sqrt(3);
+  radius_for_height = height_radius * 4.0 / 3.0;
+  radius = Math.min(radius_for_width, radius_for_height);
+ }
+ else if (sides == 4) {
+  radius *= Math.sqrt(2);
+ }
+ 
+ for (var i = 0; i < sides; i++) {
+  result.push([center[0] + radius * Math.cos(initial_angle - i * angle_radians), center[1] + radius * Math.sin(initial_angle - i * angle_radians)]);
+ }
+
+ return result;
 }
 
-form {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+// here we set up the svg
+var width = 1000;
+var height = 800;
+var border = 10;
+var svg_container = d3.select("body").append("svg")
+.attr("width",width)
+.attr("height",height)
+.attr("id","svgid");
+
+function make_d3_poly(d) {
+ return "M" + d.join("L") + "Z";
 }
 
-.node {
-  border: solid 1px white;
-  font: 10px sans-serif;
-  line-height: 12px;
-  overflow: hidden;
-  position: absolute;
-  text-indent: 2px;
+var paint = function(nodes){
+ svg_container.selectAll("path").remove();
+
+ // background color
+ var background_color = "none";
+ svg_container.append("g").append("rect")
+ .attr("x", 0)
+ .attr("y", 0)
+ .attr("width", width)
+ .attr("height", height)
+ .attr("fill", background_color);
+
+ // strokes by depth
+ var stroke_min = 2,
+ stroke_max = 8,
+ stroke_levels = 3,
+ stroke_delta = (stroke_max - stroke_min) * 1.0 / stroke_levels;
+
+ // coloring, when we want to use our color scheme this has to be changed
+ var select_color = d3.select("#select_color").node().value;
+ if (select_color == "linear") {
+  var nodes_all_depths = nodes.map(function(x) {return x.depth});
+  var nodes_max_depth = Math.max.apply(null, nodes_all_depths);
+  var color_d3_linear = d3.scale.linear().domain([0, nodes_max_depth]).range(["blue","lightblue"]);
+  var color_func = function(d) { return color_d3_linear(d.depth); };
+ }
+ else if (select_color == "name") {
+  var color_d3 = d3.scale.category20c();
+  var color_func = function(d) { return d.children ? color_d3(d.name) : "none"; };
+ }
+ else {
+  var color_func = "lightblue"; 
+ }
+ 
+ var select_max_depth = d3.select("#select_max_depth").node().value;
+ var max_depth = 3; 
+ if (select_max_depth != "none") {
+  max_depth = parseInt(select_max_depth);
+ }
+ 
+ // consolidate and draw polygons
+ var selected_node_list = [];
+ for (var i = 0; i < nodes.length; i++){
+  var node = nodes[i];
+  if (node.polygon != null && node.depth <= max_depth){
+   selected_node_list.push(node);
+  }
+ }
+ var polylines = svg_container.append("g").selectAll("path").data(selected_node_list);
+ polylines.enter().append("path")
+ .attr("d", function(d) {return make_d3_poly(d.polygon);})
+ .attr("stroke-width", function(d) { return Math.max(stroke_max - stroke_delta*d.depth, stroke_min) + "px";})
+ .attr("stroke", "black")
+ .attr("fill", color_func);
+ polylines.exit().remove();
 }
 
-</style>
-<form>
-  <label><input type="radio" name="mode" value="size" checked> Size</label>
-  <label><input type="radio" name="mode" value="count"> Count</label>
-</form>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
-var margin = {top: 40, right: 10, bottom: 10, left: 10},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-var color = d3.scale.category20c();
-
-var treemap = d3.layout.treemap()
-    .size([width, height])
-    .sticky(true)
-    .value(function(d) { return d.size; });
-
-var div = d3.select("body").append("div")
-    .style("position", "relative")
-    .style("width", (width + margin.left + margin.right) + "px")
-    .style("height", (height + margin.top + margin.bottom) + "px")
-    .style("left", margin.left + "px")
-    .style("top", margin.top + "px");
-
-d3.json("flare.json", function(error, root) {
-  if (error) throw error;
-
-  var node = div.datum(root).selectAll(".node")
-      .data(treemap.nodes)
-    .enter().append("div")
-      .attr("class", "node")
-      .call(position)
-      .style("background", function(d) { return d.children ? color(d.name) : null; })
-      .text(function(d) { return d.children ? null : d.name; });
-
-  d3.selectAll("input").on("change", function change() {
-    var value = this.value === "count"
-        ? function() { return 1; }
-        : function(d) { return d.size; };
-
-    node
-        .data(treemap.value(value).nodes)
-      .transition()
-        .duration(1500)
-        .call(position);
-  });
-});
-
-function position() {
-  this.style("left", function(d) { return d.x + "px"; })
-      .style("top", function(d) { return d.y + "px"; })
-      .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
-      .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+var newnodes;
+function compute() {
+ var vt = d3.layout.voronoitreemap()
+ .root_polygon(make_regular_polygon(width, height, border, 100))
+ .value(function(d) {return d.size; })
+ .iterations(100);
+ //flare_json is the data set
+ newnodes = vt(flare_json);
+ paint(newnodes);
 }
+
+
+
+compute();
+d3.select("#select_color").on("change", function() {paint(newnodes)});
+d3.select("#select_max_depth").on("change", function() {paint(newnodes)});
+
+d3.select("#button_compute").on("click", function() {compute();});
 
 </script>
+</body>
+</html>
+

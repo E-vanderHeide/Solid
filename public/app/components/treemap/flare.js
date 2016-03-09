@@ -1,4 +1,5 @@
-{
+// stupid local file access lockdown...I just want my data!
+flare_json = {
  "name": "flare",
  "children": [
   {
