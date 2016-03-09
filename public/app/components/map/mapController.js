@@ -76,6 +76,10 @@ d3.json("assets/Data/mock.json", function(err, data) {
   .scale((width + 1) / 2 / Math.PI)
   .translate([width / 2, height / 2])
   .precision(.1);
+  
+   var zoom = d3.behavior.zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", zoomed);
 
   var path = d3.geo.path()
   .projection(projection);
@@ -90,6 +94,13 @@ d3.json("assets/Data/mock.json", function(err, data) {
   .datum(graticule)
   .attr("class", "graticule")
   .attr("d", path);
+  
+  //for the zoooming & paning
+   var g = svg.append("g");
+   
+   svg
+    .call(zoom)
+    .call(zoom.event);
 
     //var valueHash = {};
     
@@ -124,8 +135,6 @@ d3.json("assets/Data/mock.json", function(err, data) {
     .datum(graticule)
     .attr("class", "choropleth")
     .attr("d", path);
-
-    var g = svg.append("g");
 
     g.append("path")
     .datum({type: "LineString", coordinates: [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]]})
@@ -212,6 +221,9 @@ d3.json("assets/Data/mock.json", function(err, data) {
 
   svg.attr("height", config.height * 2.2 / 3);
   });
-
+  
+   function zoomed() {
+  g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
 });
