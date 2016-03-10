@@ -12,8 +12,8 @@
  <script language="javascript" type="text/javascript" src="VoronoiTreemap.js"></script>
  <script language="javascript" type="text/javascript" src="VoronoiTreemapD3.js"></script>
  <script language="javascript" type="text/javascript" src="flare.js"></script>
- <script language="javascript" type="text/javascript" src="death2015.js"></script>
- <script language="javascript" type="text/javascript" src="death2016.js"></script>
+ <script language="javascript" type="text/javascript" src="sweden2005.js"></script>
+ <script language="javascript" type="text/javascript" src="sweden2012.js"></script>
  <script language="javascript" type="text/javascript" src="d3-legend.js"></script>
 </head>
 <body>
@@ -59,14 +59,14 @@ h3 {
 
 
 <div>
-  <h2>Sweden death causes 2012</h2>
+  <h2>Sweden death causes</h2>
 </div>
 
  <div>
   
   <h3> 
-  <button type="button" id="button_compute">2015</button>
-  <button type="button" id="change_year">2016</button>
+  <button type="button" id="year_2005">2005</button>
+  <button type="button" id="year_2012">2012</button>
   &nbsp;&nbsp;Show number of deaths:
   <select id="select_max_depth">
    <option value="2">By name</option>
@@ -212,30 +212,30 @@ var paint = function(nodes){
 
 var newnodes;
 //there should be a input to "compute" with the json file, since the data to visualize will be different
-function compute() {
+function compute2012() {
  var vt = d3.layout.voronoitreemap()
  .root_polygon(make_regular_polygon(width, height, border, 100))
  .value(function(d) {return d.size; })
  .iterations(100);
  //flare_json is the data set
- newnodes = vt(death2015_json);
+ newnodes = vt(death2012_json);
  paint(newnodes);
 }
 
-function compute2() {
+function compute2005() {
  var vt = d3.layout.voronoitreemap()
  .root_polygon(make_regular_polygon(width, height, border, 100))
  .value(function(d) {return d.size; })
  .iterations(100);
  //flare_json is the data set
- newnodes = vt(death2016_json);
+ newnodes = vt(death2005_json);
  paint(newnodes);
 }
 
-compute();
+compute2012();
 d3.select("#select_max_depth").on("change", function() {paint(newnodes)});
-d3.select("#button_compute").on("click", function() {compute();});
-d3.select("#change_year").on("click", function() {compute2();});
+d3.select("#year_2012").on("click", function() {compute2012();});
+d3.select("#year_2005").on("click", function() {compute2005();});
 
 
 

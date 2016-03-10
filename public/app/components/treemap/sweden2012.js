@@ -1,5 +1,5 @@
-// stupid local file access lockdown...I just want my data!
-death2015_json = {
+//Sweden 2012
+death2012_json = {
  "name": "Sweden", "depth":0, "size": 83269, "coverage": 0,
  "children":
  [
