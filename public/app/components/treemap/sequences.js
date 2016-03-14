@@ -10,12 +10,9 @@ var b = {
 
 // Mapping of step names to colors.
 var colors = {
-  "home": "#5687d1",
-  "product": "#7b615c",
-  "search": "#de783b",
-  "account": "#6ab975",
-  "other": "#a173d1",
-  "end": "#bbbbbb"
+  "none": "#5687d1",
+  "Injuries": "#7b615c",
+  "Communicatable": "#de783b"
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -51,8 +48,6 @@ function createVisualization(json) {
 
   // Basic setup of page elements.
   initializeBreadcrumbTrail();
-  drawLegend();
-  d3.select("#togglelegend").on("click", toggleLegend);
 
   // Bounding circle underneath the sunburst, to make it easier to detect
   // when the mouse leaves the parent g.
@@ -219,15 +214,10 @@ function updateBreadcrumbs(nodeArray, percentageString) {
 }
 
 function drawLegend() {
-
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
     w: 75, h: 30, s: 3, r: 3
   };
-
-  var legend = d3.select("#legend").append("svg:svg")
-      .attr("width", li.w)
-      .attr("height", d3.keys(colors).length * (li.h + li.s));
 
   var g = legend.selectAll("g")
       .data(d3.entries(colors))
@@ -249,15 +239,6 @@ function drawLegend() {
       .attr("dy", "0.35em")
       .attr("text-anchor", "middle")
       .text(function(d) { return d.key; });
-}
-
-function toggleLegend() {
-  var legend = d3.select("#legend");
-  if (legend.style("visibility") == "hidden") {
-    legend.style("visibility", "");
-  } else {
-    legend.style("visibility", "hidden");
-  }
 }
 
 // Take a 2-column CSV and transform it into a hierarchical structure suitable
@@ -302,4 +283,26 @@ function buildHierarchy(csv) {
     }
   }
   return root;
-};
+}
+
+//legend functions
+var ordinal = d3.scale.ordinal()
+  .domain(["0-10%","10-20%","20-30%","30-40%","40-50%","50-60%","60-70%","70-80%","80-90%","90-100%"])
+  .range(["#98006a","#c40667","#e81858","#f34145","#ff633c","#ff841b","ffa12c","ffbe3d","ffd25d","ffe67c"]);
+
+var svg = d3.select("svg");
+
+svg.append("g")
+  .attr("class", "legendOrdinal")
+  .attr("transform", "translate(20,20)");
+
+var legendOrdinal = d3.legend.color()
+  .shapeWidth(55)
+  .shapePadding(1)
+  .orient('horizontal')
+  .title("Media Coverage")
+  .scale(ordinal);
+
+svg.select(".legendOrdinal")
+  .call(legendOrdinal); 
+
