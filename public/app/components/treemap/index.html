@@ -50,15 +50,28 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.sqrt(d.y); })
     .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-//var root;
 //getDataSelectedCountry("sweden");
 
 //add getDataSelectedCountry instead of flare.json to get the data for a specific country
 //d3.json("flare.js", function(error, root) {
 //  if (error) throw error;
 
-//this has to be changed ti instead get the country sent from the map
+//the root, this has to be changed to instead get the country sent from the map
 var root = sweden;
+//loop to get the max/min/totalCoverage, not working
+var temp;
+for (var i = sweden.length - 1; i >= 0; i--) {
+  temp = sweden[i].coverage
+  if(minCoverage>temp){
+    minCoverage = temp;
+  }
+  if(maxCoverage<temp){
+    maxCoverage = temp;
+  }
+  totalCoverage += temp;
+
+  console.log(totalCoverage);
+};
 
   var path = svg.datum(root).selectAll("path")
       .data(partition.nodes(root))
@@ -202,10 +215,20 @@ function getDataSelectedCountry(data){
       return maxCoverage;
     }
   };
+var minCoverage = 0;
+var maxCoverage = 0;
+var totalCoverage = 0;
+$.each(this.data, function(index, value){
+  if(minCoverage>value.coverage){
+    minCoverage = value.coverage;
+  }
+  if(maxCoverage<value.coverage){
+    maxCoverage = value.coverage;
+  }
+  totalCoverage += value.coverage;
+});
 
 
-
-  return countryData;
 }
 
 
