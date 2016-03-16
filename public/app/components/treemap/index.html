@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+  <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br>
+  <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
+</form>
+<script>
+
+var width = 960,
+    height = 700,
+    radius = Math.min(width, height) / 2,
+    totalSize = 0;
+
+var minCoverage = 180,
+    maxCoverage = 1000;
+
+var colorScheme = ["#98006a", "#c40667", "#e81858", "#f34145", "#ff633c", "#ff841b", "#ffa12c", "#ffbe3d", "#ffd25d", "#ffe67c"];
+ var color_func = function(d) {
+    var myColor = 0;
+    myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
+    return colorScheme[myColor];
+  };    
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height * .52 + ")");
+
+var partition = d3.layout.partition()
+    .sort(null)
+    .size([2 * Math.PI, radius * radius])
+    .value(function(d) { return d.size; });
+
+var arc = d3.svg.arc()
+    .startAngle(function(d) { return d.x; })
+    .endAngle(function(d) { return d.x + d.dx; })
+    .innerRadius(function(d) { return Math.sqrt(d.y); })
+    .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
+
+d3.json("flare.json", function(error, root) {
+  if (error) throw error;
+
+  var path = svg.datum(root).selectAll("path")
+      .data(partition.nodes)
+    .enter().append("path")
+      .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
+      .attr("d", arc)
+      .style("stroke", "#fff")
+      .style("fill", color_func)
+      .style("fill-rule", "evenodd")
+      .style("opacity", 1)
+      .on("mouseenter", mouseenter)
+      .on("mouseleave", mouseleave)
+      .each(stash);
+
+  d3.selectAll("input").on("change", function change() {
+    var value = this.value === "size"
+        ? function(d) { return d.size; }
+        : function() { return 1; };
+
+    path
+      .data(partition.value(value).nodes)
+      .transition()
+      .duration(1500)
+      .attrTween("d", arcTween);
+
+    totalSize = path.node().__data__.value;
+  });
+});
+
+function mouseenter(d){
+  var xPosition = (width*0.5)-110;
+  var yPosition = height*0.5-30;
+  var percentage = (100 * d.value);
+
+  d3.select("#tooltip")
+    .style("left", xPosition + "px")
+    .style("top", yPosition + "px");
+  d3.select("#tooltip #heading")
+    .text(percentage + " % ");
+  d3.select("#tooltip #name")
+    .text("Media Coverage = " + d["coverage"] + "%");
+  d3.select("#tooltip").classed("hidden", false);
+
+  d3.selectAll("path")
+   .style("opacity", 0.3);
+
+  d3.select(this)
+    .style("opacity", 1);
+
+}
+
+function mouseleave(d){
+  d3.select("#tooltip").classed("hidden", true);
+
+  d3.selectAll("path")
+    .style("opacity", 1);
+}
+
+
+// Stash the old values for transition.
+function stash(d) {
+  d.x0 = d.x;
+  d.dx0 = d.dx;
+}
+
+// Interpolate the arcs in data space.
+function arcTween(a) {
+  var i = d3.interpolate({x: a.x0, dx: a.dx0}, a);
+  return function(t) {
+    var b = i(t);
+    a.x0 = b.x;
+    a.dx0 = b.dx;
+    return arc(b);
+  };
+}
+
+d3.select(self.frameElement).style("height", height + "px");
+</script>
+<div id="tooltip" class="hidden">
+  <p><strong id="heading"></strong></p>
+  <p><span id="name"></span></p>
+  <p><span id="size"></span></p>
+</div>
+</body>
+</html>
