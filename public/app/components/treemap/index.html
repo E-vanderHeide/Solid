@@ -2,9 +2,15 @@
 <head>
 <meta charset="utf-8">
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script language="javascript" type="text/javascript" src="d3-legend.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div id="sunburst">
+  </div>
+  <div id="legend">
+  </div>
 <form>
   <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br>
   <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
@@ -16,10 +22,10 @@ var width = 960,
     radius = Math.min(width, height) / 2,
     totalSize = 0;
 
-var minCoverage = 180,
-    maxCoverage = 1000;
+var minCoverage = 0,
+    maxCoverage = 100;
 
-var colorScheme = ["#98006a", "#c40667", "#e81858", "#f34145", "#ff633c", "#ff841b", "#ffa12c", "#ffbe3d", "#ffd25d", "#ffe67c"];
+var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"];
  var color_func = function(d) {
     var myColor = 0;
     myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
@@ -122,11 +128,36 @@ function arcTween(a) {
 }
 
 d3.select(self.frameElement).style("height", height + "px");
+
+//legend functions
+var ordinal = d3.scale.ordinal()
+  .domain(["0-10","10-20","20-30","30-40","40-50","50-60","60-70","70-80","80-90","90-100"])
+  .range(["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
+
+var svg = d3.select("svg");d3.select("#sunburst").append("svg")
+
+svg.append("g")
+  .attr("class", "legendOrdinal")
+  .attr("transform", "translate(20,20)");
+
+var legendOrdinal = d3.legend.color()
+  .shapeWidth(55)
+  .shapePadding(1)
+  .orient('horizontal')
+  .title("Media Coverage")
+  .scale(ordinal);
+
+svg.select(".legendOrdinal")
+  .call(legendOrdinal); 
+
+
+
 </script>
 <div id="tooltip" class="hidden">
   <p><strong id="heading"></strong></p>
   <p><span id="name"></span></p>
   <p><span id="size"></span></p>
 </div>
+
 </body>
 </html>
