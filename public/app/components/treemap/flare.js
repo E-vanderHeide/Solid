@@ -1,37 +1,19 @@
-// stupid local file access lockdown...I just want my data!
-flare_json = {
- "name": "flare",
- "children": [
-
-
-  {
-   "name": "analytics",
-   "children": [
-    {"name": "cluster", "size": 3938},
-    {"name": "graph", "size": 5731},
-    {"name": "optimization", "size": 7074}
-   ]
-  },
-
-  {
-   "name": "animate",
-   "children": [
-    {"name": "Easing", "size": 17010},
-    {"name": "FunctionSequence", "size": 5842},
-    {"name": "Tween", "size": 6006}
-   ]
-  },
-
-  {
-   "name": "data",
-   "children": [
-    {"name": "DataField", 
-    "children": [
-      {"name": "DataSchema", "size": 2165},
-      {"name": "DataSet", "size": 586}
-      ]
+{
+  "name":"flare",
+  "children": 
+  [
+    {"name":"Communicatable",
+    "children":
+    [
+    {"name":"Tuberculosis","depth":2,"size":0,"coverage":4370},
+    {"name":"HIV/AIDS","depth":2,"size":0,"coverage":672500},
+    {"name":"Diarrheal diseases","depth":2,"size":0,"coverage":4250},
+    {"name":"Intestinal infectious diseases","depth":2,"size":0,"coverage":5333},
+    {"name":"Lower respiratory infections","depth":2,"size":0,"coverage":14776},
+    {"name":"Upper respiratory infections","depth":2,"size":0,"coverage":52131},
+    {"name":"Otitis media","depth":2,"size":0,"coverage":0},
+    {"name":"Meningitis","depth":2,"size":0,"coverage":0}
+    ]
     }
-   ]
-  }
- ]
+  ]
 }
