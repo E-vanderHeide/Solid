@@ -3,7 +3,7 @@
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
 
- <title>Project 4</title>
+ <title>Solid - Voronoi Treemap</title>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  <script language="javascript" type="text/javascript" src="d3.js"></script>
@@ -12,22 +12,95 @@
  <script language="javascript" type="text/javascript" src="VoronoiTreemap.js"></script>
  <script language="javascript" type="text/javascript" src="VoronoiTreemapD3.js"></script>
  <script language="javascript" type="text/javascript" src="flare.js"></script>
+ <script language="javascript" type="text/javascript" src="sweden2005.js"></script>
+ <script language="javascript" type="text/javascript" src="sweden2012.js"></script>
+ <script language="javascript" type="text/javascript" src="d3-legend.js"></script>
 </head>
 <body>
 
- <div>
-  <button type="button" id="button_compute">Compute Diagram!</button>
+<style>
+/*style for the tooltip*/
+#tooltip {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
 
-  Max depth to show: 
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h2 {
+  padding-left: 20px;
+}
+
+h3 {
+  padding-left: 20px;
+}
+
+
+</style>
+
+
+<div>
+  <h2>Sweden death causes</h2>
+</div>
+
+ <div>
+  
+  <h3> 
+  <button type="button" id="year_2005">2005</button>
+  <button type="button" id="year_2012">2012</button>
+  &nbsp;&nbsp;Show number of deaths:
   <select id="select_max_depth">
-   <option value="none">None</option>
-   <option value="1">1</option>
-   <option value="2">2</option>
-   <option value="3">3</option>
-  </select>
+   <option value="2">By name</option>
+   <option value="1">By category</option>
+   <option value="0">Total</option>
+  </select></h3>
+  <br><br>
  </div>
 
- <script language="javascript">
+
+<script language="javascript">
+                             
+
+//mouseover functions
+var mousemove = function(d) {
+  var xPosition = d3.event.pageX + 5;
+  var yPosition = d3.event.pageY + 5;
+
+  d3.select("#tooltip")
+    .style("left", xPosition + "px")
+    .style("top", yPosition + "px");
+  d3.select("#tooltip #heading")
+    .text(d["name"] + " = " + d["size"]);
+  d3.select("#tooltip #name")
+    .text("Media Coverage = " + d["coverage"] + "%");
+  d3.select("#tooltip").classed("hidden", false);
+};
+
+var mouseout = function() {
+  d3.select("#tooltip").classed("hidden", true);
+};
+
+
+
  function make_regular_polygon(width, height, border, sides) {
   var center = [width*0.5, height*0.5],
   width_radius = (width - 2*border) * 0.5,
@@ -57,9 +130,9 @@
  return result;
 }
 
-var width = 1000;
-var height = 800;
-var border = 10;
+var width = 800;
+var height = 600;
+var border = 100;
 var svg_container = d3.select("body").append("svg")
 .attr("width",width)
 .attr("height",height)
@@ -95,14 +168,20 @@ var paint = function(nodes){
 //Coloring the treemap
  var nodes_all_depths = nodes.map(function(x) {return x.depth});
  var nodes_max_depth = Math.max.apply(null, nodes_all_depths);
- var colorScheme = ["#226600","#4ce600","#99ff66","#ddffcc"];
+ var colorScheme = ["#FFF7F7", "#FFE4E2", "#C2827E", "#753B36", "#5C1E18", "#330804"];
  var color_d3_linear = d3.scale.linear().domain([0, nodes_max_depth]).range(colorScheme);
- var color_func = function(d) { return color_d3_linear(d.depth); };
+ var color_func = function(d) {
+    var myColor = 0;
+    myColor = Math.round(d["coverage"]/20);
+    return colorScheme[myColor];
+  };
+
+  //return colorScheme[d["colour"]];};
 
 
  var select_max_depth = d3.select("#select_max_depth").node().value;
- var max_depth = 3; 
- if (select_max_depth != "none") {
+ var max_depth = 2; 
+ if (select_max_depth != "Total") {
   max_depth = parseInt(select_max_depth);
  }
  
@@ -122,27 +201,70 @@ var paint = function(nodes){
  .attr("stroke-width", function(d) { return Math.max(stroke_max - stroke_delta*d.depth, stroke_min) + "px";})
  .attr("stroke", "black")
  .attr("fill", color_func)
+
+
  // Click to update the world map  according to the clicked desis. 
- .on("click", function(d){updateMap()});
+ //.on("click", function(d){updateMap()})
+ .on("mousemove", mousemove)
+ .on("mouseout", mouseout)
  polylines.exit().remove();
 }
 
 var newnodes;
 //there should be a input to "compute" with the json file, since the data to visualize will be different
-function compute() {
+function compute2012() {
  var vt = d3.layout.voronoitreemap()
  .root_polygon(make_regular_polygon(width, height, border, 100))
  .value(function(d) {return d.size; })
  .iterations(100);
  //flare_json is the data set
- newnodes = vt(flare_json);
+ newnodes = vt(death2012_json);
  paint(newnodes);
 }
 
-compute();
-d3.select("#select_max_depth").on("change", function() {paint(newnodes)});
-d3.select("#button_compute").on("click", function() {compute();});
+function compute2005() {
+ var vt = d3.layout.voronoitreemap()
+ .root_polygon(make_regular_polygon(width, height, border, 100))
+ .value(function(d) {return d.size; })
+ .iterations(100);
+ //flare_json is the data set
+ newnodes = vt(death2005_json);
+ paint(newnodes);
+}
 
+compute2012();
+d3.select("#select_max_depth").on("change", function() {paint(newnodes)});
+d3.select("#year_2012").on("click", function() {compute2012();});
+d3.select("#year_2005").on("click", function() {compute2005();});
+
+
+
+//legend functions
+var ordinal = d3.scale.ordinal()
+  .domain(["0%", "> 10%", "30%", "50%", "70%", "< 90%"])
+  .range(["#FFF7F7", "#FFE4E2", "#C2827E", "#753B36", "#5C1E18", "#330804"]);
+
+var svg = d3.select("svg");
+
+svg.append("g")
+  .attr("class", "legendOrdinal")
+  .attr("transform", "translate(20,20)");
+
+var legendOrdinal = d3.legend.color()
+  .shapeWidth(55)
+  .shapePadding(1)
+  .orient('horizontal')
+  .title("Media Coverage")
+  .scale(ordinal);
+
+svg.select(".legendOrdinal")
+  .call(legendOrdinal);     
 </script>
+
+<div id="tooltip" class="hidden">
+  <p><strong id="heading"></strong></p>
+  <p><span id="name"></span></p>
+  <p><span id="size"></span></p>
+</div>
 </body>
 </html>
