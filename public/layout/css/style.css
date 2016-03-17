@@ -1,0 +1,209 @@
+/*WEB*/
+html{
+    font-size: 100%;
+}
+span{
+    font-size: 100%;
+}
+
+body,form {
+  font-family: 'Droid Serif', serif;
+  /*font-size: 1em;*/
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  background-color: #fefcf8;
+}
+
+.container{
+   width: 960px;
+}
+
+.container-fluid{
+  /*max-width: 960px;*/
+}
+ 
+h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3em;
+  /*margin: 1em 0 .5em 0;*/
+  color: #69010c;
+}
+
+h2 {
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2em;
+  /*margin: 2em 0 0.5em;*/
+  /*padding: .5em 0 .5em 0;*/
+  color: #69010c;
+/*  border-bottom: solid #ccc 1px;*/
+}
+
+h3{
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+h4{
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #69010c;
+  font-size: 1.3em;
+}
+
+.red{
+  font-weight: bold;
+  color: #69010c;
+}
+
+p.caption {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 0.9em;
+  /*color: #999;*/
+}
+
+p.data {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 0.9em;
+  /*color: #fff;*/
+}
+
+
+a:link, a:visited {
+  color: #a57c80;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #69010c;
+  /*color: #fff;*/
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(153, 153, 153, 0), rgba(153, 153, 153, 0.75), rgba(153, 153, 153, 0));
+}
+
+.modalText{
+  text-align: left;
+}
+
+.modalImg{
+  width:50%;
+  height:50%;
+}
+
+.team {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.team p{
+  margin: 0 0 0 0;
+}
+
+.portrait {
+  width: 100px;
+  height: 100px;
+}
+
+/*BOOTSTRAP*/
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*MODAL*/
+.modal-content{
+  background-color: #fefcf8;
+}
+
+.modal-header{
+  border-bottom: 1px solid #a57c80;
+}
+
+.close{
+  color: #a57c80;
+}
+
+/*NAVBAR*/
+.navbar{
+  border: none;
+  border-bottom: 1px solid #a57c80;
+  border-radius: 0px;
+}
+
+.navbar-brand{
+  padding: 10px 10px 10px 15px;
+}
+
+/*Sets the text hover color on navbar*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #69010c;  
+}
+
+
+/*BACKGROUND color for active*/
+/*.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: white; 
+  background-color: #030033;
+}*/
+
+.navbar-default {
+  background-color: #fefcf8;
+  /*border-color: #030033;*/
+}
+
+.close:focus, .close:hover {
+  color: #69010c;
+}
+
+/*change color of links in drop down here*/
+/*.dropdown-menu > li > a:hover,
+   .dropdown-menu > li > a:focus {
+    color: #262626;
+   text-decoration: none;
+  background-color: #66CCFF;
+}*/
+
+/*Change rollover cell color here*/
+/* .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: silver; 
+  }*/
+
+/*Change active text color here*/
+.navbar-default .navbar-nav > li > a {
+   color: #a57c80; 
+}
+
+
+/*for treemap & parallel
+text {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 0.7em;
+}*/

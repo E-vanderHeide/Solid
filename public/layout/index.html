@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- BOOTSTRAP -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GOOGLE FONT -->
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:700italic|Droid+Serif:400,700,400italic|PT+Sans+Narrow' rel='stylesheet' type='text/css'><!-- Without PT Sans Bold  -->
+
+ <!--  <link href='https://fonts.googleapis.com/css?family=PT+Sans:700italic,700|Droid+Serif:400,400italic|PT+Sans+Narrow' rel='stylesheet' type='text/css'> --> 
+ <!-- With PT Sans Bold  -->
+
+  
+
+  <link href="css/style.css" rel="stylesheet">
+  <title>Solid</title>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand"><img src="images/logo11.png"></div>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Features">Features</a></li>
+          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="About Solid">About Solid</a></li>
+          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Team">Team</a></li>
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Colour scheme <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Light</a></li>
+              <li><a href="#">Dark</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title" id="mainModalLabel">menuHead</h2>
+        </div>
+        <div class="modal-body">
+          <div id="modalContent">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid row">
+    <div class="col-lg-6">
+      <img src="images/placeholder-01.jpg" class="img-responsive center-block">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <img src="images/placeholder-02.jpg" class="img-responsive center-block">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <img src="images/placeholder-03.jpg" class="img-responsive center-block">
+    </div>
+  </div>
+
+   <div class="container-fluid row">
+    <div class="col-lg-12">
+      <h1>This is headline (h1)</h1>
+      <h2>This is sub-headline (h2)</h2>
+      <h3>This is a small headline (h3)</h3>
+      <h4>This is a small headline (h4)</h4>
+      <p>This is normal p. Cras eu arcu nisl. Curabitur eu elit eu felis vestibulum faucibus id in augue. Vivamus eget ultricies felis. <b>It can be bold.Phasellus a tempus mauris, non dictum leo. Mauris facilisis pellentesque lacinia.</b> <i>It can be italic. Nullam consequat vulputate tempor. Duis finibus mauris ex, at tempor diam suscipit quis.</i>
+        <p class="caption">*This is sort of caption. Small notes.
+        <p class="data">This is a style for data in charts and diagrams.
+    </div>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- BOOTSTRAP -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<script>
+  $('#mainModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var menuHead = button.data('menu') // Extract info from data-* attributes
+    var modal = $(this)
+    modal.find('.modal-title').text(menuHead)
+
+    this.contentContainer = modal.find('#modalContent');
+    var contentStr;
+
+    switch(menuHead) {
+    case "Features":
+        contentStr ='<div class="modalText">'+
+            '<p>This visualization mainly consists of two graphs, one world map and one treemap. Both of them work as data visualizers and as filters.'+
+            '<div class="col-lg-12">'+
+            '<img src="images/placeholder-02.jpg" class="img-responsive center-block modalImg">'+
+            '</div>'+
+            '<p><span class="red">The world map:</span> It is a visual structure showing a world map with all the countries in the world. It can be zoomed in and out using the “pinch” function of a mousepad or a scroll wheel of a mouse. Zooming can be panned with left-clicking in the mouse in one area and dragging it. When mouse over the countries, the name of the country will be shown. When the user left-clicks a country, the treemap will show the DALY for every kind of disease that that country has.'+
+             '<div class="col-lg-12">'+
+            '<img src="images/placeholder-01.jpg" class="img-responsive center-block modalImg">'+
+            '</div>'+
+            '<p><span class="red">The tree map:</span> When a country is clicked on the world map, the treemap will show the DALY for every kind of diseases that that country has, the colour of each node represents the media coverage of that disease in the country, so the more saturated the more media coverage, the less saturated the less covered. The size of each node represents the amount of DALY for each disease, as the bigger the size is, the bigger the DALY is. If a user clicks on any node in the treemap, the world map will show the media coverage of this kind of disease for every country.'+
+           
+            '</div>';
+        break;
+    case "About Solid":
+        contentStr ='<div class="modalText">'+
+          '<p>Solid is a group created by nine KTH students with the purpose of developing the final project for the course: Information Visualization DH2321. The goal of the project is to create a visualization that should be able to help users to see, understand and create their own discussions of a particular data.'+
+          '<p>Solid’s mission is to help people find common ground by helping them acknowledge their biases by visualising what is actually important in life. For this project we have chosen to visualise the loss of disability-lost-life-years (DALYs) by causes in comparison with media coverage.'+
+          '<p>Although at first we planned to compare causes of death with media coverage, we decided to go with DALYs because the data was easily available and DALYs are more relevant for especially younger people as they do not represent death, which in many cases is unavoidable, but loss in quality of life due to very avoidable causes.'+
+          '<p>One DALY can be thought of as one lost year of "healthy" life. The sum of these DALYs across the population, or the burden of disease, can be thought of as a measurement of the gap between current health status and an ideal health situation where the entire population lives to an advanced age, free of disease and disability. '+'<a href="http://www.who.int/healthinfo/global_burden_disease/metrics_daly/en/"><i>[Reference]</i></a>'+'</p>'+
+          '<p>Visualisation of the bias will help us acknowledge it, which does not nullify the bias or its effects, but hopefully helps people find a common ground of what is actually important.'+
+          '<p>The core values of solid are:'+
+          '<li><span class="red">Commitment:</span>  Committing to great product, service, and other initiatives that impact lives within and outside the group.</li>'+
+          '<li><span class="red">Community:</span> Contributing to society and demonstrating corporate social responsibility.</li>'+
+          '<li><span class="red">Diversity:</span> Respecting the diversity and giving the best of composition thanks to our international profiles.</li>'+
+          '<li><span class="red">Innovation:</span>  Pursuing new creative ideas that have the potential to change how things are seen.</li>'+
+          '<li><span class="red">Integrity:</span> Acting with honesty and honor without compromising the truth.</li>'+'<br>'+
+          '<div class="row">'+
+            '<div class="col-lg-6 col-md-6">'+
+            '<img src="images/feature1.png" class="img-responsive center-block">'+
+            '</div>'+
+            '<div class="col-lg-6 col-md-6">'+
+            '<img src="images/feature2.png" class="img-responsive center-block">'+
+            '</div>'+
+          '</div>'+
+          '</div>'+
+          '<p class="caption">Images from <a href="http://www.jamesclear.com"><i>JamesClear.com</i></a></p>';
+        break;
+    case "Team":
+        contentStr ='<div class="row">'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/adri.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Adrià Cruz'+'<p>adriac@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/cheng.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Cheng Tianchang'+'<p>tche@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/ewoud.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Ewoud van der Heide'+'<p>ewoud@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/giovana.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Giovanna Vilaza'+'<p>gnv@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/ingrid.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Ingrid Sörensen'+'<p>isor@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/maria.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Maria Rahamägi'+'<p>rahamagi@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/martin.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Martin Hedlund'+'<p>marthed@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/pruek.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Pruek Laochaiyapruek'+'<p>pruek@kth.se'+
+          '</div>'+
+          '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
+          '<img src="images/yun.png" class="portrait img-responsive img-circle center-block">'+
+          '<p class="red">Yun Zeng'+'<p>yzeng@kth.se'+
+          '</div>'+
+          '</div>';
+        break;
+    }
+
+    this.contentContainer.html(contentStr);
+  })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+/*WEB*/
+html{
+    font-size: 100%;
+}
+span{
+    font-size: 100%;
+}
+
+body,form {
+  /* font-family: "PT Sans", Helvetica;*/
+  /*font-family: sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  /*width: 960px;*/
+  margin: auto;
+  position: relative;
+  text-align: center;
+  background-color: #031327;
+}
+
+.container{
+   width: 960px;
+}
+
+.container-fluid{
+  max-width: 960px;
+}
+ 
+h1 {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 3em;
+  margin: 1em 0 .5em 0;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 1.2em;
+  /*margin: 2em 0 0.5em;*/
+  padding: .5em 0 .5em 0;
+  color: #fff;
+/*  border-bottom: solid #ccc 1px;*/
+}
+p{
+  color: #fff;
+}
+p.meta, p.footer {
+  font-size: 0.8em;
+  color: #fff;
+}
+
+a:link, a:visited {
+  color: #99ccff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.hint {
+  /*position: absolute;
+  right: 0;
+  width: 1280px;*/
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 0.8em;
+  color: #999;
+}
+.reference {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+  color: #999;
+  margin: 0;
+}
+.referenceItalic {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  color: #999;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(153, 153, 153, 0), rgba(153, 153, 153, 0.75), rgba(153, 153, 153, 0));
+}
+
+#designText{
+  max-width: 480px;
+}
+
+#designBrief{
+  text-align: left;
+}
+
+#colorLabels{
+  padding: 10px; 
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 0.7em;
+}
+
+#color1,#color2,#color3,#color4,#color5 {
+    /*border-radius: 25px;*/
+    padding: 5px;
+    padding-left: 10px; 
+    padding-right: 10px;
+    color: #ffffff;
+    /*opacity: .3;*/
+}
+
+#color1{
+  /*background: #33cccc;*/
+  background-color: rgba(51, 204, 204, .3);
+}
+#color1:hover{
+  /*background: #33cccc;*/
+  background-color: rgba(51, 204, 204, 1);
+}
+
+#color2{
+  /*background: #9999ff;*/
+  background-color: rgba(153, 153, 255, .3);
+}
+#color2:hover{
+  /*background: #9999ff;*/
+  background-color: rgba(153, 153, 255, 1);
+}
+
+#color3{
+  /*background: #00bfff;*/
+  background-color: rgba(0, 191, 255, .3);
+}
+#color3:hover{
+  /*background: #00bfff;*/
+  background-color: rgba(0, 191, 255, 1);
+}
+
+#color4{
+  /*background: #009999;*/
+  background-color: rgba(0, 153, 153, .3);
+}
+#color4:hover{
+  /*background: #009999;*/
+  background-color: rgba(0, 153, 153, 1);
+}
+
+#color5{
+  /*background: #3333ff;*/
+  background-color: rgba(51, 51, 255, .3);
+}
+#color5:hover{
+  /*background: #3333ff;*/
+  background-color: rgba(51, 51, 255, 1);
+}
+
+.treemap-col{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*BOOTSTRAP*/
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*for treemap & parallel*/
+/*
+rect {
+  fill: none;
+  pointer-events: all;
+}*/
+
+text {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 0.7em;
+  /*color: white;*/
+}
+
+/*TREE MAP*/
+#treemap{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+/*.cell:hover { 
+  fill: #ffff99;
+  fill-opacity: 0.5; 
+}*/
+
+/*rect :hover{
+  fill: #ffff99; 
+  fill-opacity: .5;
+}*/
+
+
+/*PARALLEL*/
+.background path {
+  fill: none;
+  stroke: #999;
+  stroke-opacity: .03;
+  shape-rendering: crispEdges;
+}
+
+.foreground path {
+  fill: none;
+  stroke: #ccffff;
+  stroke-opacity: .1;
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  fill: #fff;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  /*text-shadow: 0 1px 0 #fff;*/
+  cursor: move;
+}
+
+path:hover { 
+  stroke: #ffff66; 
+  stroke-opacity: .7;
+}
+
+#tooltip-container {
+  position: absolute;
+  background-color: #ffff66;
+  color: #000;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  opacity: .7;
+}
+
+.tooltip_key {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 0.7em;
+}
+
+#parallel{
+  padding-bottom: 20px;
+}
