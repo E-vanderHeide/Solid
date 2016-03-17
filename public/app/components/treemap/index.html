@@ -23,7 +23,7 @@ var width = 960,
     radius = Math.min(width, height) / 2;
 
 var minCoverage = 0,
-    maxCoverage = 100,
+    maxCoverage = 1,
     totalCoverage = 1;
 
 var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"];
@@ -57,7 +57,7 @@ var arc = d3.svg.arc()
 //  if (error) throw error;
 
 //the root, this has to be changed to instead get the country sent from the map
-var root = sweden;
+var root = norway;
 //loop to get the max/min/totalCoverage, not working
 var temp;
 for (var i = sweden.length - 1; i >= 0; i--) {
@@ -70,8 +70,10 @@ for (var i = sweden.length - 1; i >= 0; i--) {
   }
   totalCoverage += temp;
 
-  console.log(totalCoverage);
+  console.log(sweden.length);
 };
+
+console.log("sweden längd " + root.length);
 
   var path = svg.datum(root).selectAll("path")
       .data(partition.nodes(root))
@@ -79,6 +81,7 @@ for (var i = sweden.length - 1; i >= 0; i--) {
       .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
       .attr("d", arc)
       .style("stroke", "#fff")
+      .each(getValues)
       .style("fill", color_func)
       .style("fill-rule", "evenodd")
       .style("opacity", 1)
@@ -103,7 +106,7 @@ function mouseenter(d){
   var xPosition = (width*0.5)-110;
   var yPosition = height*0.5-30;
   var dPercentage = (100 * d.value);
-  var mPercentage = (d["coverage"]/totalCoverage);
+  var mValue = (d["coverage"]);
 
   if (d["name"] !== "Communicatable" && d["name"] !== "non" && d["name"] !== "infectus") {
     d3.select("#tooltip")
@@ -114,7 +117,7 @@ function mouseenter(d){
   d3.select("#tooltip #death")
     .text("Death data: " + dPercentage + " % ");
   d3.select("#tooltip #media")
-    .text("Media Coverage: " + mPercentage + "%");
+    .text("Media Coverage: " + mValue);
   d3.select("#tooltip").classed("hidden", false);
   }else{
     d3.select("#tooltip")
@@ -123,7 +126,7 @@ function mouseenter(d){
     d3.select("#tooltip #heading")
     .text(d["name"]);
     d3.select("#tooltip #death")
-    .text(" ");
+    .text(d["coverage"]);
   d3.select("#tooltip #media")
     .text(" ");
     d3.select("#tooltip").classed("hidden", false);
@@ -144,6 +147,13 @@ function mouseleave(d){
     .style("opacity", 1);
 }
 
+function getValues(d){
+  if (d["name"] == "Communicatable") {
+      minCoverage = d["minCoverage"];
+      maxCoverage = d["maxCoverage"];
+      totalCoverage = d["totalCoverage"];
+  }
+}
 
 // Stash the old values for transition.
 function stash(d) {
