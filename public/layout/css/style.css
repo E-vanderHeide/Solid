@@ -74,8 +74,14 @@ p.data {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 0.9em;
   /*color: #fff;*/
-}
 
+}
+.label{
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  /*color: #999;*/
+}
 
 a:link, a:visited {
   color: #a57c80;
@@ -201,12 +207,168 @@ hr{
    color: #a57c80; 
 }
 
-.mapPart{
-  width: 50%;
-  height: 50%;
-}
+
 /*for treemap & parallel
 text {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 0.7em;
 }*/
+
+
+
+.mapButton{
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+/*CSS for the death description*/
+.newsBox{
+  border:1px solid;
+  border-radius: 10px;
+  -moz-border-radius:10px;
+  width: 600px;
+  height: 200px;
+  padding:20px 10px;
+}
+
+.deathDescription{
+  width: 100%;
+  height: 110px;
+
+}
+
+.deathImg {
+  padding: 0px;
+  margin: 0px;
+  height: 110px;
+  float: left;
+}
+
+
+.deathText h4{
+  text-align: left;
+  margin: 0px;
+}
+.deathText p{
+/*  padding: 10px 0px;*/
+/*  float: right;*/
+/*  width: 65%;*/
+  margin-bottom: 0px;
+  line-height:17px;
+  height: 51px;
+
+  text-align: justify;
+  text-justify:inter-ideograph; 
+
+
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+}
+
+.more{
+  float: right;
+  text-align: right;
+
+}
+
+
+.keyWords{
+  font-weight: bold;
+  text-align: left;
+
+}
+.keyWords span{
+  font-weight: normal;
+  text-align: left;
+}
+
+.sampleNews{
+
+  text-align: left;
+
+}
+.sampleNews .title{
+  padding: 5px 0px;
+  font-weight: bold;
+  text-align: left;
+
+}
+/*.sampleNews .example{
+  padding: 2px 0px;
+}*/
+
+
+.tooltipNews {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin: 0px 4px; 
+}
+
+/* Tooltip text */
+.tooltipNews .tooltiptextNews {
+    visibility: hidden;
+    width: 120px;
+    background-color: #69010c;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+
+    left: 50%;
+    margin-left: -60px;
+    top: 100%;
+}
+
+.tooltipNews .tooltiptextNews::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #69010c transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipNews:hover .tooltiptextNews {
+    visibility: visible;
+}
+
+
+
+/*CSS for the News Media*/
+.mediaBox{
+  border:1px solid;
+  border-radius: 15px;
+  -moz-border-radius:15px;
+  width: 600px;
+  height: 200px;
+  padding:15px 25px;
+}
+.countryName{
+
+  font-weight: bold;
+}
+.mediaImg{
+  padding: 10px 0px;
+
+}
+.mediaImg span{
+  height: 140px;
+
+}
+.mediaImg img{
+  padding-right: 10px;
+  padding-top: 10px;
+  height: 60px;
+/*  width: 20px*/
+
+}

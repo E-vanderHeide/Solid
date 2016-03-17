@@ -127,6 +127,42 @@
 /*	width: 20px*/
 
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 </style>
 </head>
 <body>
@@ -152,7 +188,13 @@
 		<div class="title">Sample News: </div>
 		<div class="example">BBC: <a href="">Are we winning the fight against HIV?</a></div>
 		<div class="example">CNN: <a href="">8 dangerous HIV myths debunked by the experts</a></div>
-		<div class="example">China Daily: <a href="">China has 575,000 people with HIV/AIDS</a></div>		
+		<div class="example">China Daily: <a href="">China has 575,000 people with HIV/AIDS</a></div>
+
+
+
+		<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>		
 	</div>
 
 </div>

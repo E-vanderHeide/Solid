@@ -25,12 +25,13 @@ form {
   width: 200px;
   height: auto;
   padding: 10px;
-  background-color: white;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   pointer-events: none;
-  background-color: #fefcf8
+  background-color: #fefcf8;
+  opacity: .7;
+  color: #69010c;
 }
 
 #tooltip.hidden {

@@ -14,9 +14,9 @@
  <!-- With PT Sans Bold  -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/main.css">
+<!--   <link rel="stylesheet" href="styles/main.css"> -->
   <link rel="stylesheet" href="styles/map.css">
-  <link rel="stylesheet" href="styles/bubbles.css">
+<!--   <link rel="stylesheet" href="styles/bubbles.css"> -->
   <link rel="stylesheet" href="styles/sunburst.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,11 +82,11 @@
 
   <div class="container-fluid row">
 <!-- Sunburst + legend -->
-    <div class="col-lg-5 col-md-5">
+    <div class="col-lg-6 col-md-6">
       <div>
-      <form><br>
-        <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br><br>
-        <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
+      <form>
+        <input type="radio" name="mode" value="size" checked> Actual relationship   
+        <input type="radio" name="mode" value="count"> Fixed relationship
       </form>
       </div>
       <div id="sunburst"></div>
@@ -103,18 +103,54 @@
     
       
 <!-- map -->
-    <div class="col-lg-7 col-md-7">
+    <div class="col-lg-6 col-md-6">
 <!--       <div style="width:80%; height:20"> -->
-       <button onclick="changeColorCodingMap()">Change map color</button> 
+      <button onclick="changeColorCodingMap()" class="mapButton">Change map color</button> 
         <div class="row-fluid">
          <div class ="col-md-6" id="canvas-map"></div>
          <div class ="col-md-6" id="canvas-bubbles"></div>
-       </div>
+      </div>
 <!--       </div> -->
-    <div id="tooltip-container"></div>
-    <div>
-      <img src="images/placeholder-03.jpg" class="img-responsive center-block">
+      <div id="tooltip-container"></div>
     </div>
+
+
+    <!-- death description -->
+    <div class="col-lg-6 col-md-6 newsBox">
+<!--     <div class="newsBox"> -->
+
+      <!-- Death Description -->
+      <div class="deathDescription">
+        <div class="deathImg col-lg-3 col-md-3 col-sm-3"><img class="img-responsive" src="images/HIV-budding-Color.jpg"></div>
+        <div class="deathText col-lg-9 col-md-9 col-sm-9">
+              <h4>HIV</h4>
+              <p>The human immunodeficiency virus (HIV) is a lentivirus (a subgroup of retrovirus) that causes HIV infection and over time acquired immunodeficiency syndrome (AIDS).AIDS is a condition in humans in which progressive failure of the immune system allows life-threatening opportunistic infections and cancers to thrive. Without treatment, average survival time after infection with HIV 
+              </p>
+              <div class="more"><a href="">More</a></div>
+        </div>
+
+      </div>
+
+
+      <!--  News Collection -->
+      <div class="keyWords">Key Words for Media Coverage Collection: <span>HIV/AIDS +</span></div>
+      <div class="sampleNews">
+        <span class="title">Sample News: </span>
+        <span class="tooltipNews"><a href="">BBC</a>
+          <span class="tooltiptextNews">Are we winning the fight against HIV?</span>
+        </span>
+
+        <span class="tooltipNews"><a href="">CNN</a>
+          <span class="tooltiptextNews">8 dangerous HIV myths debunked by the experts</span>
+        </span>
+
+        <span class="tooltipNews"><a href="">China Daily:</a>
+          <span class="tooltiptextNews">China has 575,000 people with HIV/AIDS</span>
+        </span>
+
+      </div>
+<!--     </div> -->
+
     </div>
 <!-- *** end map *** -->
 
@@ -134,7 +170,9 @@
     </div>
   </div>
  -->
-
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
