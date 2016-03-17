@@ -201,7 +201,10 @@ hr{
    color: #a57c80; 
 }
 
-
+.mapPart{
+  width: 50%;
+  height: 50%;
+}
 /*for treemap & parallel
 text {
   font-family: 'Open Sans Condensed', sans-serif;

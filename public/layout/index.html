@@ -81,47 +81,48 @@
   </div>
 
   <div class="container-fluid row">
-    <div class="col-lg-6">
-
 <!-- Sunburst + legend -->
-    <div>
-    <form><br>
-      <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br><br>
-      <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
-    </form>
-  </div>
-    <div id="sunburst"></div>
-  <div id="legend"></div>
+    <div class="col-lg-5 col-md-5">
+      <div>
+      <form><br>
+        <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br><br>
+        <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
+      </form>
+      </div>
+      <div id="sunburst"></div>
+      <div id="legend"></div>
 
   
-<div id="tooltip" class="hidden">
-  <p><strong id="heading"></strong></p>
-  <p><span id="death"></span></p>
-  <p><span id="media"></span></p>
-</div>
+      <div id="tooltip" class="hidden">
+        <p><strong id="heading"></strong></p>
+        <p><span id="death"></span></p>
+        <p><span id="media"></span></p>
+      </div>
+    </div>
 <!-- *** end sunburst + legend *** -->
-
-    </div>
-    <div class="col-lg-6 col-md-6">
+    
       
-      <!-- map -->
-  <div class="container-fluid">
-   <button onclick="changeColorCodingMap()">Change map color</button> 
-    <div class="row-fluid">
-     <div class ="col-md-6" id="canvas-map"></div>
-     <div class ="col-md-6" id="canvas-bubbles"></div>
-   </div>
- </div>
- <div id="tooltip-container"></div>
-<!-- *** end map *** -->
-
-    </div>
-    <div class="col-lg-6 col-md-6">
+<!-- map -->
+    <div class="col-lg-7 col-md-7">
+<!--       <div style="width:80%; height:20"> -->
+       <button onclick="changeColorCodingMap()">Change map color</button> 
+        <div class="row-fluid">
+         <div class ="col-md-6" id="canvas-map"></div>
+         <div class ="col-md-6" id="canvas-bubbles"></div>
+       </div>
+<!--       </div> -->
+    <div id="tooltip-container"></div>
+    <div>
       <img src="images/placeholder-03.jpg" class="img-responsive center-block">
     </div>
+    </div>
+<!-- *** end map *** -->
+
+
+
   </div>
 
-   <div class="container-fluid row">
+<!--    <div class="container-fluid row">
     <div class="col-lg-12">
       <h1>This is headline (h1)</h1>
       <h2>This is sub-headline (h2)</h2>
@@ -132,7 +133,7 @@
         <p class="data">This is a style for data in charts and diagrams.
     </div>
   </div>
-
+ -->
 
 <script src="https://code.jquery.com/jquery.js"></script>
 

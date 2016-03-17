@@ -1,5 +1,6 @@
-var width = 800,
+var width = 600,
     height = 400,
+    heightLegend = 100,
     radius = Math.min(width, height) / 2;
 
 var minCoverage = 0,
@@ -14,11 +15,11 @@ var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c",
     return colorScheme[myColor];
   };    
 
-var svg = d3.select("#sunburst").append("svg")
-    .attr("width", width + 600)
-    .attr("height", height + 100)
+var svgS = d3.select("#sunburst").append("svg")
+    .attr("width", width )
+    .attr("height", height)
     .append("g")
-    .attr("transform", "translate(" + width / 4 + "," + height * .52 + ")");
+    .attr("transform", "translate(" + width * .5 + "," + height * .5 + ")");
 
 var partition = d3.layout.partition()
     .sort(null)
@@ -37,7 +38,7 @@ var arc = d3.svg.arc()
 
 //the root, this has to be changed to instead get the country sent from the map
   var root = norway;
-  var path = svg.datum(root).selectAll("path")
+  var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
       .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
@@ -48,7 +49,7 @@ var arc = d3.svg.arc()
       .style("fill", color_func)
       .style("fill-rule", "evenodd")
       .style("opacity", 1)
-      .on("mouseenter", mouseenter)
+      .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
       .each(stash);
 
@@ -64,7 +65,7 @@ var arc = d3.svg.arc()
       .attrTween("d", arcTween);
   });
 
-function mouseenter(d){
+function mousemove(d){
   var xPosition = (width*0.5)-290;
   var yPosition = height*0.5+100;
   var dPercentage = (100 * d.value);
@@ -72,8 +73,8 @@ function mouseenter(d){
 
   if (d["name"] !== "Communicatable" && d["name"] !== "non" && d["name"] !== "infectus") {
     d3.select("#tooltip")
-    .style("left", xPosition + "px")
-    .style("top", yPosition + "px");
+    .style("left", d3.event.layerX + "px")
+    .style("top", d3.event.layerY + "px");
   d3.select("#tooltip #heading")
     .text(d["name"]);
   d3.select("#tooltip #death")
@@ -83,8 +84,8 @@ function mouseenter(d){
   d3.select("#tooltip").classed("hidden", false);
   }else{
     d3.select("#tooltip")
-    .style("left", xPosition + "px")
-    .style("top", yPosition + "px");
+    .style("left", d3.event.layerX + "px")
+    .style("top", d3.event.layerY + "px");
     d3.select("#tooltip #heading")
     .text(d["name"]);
     d3.select("#tooltip #death")
@@ -146,7 +147,7 @@ var ordinal = d3.scale.ordinal()
 var legend2 = d3.select("#legend")
   .append("svg")
   .attr("width", width)
-  .attr("height", height)
+  .attr("height", heightLegend)
 
 legend2.append("g")
   .attr("class", "legendOrdinal")
