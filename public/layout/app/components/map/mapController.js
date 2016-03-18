@@ -212,7 +212,7 @@ if(!svg)
   //action when clicking with the mouse on a country
   .on("click", function(d){
     selectedCountry = getCountryByName(countries, d.properties.name);
-    drawSunBurst();
+    drawSunBurst(selectedCountry.name);
   
 
   });

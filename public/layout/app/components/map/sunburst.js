@@ -41,7 +41,18 @@ var arc = d3.svg.arc()
     var root = norway;
   function drawSunBurst(country)
   {
-    root = unitedKingdom;
+    if(country == "Sweden")
+    {
+      root = sweden;
+    }
+    if(country == "United Kingdom")
+    {
+       root = unitedKingdom;
+    }
+    
+   ordinal = d3.scale.ordinal()
+  .domain([getMinCoverage(),""," ","  ","   ","    ","     ","      ","       ",getMaxCoverage()])
+  .range(["#ffe67c", "#ffd25d", "#ffbe3d", "#ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
 
 
     var path = svgS.datum(root).selectAll("path")
