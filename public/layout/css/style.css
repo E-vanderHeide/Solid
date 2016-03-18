@@ -108,6 +108,10 @@ hr{
   height:50%;
 }
 
+.divLogo{
+  padding-bottom: 10px;
+}
+
 .team {
   text-align: center;
   margin: 10px 0 10px 0;
@@ -224,7 +228,7 @@ text {
 }
 /*CSS for the death description*/
 .newsBox{
-  border:1px solid;
+  border:1px solid #a57c80;
   border-radius: 10px;
   -moz-border-radius:10px;
   width: 600px;

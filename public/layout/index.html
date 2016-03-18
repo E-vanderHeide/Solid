@@ -43,7 +43,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"><img src="images/logo11.png"></div>
+        <div class="navbar-brand"><img src="images/logo_30.png"></div>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -194,20 +194,23 @@
     switch(menuHead) {
     case "Features":
         contentStr ='<div class="modalText">'+
-            '<p>This visualization mainly consists of two graphs, one world map and one treemap. Both of them work as data visualizers and as filters.'+
+            '<p>This visualization mainly consists of two graphs, one world map and one sunburst. Both of them work as data visualizers and as filters.'+
             '<div class="col-lg-12">'+
-            '<img src="images/placeholder-02.jpg" class="img-responsive center-block modalImg">'+
+            '<img src="images/world.png" class="img-responsive center-block modalImg">'+
             '</div>'+
-            '<p><span class="red">The world map:</span> It is a visual structure showing a world map with all the countries in the world. It can be zoomed in and out using the “pinch” function of a mousepad or a scroll wheel of a mouse. Zooming can be panned with left-clicking in the mouse in one area and dragging it. When mouse over the countries, the name of the country will be shown. When the user left-clicks a country, the treemap will show the DALY for every kind of disease that that country has.'+
+            '<p><span class="red">The world map:</span> It is a visual structure showing a world map with all the countries in the world. It can be zoomed in and out using the “pinch” function of a mousepad or a scroll wheel of a mouse. Zooming can be panned with left-clicking in the mouse in one area and dragging it. When mouse over the countries, the name of the country will be shown. When the user left-clicks a country, the sunburst will show the DALY for every kind of disease that that country has.'+
              '<div class="col-lg-12">'+
-            '<img src="images/placeholder-01.jpg" class="img-responsive center-block modalImg">'+
+            '<img src="images/sunburst.png" class="img-responsive center-block modalImg">'+
             '</div>'+
-            '<p><span class="red">The tree map:</span> When a country is clicked on the world map, the treemap will show the DALY for every kind of diseases that that country has, the colour of each node represents the media coverage of that disease in the country, so the more saturated the more media coverage, the less saturated the less covered. The size of each node represents the amount of DALY for each disease, as the bigger the size is, the bigger the DALY is. If a user clicks on any node in the treemap, the world map will show the media coverage of this kind of disease for every country.'+
+            '<p><span class="red">The sunburst:</span> When a country is clicked on the world map, the sunburst will show the DALY for every kind of diseases that that country has, the colour of each node represents the media coverage of that disease in the country, so the more saturated the more media coverage, the less saturated the less covered. The size of each node represents the amount of DALY for each disease, as the bigger the size is, the bigger the DALY is. If a user clicks on any node in the sunburst, the world map will show the media coverage of this kind of disease for every country.'+
            
             '</div>';
         break;
     case "About Solid":
         contentStr ='<div class="modalText">'+
+          '<div class="col-lg-12 divLogo">'+
+            '<img src="images/logo_130.png" class="img-responsive center-block">'+
+            '</div>'+
           '<p>Solid is a group created by nine KTH students with the purpose of developing the final project for the course: Information Visualization DH2321. The goal of the project is to create a visualization that should be able to help users to see, understand and create their own discussions of a particular data.'+
           '<p>Solid’s mission is to help people find common ground by helping them acknowledge their biases by visualising what is actually important in life. For this project we have chosen to visualise the loss of disability-lost-life-years (DALYs) by causes in comparison with media coverage.'+
           '<p>Although at first we planned to compare causes of death with media coverage, we decided to go with DALYs because the data was easily available and DALYs are more relevant for especially younger people as they do not represent death, which in many cases is unavoidable, but loss in quality of life due to very avoidable causes.'+
