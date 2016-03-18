@@ -1013,33 +1013,1011 @@
 {
   "name":"Norway",
   "children": 
-  [
-    {"name":"communicatable", "minCoverage": 20, "maxCoverage": 93733, "totalCoverage":270590, "coverage":33824, 
-    "children":
-    [
-    {"name":"Tuberculosis","depth":2,"size":0,"coverage":44400},
-    {"name":"HIV/AIDS","depth":2,"size":0,"coverage":61250},
-    {"name":"Diarrheal diseases","depth":2,"size":0,"coverage":4250},
-    {"name":"Intestinal infectious diseases","depth":2,"size":0,"coverage":93733},
-    {"name":"Lower respiratory infections","depth":2,"size":0,"coverage":14776},
-    {"name":"Upper respiratory infections","depth":2,"size":0,"coverage":52131},
-    {"name":"Otitis media","depth":2,"size":0,"coverage":20},
-    {"name":"Meningitis","depth":2,"size":0,"coverage":30}
-    ]
-    },    {
-      "name":"non-communicatable", "minCoverage": 20, "maxCoverage": 93733, "totalCoverage":270590, "coverage":33824, 
-    "children":
-    [
-    {"name":"Tuberculosis","depth":2,"size":0,"coverage":44400},
-    {"name":"HIV/AIDS","depth":2,"size":0,"coverage":61250},
-    {"name":"Diarrheal diseases","depth":2,"size":0,"coverage":4250},
-    {"name":"Intestinal infectious diseases","depth":2,"size":0,"coverage":93733},
-    {"name":"Lower respiratory infections","depth":2,"size":0,"coverage":14776},
-    {"name":"Upper respiratory infections","depth":2,"size":0,"coverage":52131},
-    {"name":"Otitis media","depth":2,"size":0,"coverage":20},
-    {"name":"Meningitis","depth":2,"size":0,"coverage":30}
-    ]
-    }
+  [{}
+    "name":"communicatable",
+      "depth":1,
+      "size":0.07473695,
+      "totalCoverage":10625,
+      "minCoverage":0,
+      "maxCoverage":5000,
+      "coverage":208,
+      "subCategories":[  
+         {  
+            "name":"Tuberculosis",
+            "depth":2,
+            "size":0.000622421,
+            "coverage":49
+         },
+         {  
+            "name":"HIV/AIDS",
+            "depth":2,
+            "size":0.000382012,
+            "coverage":5000
+         },
+         {  
+            "name":"Diarrheal diseases",
+            "depth":2,
+            "size":0.001457801,
+            "coverage":58
+         },
+         {  
+            "name":"Intestinal infectious diseases",
+            "depth":2,
+            "size":0.000241536,
+            "coverage":79
+         },
+         {  
+            "name":"Lower respiratory infections",
+            "depth":2,
+            "size":0.011373667,
+            "coverage":21
+         },
+         {  
+            "name":"Upper respiratory infections",
+            "depth":2,
+            "size":0.000655221,
+            "coverage":9
+         },
+         {  
+            "name":"Otitis media",
+            "depth":2,
+            "size":0.000778761,
+            "coverage":0
+         },
+         {  
+            "name":"Meningitis",
+            "depth":2,
+            "size":0.000460691,
+            "coverage":7
+         },
+         {  
+            "name":"Encephalitis",
+            "depth":2,
+            "size":0.000202389,
+            "coverage":43
+         },
+         {  
+            "name":"Diphtheria",
+            "depth":2,
+            "size":2.17E-06,
+            "coverage":0
+         },
+         {  
+            "name":"Whooping cough",
+            "depth":2,
+            "size":2.36E-05,
+            "coverage":3
+         },
+         {  
+            "name":"Tetanus",
+            "depth":2,
+            "size":1.67E-05,
+            "coverage":4
+         },
+         {  
+            "name":"Measles",
+            "depth":2,
+            "size":2.55E-07,
+            "coverage":1
+         },
+         {  
+            "name":"Varicella and herpes zoster",
+            "depth":2,
+            "size":0.000201908,
+            "coverage":151
+         },
+         {  
+            "name":"Malaria",
+            "depth":2,
+            "size":5.36E-07,
+            "coverage":915
+         },
+         {  
+            "name":"Chagas disease",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Leishmaniasis",
+            "depth":2,
+            "size":0.0,
+            "coverage":5
+         },
+         {  
+            "name":"African trypanosomiasis",
+            "depth":2,
+            "size":0.0,
+            "coverage":1
+         },
+         {  
+            "name":"Schistosomiasis",
+            "depth":2,
+            "size":0.0,
+            "coverage":2
+         },
+         {  
+            "name":"Cysticercosis",
+            "depth":2,
+            "size":3.3E-06,
+            "coverage":0
+         },
+         {  
+            "name":"Cystic echinococcosis",
+            "depth":2,
+            "size":4.41E-05,
+            "coverage":0
+         },
+         {  
+            "name":"Lymphatic filariasis",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Onchocerciasis",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Trachoma",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Dengue",
+            "depth":2,
+            "size":1.67E-05,
+            "coverage":2780
+         },
+         {  
+            "name":"Yellow fever",
+            "depth":2,
+            "size":0.0,
+            "coverage":1173
+         },
+         {  
+            "name":"Rabies",
+            "depth":2,
+            "size":1.6E-05,
+            "coverage":259
+         },
+         {  
+            "name":"Intestinal nematode infections",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Food-borne trematodiases",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         },
+         {  
+            "name":"Other neglected tropical diseases",
+            "depth":2,
+            "size":3.47E-05,
+            "coverage":3
+         },
+         {  
+            "name":"Maternal hemorrhage",
+            "depth":2,
+            "size":3.32E-05,
+            "coverage":0
+         },
+         {  
+            "name":"Maternal sepsis and other maternal infections",
+            "depth":2,
+            "size":1.87E-05,
+            "coverage":0
+         },
+         {  
+            "name":"Maternal hypertensive disorders",
+            "depth":2,
+            "size":3.01E-05,
+            "coverage":0
+         },
+         {  
+            "name":"Obstructed labor",
+            "depth":2,
+            "size":7.9E-06,
+            "coverage":0
+         },
+         {  
+            "name":"Complications of abortion",
+            "depth":2,
+            "size":1.87E-05,
+            "coverage":6
+         },
+         {  
+            "name":"Indirect maternal deaths",
+            "depth":2,
+            "size":9.53E-06,
+            "coverage":2
+         },
+         {  
+            "name":"Late maternal deaths",
+            "depth":2,
+            "size":6.42E-06,
+            "coverage":2
+         },
+         {  
+            "name":"Other maternal disorders",
+            "depth":2,
+            "size":3.32E-05,
+            "coverage":1
+         },
+         {  
+            "name":"Preterm birth complications",
+            "depth":2,
+            "size":0.003982679,
+            "coverage":0
+         },
+         {  
+            "name":"Neonatal encephalopathy due to birth asphyxia and trauma",
+            "depth":2,
+            "size":0.001574662,
+            "coverage":0
+         },
+         {  
+            "name":"Neonatal sepsis and other neonatal infections",
+            "depth":2,
+            "size":0.000203227,
+            "coverage":1
+         },
+         {  
+            "name":"Hemolytic disease and other neonatal jaundice",
+            "depth":2,
+            "size":0.000279557,
+            "coverage":3
+         },
+         {  
+            "name":"Other neonatal disorders",
+            "depth":2,
+            "size":0.002096419,
+            "coverage":0
+         },
+         {  
+            "name":"Protein-energy malnutrition",
+            "depth":2,
+            "size":0.000251831,
+            "coverage":20
+         },
+         {  
+            "name":"Iodine deficiency",
+            "depth":2,
+            "size":0.000629596,
+            "coverage":0
+         },
+         {  
+            "name":"Vitamin A deficiency",
+            "depth":2,
+            "size":0.0,
+            "coverage":3
+         },
+         {  
+            "name":"Iron-deficiency anemia",
+            "depth":2,
+            "size":0.0109095694,
+            "coverage":0
+         },
+         {  
+            "name":"Other nutritional deficiencies",
+            "depth":2,
+            "size":7.01E-05,
+            "coverage":4
+         },
+         {  
+            "name":"Sexually transmitted diseases excluding HIV",
+            "depth":2,
+            "size":0.000518498,
+            "coverage":2
+         },
+         {  
+            "name":"Hepatitis",
+            "depth":2,
+            "size":0.000160121,
+            "coverage":10
+         },
+         {  
+            "name":"Leprosy",
+            "depth":2,
+            "size":0.0,
+            "coverage":8
+         }
+      ]
+   },
+   {  
+      "name":"non-communicatable",
+      "depth":1,
+      "size":1.75510132,
+      "totalCoverage":8314,
+      "minCoverage":0,
+      "maxCoverage":5329,
+      "coverage":87,
+      "subCategories":[  
+         {  
+            "name":"Other infectious diseases",
+            "depth":2,
+            "size":0.0,
+            "coverage":1
+         },
+         {  
+            "name":"Esophageal cancer",
+            "depth":2,
+            "size":0.002898064,
+            "coverage":3
+         },
+         {  
+            "name":"Stomach cancer",
+            "depth":2,
+            "size":0.005524463,
+            "coverage":12
+         },
+         {  
+            "name":"Liver cancer",
+            "depth":2,
+            "size":0.004273652,
+            "coverage":37
+         },
+         {  
+            "name":"Larynx cancer",
+            "depth":2,
+            "size":0.000424495,
+            "coverage":2
+         },
+         {  
+            "name":"Tracheal, bronchus, and lung cancer",
+            "depth":2,
+            "size":0.0266856886,
+            "coverage":1289
+         },
+         {  
+            "name":"Breast cancer",
+            "depth":2,
+            "size":0.012808295,
+            "coverage":130
+         },
+         {  
+            "name":"Cervical cancer",
+            "depth":2,
+            "size":0.001861959,
+            "coverage":5
+         },
+         {  
+            "name":"Uterine cancer",
+            "depth":2,
+            "size":0.00169273,
+            "coverage":2
+         },
+         {  
+            "name":"Prostate cancer",
+            "depth":2,
+            "size":0.0154168215,
+            "coverage":47
+         },
+         {  
+            "name":"Colon and rectum cancer",
+            "depth":2,
+            "size":0.0220359731,
+            "coverage":23
+         },
+         {  
+            "name":"Lip and oral cavity cancer",
+            "depth":2,
+            "size":0.001355068,
+            "coverage":116
+         },
+         {  
+            "name":"Nasopharynx cancer",
+            "depth":2,
+            "size":0.00025078,
+            "coverage":0
+         },
+         {  
+            "name":"Other pharynx cancer",
+            "depth":2,
+            "size":0.000806744,
+            "coverage":0
+         },
+         {  
+            "name":"Gallbladder and biliary tract cancer",
+            "depth":2,
+            "size":0.003132496,
+            "coverage":2
+         },
+         {  
+            "name":"Pancreatic cancer",
+            "depth":2,
+            "size":0.009945966,
+            "coverage":3
+         },
+         {  
+            "name":"Malignant skin melanoma",
+            "depth":2,
+            "size":0.004076028,
+            "coverage":0
+         },
+         {  
+            "name":"Non-melanoma skin cancer",
+            "depth":2,
+            "size":0.000516615,
+            "coverage":1
+         },
+         {  
+            "name":"Ovarian cancer",
+            "depth":2,
+            "size":0.004784804,
+            "coverage":8
+         },
+         {  
+            "name":"Testicular cancer",
+            "depth":2,
+            "size":0.000211497,
+            "coverage":2
+         },
+         {  
+            "name":"Kidney cancer",
+            "depth":2,
+            "size":0.004225035,
+            "coverage":10
+         },
+         {  
+            "name":"Bladder cancer",
+            "depth":2,
+            "size":0.003630686,
+            "coverage":5
+         },
+         {  
+            "name":"Brain and nervous system cancer",
+            "depth":2,
+            "size":0.006361668,
+            "coverage":6
+         },
+         {  
+            "name":"Thyroid cancer",
+            "depth":2,
+            "size":0.000522681,
+            "coverage":6
+         },
+         {  
+            "name":"Mesothelioma",
+            "depth":2,
+            "size":0.001185096,
+            "coverage":1
+         },
+         {  
+            "name":"Hodgkin lymphoma",
+            "depth":2,
+            "size":0.000451649,
+            "coverage":3
+         },
+         {  
+            "name":"Non-Hodgkin lymphoma",
+            "depth":2,
+            "size":0.005159891,
+            "coverage":1
+         },
+         {  
+            "name":"Multiple myeloma",
+            "depth":2,
+            "size":0.00323845,
+            "coverage":5
+         },
+         {  
+            "name":"Leukemia",
+            "depth":2,
+            "size":0.005927431,
+            "coverage":22
+         },
+         {  
+            "name":"Other neoplasms",
+            "depth":2,
+            "size":0.00690433,
+            "coverage":1
+         },
+         {  
+            "name":"Rheumatic heart disease",
+            "depth":2,
+            "size":0.000751794,
+            "coverage":0
+         },
+         {  
+            "name":"Ischemic heart disease",
+            "depth":2,
+            "size":0.09943424,
+            "coverage":0
+         },
+         {  
+            "name":"Cerebrovascular disease",
+            "depth":2,
+            "size":0.0407049358,
+            "coverage":0
+         },
+         {  
+            "name":"Hypertensive heart disease",
+            "depth":2,
+            "size":0.002954463,
+            "coverage":0
+         },
+         {  
+            "name":"Cardiomyopathy and myocarditis",
+            "depth":2,
+            "size":0.005504811,
+            "coverage":2
+         },
+         {  
+            "name":"Atrial fibrillation and flutter",
+            "depth":2,
+            "size":0.0132807679,
+            "coverage":44
+         },
+         {  
+            "name":"Aortic aneurysm",
+            "depth":2,
+            "size":0.006132367,
+            "coverage":0
+         },
+         {  
+            "name":"Peripheral vascular disease",
+            "depth":2,
+            "size":0.00173826,
+            "coverage":3
+         },
+         {  
+            "name":"Endocarditis",
+            "depth":2,
+            "size":0.000599752,
+            "coverage":0
+         },
+         {  
+            "name":"Other cardiovascular and circulatory diseases",
+            "depth":2,
+            "size":0.01327178,
+            "coverage":14
+         },
+         {  
+            "name":"Chronic obstructive pulmonary disease",
+            "depth":2,
+            "size":0.0346476138,
+            "coverage":2
+         },
+         {  
+            "name":"Pneumoconiosis",
+            "depth":2,
+            "size":0.000343752,
+            "coverage":0
+         },
+         {  
+            "name":"Asthma",
+            "depth":2,
+            "size":0.01471218,
+            "coverage":25
+         },
+         {  
+            "name":"Interstitial lung disease and pulmonary sarcoidosis",
+            "depth":2,
+            "size":0.002693539,
+            "coverage":0
+         },
+         {  
+            "name":"Other chronic respiratory diseases",
+            "depth":2,
+            "size":0.000351058,
+            "coverage":3
+         },
+         {  
+            "name":"Cirrhosis due to hepatitis B",
+            "depth":2,
+            "size":0.000794014,
+            "coverage":0
+         },
+         {  
+            "name":"Cirrhosis due to hepatitis C",
+            "depth":2,
+            "size":0.004130512,
+            "coverage":0
+         },
+         {  
+            "name":"Cirrhosis due to alcohol use",
+            "depth":2,
+            "size":0.00238413,
+            "coverage":1
+         },
+         {  
+            "name":"Cirrhosis due to other causes",
+            "depth":2,
+            "size":0.000779464,
+            "coverage":2
+         },
+         {  
+            "name":"Peptic ulcer disease",
+            "depth":2,
+            "size":0.002478099,
+            "coverage":0
+         },
+         {  
+            "name":"Gastritis and duodenitis",
+            "depth":2,
+            "size":0.000340249,
+            "coverage":4
+         },
+         {  
+            "name":"Appendicitis",
+            "depth":2,
+            "size":0.000191028,
+            "coverage":2
+         },
+         {  
+            "name":"Paralytic ileus and intestinal obstruction",
+            "depth":2,
+            "size":0.001410348,
+            "coverage":1
+         },
+         {  
+            "name":"Inguinal, femoral, and abdominal hernia",
+            "depth":2,
+            "size":0.000273294,
+            "coverage":0
+         },
+         {  
+            "name":"Inflammatory bowel disease",
+            "depth":2,
+            "size":0.006066531,
+            "coverage":3
+         },
+         {  
+            "name":"Vascular intestinal disorders",
+            "depth":2,
+            "size":0.001363101,
+            "coverage":0
+         },
+         {  
+            "name":"Gallbladder and biliary diseases",
+            "depth":2,
+            "size":0.001557296,
+            "coverage":8
+         },
+         {  
+            "name":"Pancreatitis",
+            "depth":2,
+            "size":0.001324651,
+            "coverage":0
+         },
+         {  
+            "name":"Other digestive diseases",
+            "depth":2,
+            "size":0.002834107,
+            "coverage":4
+         },
+         {  
+            "name":"Alzheimer disease and other dementias",
+            "depth":2,
+            "size":0.03007267,
+            "coverage":45
+         },
+         {  
+            "name":"Parkinson disease",
+            "depth":2,
+            "size":0.002717321,
+            "coverage":8
+         },
+         {  
+            "name":"Epilepsy",
+            "depth":2,
+            "size":0.005247747,
+            "coverage":14
+         },
+         {  
+            "name":"Multiple sclerosis",
+            "depth":2,
+            "size":0.003606214,
+            "coverage":23
+         },
+         {  
+            "name":"Migraine",
+            "depth":2,
+            "size":0.0166212544,
+            "coverage":49
+         },
+         {  
+            "name":"Tension-type headache",
+            "depth":2,
+            "size":0.001132322,
+            "coverage":1
+         },
+         {  
+            "name":"Medication overuse headache",
+            "depth":2,
+            "size":0.005253115,
+            "coverage":0
+         },
+         {  
+            "name":"Other neurological disorders",
+            "depth":2,
+            "size":0.007048464,
+            "coverage":0
+         },
+         {  
+            "name":"Schizophrenia",
+            "depth":2,
+            "size":0.008381348,
+            "coverage":20
+         },
+         {  
+            "name":"Alcohol use disorders",
+            "depth":2,
+            "size":0.0108106453,
+            "coverage":46
+         },
+         {  
+            "name":"Drug use disorders",
+            "depth":2,
+            "size":0.0121280421,
+            "coverage":4
+         },
+         {  
+            "name":"Depressive disorders",
+            "depth":2,
+            "size":0.03629202,
+            "coverage":44
+         },
+         {  
+            "name":"Bipolar disorder",
+            "depth":2,
+            "size":0.005609624,
+            "coverage":13
+         },
+         {  
+            "name":"Anxiety disorders",
+            "depth":2,
+            "size":0.0172246229,
+            "coverage":5
+         },
+         {  
+            "name":"Eating disorders",
+            "depth":2,
+            "size":0.002741754,
+            "coverage":134
+         },
+         {  
+            "name":"Autistic spectrum disorders",
+            "depth":2,
+            "size":0.004079923,
+            "coverage":0
+         },
+         {  
+            "name":"Attention-deficit/hyperactivity disorder",
+            "depth":2,
+            "size":0.000232018,
+            "coverage":130
+         },
+         {  
+            "name":"Conduct disorder",
+            "depth":2,
+            "size":0.002789747,
+            "coverage":0
+         },
+         {  
+            "name":"Idiopathic intellectual disability",
+            "depth":2,
+            "size":0.000447939,
+            "coverage":0
+         },
+         {  
+            "name":"Other mental and substance use disorders",
+            "depth":2,
+            "size":0.005410192,
+            "coverage":0
+         },
+         {  
+            "name":"Diabetes mellitus",
+            "depth":2,
+            "size":0.0189387091,
+            "coverage":24
+         },
+         {  
+            "name":"Acute glomerulonephritis",
+            "depth":2,
+            "size":2.27E-05,
+            "coverage":0
+         },
+         {  
+            "name":"Chronic kidney disease",
+            "depth":2,
+            "size":0.0218146332,
+            "coverage":1
+         },
+         {  
+            "name":"Urinary diseases and male infertility",
+            "depth":2,
+            "size":0.007911209,
+            "coverage":4
+         },
+         {  
+            "name":"Gynecological diseases",
+            "depth":2,
+            "size":0.00437663,
+            "coverage":165
+         },
+         {  
+            "name":"Hemoglobinopathies and hemolytic anemias",
+            "depth":2,
+            "size":0.003218841,
+            "coverage":0
+         },
+         {  
+            "name":"Endocrine, metabolic, blood, and immune disorders",
+            "depth":2,
+            "size":0.003669518,
+            "coverage":5329
+         },
+         {  
+            "name":"Rheumatoid arthritis",
+            "depth":2,
+            "size":0.006608919,
+            "coverage":0
+         },
+         {  
+            "name":"Osteoarthritis",
+            "depth":2,
+            "size":0.007758854,
+            "coverage":3
+         },
+         {  
+            "name":"Low back and neck pain",
+            "depth":2,
+            "size":0.105913505,
+            "coverage":281
+         },
+         {  
+            "name":"Gout",
+            "depth":2,
+            "size":0.000295461,
+            "coverage":33
+         },
+         {  
+            "name":"Other musculoskeletal disorders",
+            "depth":2,
+            "size":0.0158573315,
+            "coverage":0
+         },
+         {  
+            "name":"Congenital anomalies",
+            "depth":2,
+            "size":0.0124011738,
+            "coverage":1
+         },
+         {  
+            "name":"Skin and subcutaneous diseases",
+            "depth":2,
+            "size":0.0262030847,
+            "coverage":29
+         },
+         {  
+            "name":"Sense organ diseases",
+            "depth":2,
+            "size":0.0313264467,
+            "coverage":2
+         },
+         {  
+            "name":"Oral disorders",
+            "depth":2,
+            "size":0.014029176,
+            "coverage":45
+         }
+      ]
+   },
+   {  
+      "name":"injuries",
+      "depth":1,
+      "size":0.165796936,
+      "totalCoverage":20762,
+      "minCoverage":0,
+      "maxCoverage":11807,
+      "coverage":0,
+      "subCategories":[  
+         {  
+            "name":"Sudden infant death syndrome",
+            "depth":2,
+            "size":0.0,
+            "coverage":15
+         },
+         {  
+            "name":"Road injuries",
+            "depth":2,
+            "size":0.0116314376,
+            "coverage":2
+         },
+         {  
+            "name":"Other transport injuries",
+            "depth":2,
+            "size":0.001299525,
+            "coverage":3
+         },
+         {  
+            "name":"Falls",
+            "depth":2,
+            "size":0.0344528742,
+            "coverage":4200
+         },
+         {  
+            "name":"Drowning",
+            "depth":2,
+            "size":0.001710031,
+            "coverage":143
+         },
+         {  
+            "name":"Fire, heat, and hot substances",
+            "depth":2,
+            "size":0.001794134,
+            "coverage":2800
+         },
+         {  
+            "name":"Poisonings",
+            "depth":2,
+            "size":0.000326338,
+            "coverage":394
+         },
+         {  
+            "name":"Exposure to mechanical forces",
+            "depth":2,
+            "size":0.003203873,
+            "coverage":912
+         },
+         {  
+            "name":"Adverse effects of medical treatment",
+            "depth":2,
+            "size":0.001038457,
+            "coverage":4
+         },
+         {  
+            "name":"Animal contact",
+            "depth":2,
+            "size":0.000257465,
+            "coverage":4
+         },
+         {  
+            "name":"Foreign body",
+            "depth":2,
+            "size":0.001313735,
+            "coverage":41
+         },
+         {  
+            "name":"Other unintentional injuries",
+            "depth":2,
+            "size":0.00390203,
+            "coverage":0
+         },
+         {  
+            "name":"Self-harm",
+            "depth":2,
+            "size":0.0199591126,
+            "coverage":436
+         },
+         {  
+            "name":"Interpersonal violence",
+            "depth":2,
+            "size":0.002009013,
+            "coverage":1
+         },
+         {  
+            "name":"Exposure to forces of nature, disaster",
+            "depth":2,
+            "size":4.45E-07,
+            "coverage":11807
+         },
+         {  
+            "name":"Collective violence and legal intervention",
+            "depth":2,
+            "size":0.0,
+            "coverage":0
+         }
+      ]
+   }
   ]
 },
  {

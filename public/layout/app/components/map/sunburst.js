@@ -38,7 +38,7 @@ var arc = d3.svg.arc()
 //add getDataSelectedCountry instead of flare.json to get the data for a specific country
 
 //the root, this has to be changed to instead get the country sent from the map
-    var root = unitedKingdom;
+    var root = sweden;
   function drawSunBurst(country)
   {
     if(country == "Sweden")
@@ -49,13 +49,8 @@ var arc = d3.svg.arc()
     {
        root = unitedKingdom;
     }
-    
-   ordinal = d3.scale.ordinal()
-  .domain([getMinCoverage(),""," ","  ","   ","    ","     ","      ","       ",getMaxCoverage()])
-  .range(["#ffe67c", "#ffd25d", "#ffbe3d", "#ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
 
-
-    var path = svgS.datum(root).selectAll("path")
+      var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
       .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring

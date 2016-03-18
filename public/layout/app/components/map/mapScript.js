@@ -86,16 +86,18 @@ function Country(name, categories){
    function getDataForCountry(data)
    {
     var superCategories = [];
-    $.each(data.children, function(index, value)
+    for(var i=0; i<data.children.length; i++)
     {
+      var value = data.children[i];
       var subCategories = [];
-      $.each(value.children, function(jndex, subCat)
+      for(var j = 0; j<value.subCategories.length; j++)
       {
+        var subCat = value.subCategories[j];
         subCategories.push(new Category(subCat.name, subCat.size, subCat.coverage));
 
-      });
+      }
       superCategories.push(new SuperCategory(value.name, value.size, value.coverage, value.maxCoverage, value.minCoverage, value.totalCoverage, subCategories));
-    });
+    }
 
     // var countryData = [];
     // addDataToCountryDataArray(countryData, "01", parseInt(data.D01), parseInt(data.M01));
@@ -113,10 +115,12 @@ function Country(name, categories){
   function getDataForCountries(data)
   {
     var countries = [];
-    $.each(data, function(index, value){
+    for(var i = 0; i<data.length; i++)
+    {
+      var value = data[i];
       countries.push(getDataForCountry(value));
 
-    });
+    }
     return countries;
   }
 
