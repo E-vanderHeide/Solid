@@ -42,6 +42,8 @@ var arc = d3.svg.arc()
   function drawSunBurst(country)
   {
     root = unitedKingdom;
+
+
     var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
@@ -145,7 +147,7 @@ d3.select(self.frameElement).style("height", height + "px");
 
 //legend functions
 var ordinal = d3.scale.ordinal()
-  .domain([minCoverage,""," ","  ","   ","    ","     ","      ","       ",maxCoverage])
+  .domain([getMinCoverage(),""," ","  ","   ","    ","     ","      ","       ",getMaxCoverage()])
   .range(["#ffe67c", "#ffd25d", "#ffbe3d", "#ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
 
 
@@ -167,3 +169,27 @@ var legendOrdinal = d3.legend.color()
 
 legend2.select(".legendOrdinal")
   .call(legendOrdinal); 
+
+function getMinCoverage()
+{
+  var minCoverage = -1;
+  $.each(root.children, function(i, v) {
+        if(minCoverage > v.minCoverage || minCoverage == -1)
+        {
+          minCoverage = v.minCoverage;
+        }
+    });
+  return minCoverage;
+}
+
+function getMaxCoverage()
+{
+  var maxCoverage = 0;
+  $.each(root.children, function(i, v) {
+        if(maxCoverage < v.maxCoverage)
+        {
+          maxCoverage = v.maxCoverage;
+        }
+    });
+  return maxCoverage;
+}
