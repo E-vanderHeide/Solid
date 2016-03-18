@@ -37,7 +37,12 @@ var arc = d3.svg.arc()
 //add getDataSelectedCountry instead of flare.json to get the data for a specific country
 
 //the root, this has to be changed to instead get the country sent from the map
-  var root = norway;
+    var root = norway;
+  function drawSunBurst(country)
+  {
+    root = unitedKingdom;
+
+
   var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
@@ -64,7 +69,7 @@ var arc = d3.svg.arc()
       .duration(1500)
       .attrTween("d", arcTween);
   });
-
+ }
 function mousemove(d){
   var xPosition = (width*0.5)-290;
   var yPosition = height*0.5+100;

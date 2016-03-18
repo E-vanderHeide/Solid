@@ -5,7 +5,7 @@ var mapCountries;
 drawMap();
 var svg;
 function drawMap(){
-  d3.json("assets/Data/mock.json", function(err, data) {
+  d3.json("assets/Data/data.json", function(err, data) {
 
   countries = getDataForCountries(data);  
 });
@@ -181,7 +181,7 @@ if(!svg)
     html += d.properties.name;
     html += "</span>";
     html += "<span class=\"tooltip_value\">";
-    html += matchedCountry ? matchedCountry.getCorrelation() : "";
+    html += matchedCountry ? matchedCountry.getTotalAmountOfMedia() : "";
     html += "";
     html += "</span>";
     html += "</div>";
@@ -212,7 +212,7 @@ if(!svg)
   //action when clicking with the mouse on a country
   .on("click", function(d){
     selectedCountry = getCountryByName(countries, d.properties.name);
-    changeCountrySelection();
+    drawSunBurst();
   
 
   });
