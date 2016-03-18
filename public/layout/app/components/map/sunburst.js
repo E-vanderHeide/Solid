@@ -38,7 +38,7 @@ var arc = d3.svg.arc()
 //add getDataSelectedCountry instead of flare.json to get the data for a specific country
 
 //the root, this has to be changed to instead get the country sent from the map
-    var root = norway;
+    var root = unitedKingdom;
   function drawSunBurst(country)
   {
     root = unitedKingdom;
