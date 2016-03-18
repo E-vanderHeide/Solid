@@ -21,7 +21,7 @@ var norway = {
   "name":"flare",
   "children": 
   [
-    {"name":"Communicatable", "minCoverage": 20, "maxCoverage": 93733, "totalCoverage":270590, "coverage":33824, 
+    {"name":"communicatable", "minCoverage": 20, "maxCoverage": 93733, "totalCoverage":270590, "coverage":33824, 
     "children":
     [
     {"name":"Tuberculosis","depth":2,"size":0,"coverage":44400},
