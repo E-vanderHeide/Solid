@@ -1,0 +1,8 @@
+Legend
+*01 : * Transport accidents,
+*02 : * Falls,
+*03 : * Accidental drowning and submersion,
+*04 : * Exposure to smoke,
+*05 : * Accidental poisoning by and exposure to noxious substances,
+*06 : * Intentional self-harm,
+*07 : * Assault

@@ -1,0 +1,55 @@
+/*body {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+  position: relative;
+  width: 1060px;
+  height:1060px;
+}
+*/
+#sunburst{
+/*  font-family: 'Open Sans', sans-serif;*/
+  margin: auto;
+  position: relative;
+  width: 600px;
+  height: 450px;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  pointer-events: none;
+  background-color: #fefcf8;
+  opacity: .7;
+  color: #69010c;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+#tooltip p {
+  margin: 0;
+/*  font-family: sans-serif;*/
+/*  font-size: 16px;*/
+  line-height: 20px;
+  text-align: center;
+}
+#legend{
+/*    font-family: 'Open Sans', sans-serif;
+      font-size: 15px;*/
+}
+
+label{
+  
+}

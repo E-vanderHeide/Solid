@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script language="javascript" type="text/javascript" src="d3-legend.js"></script>
+<script language="javascript" type="text/javascript" src="flare.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="sunburst"></div>
+  <div id="legend"></div>
+  <div>
+    <form><br>
+      <label><input type="radio" name="mode" value="size" checked> Actual relationship</label><br><br>
+      <label><input type="radio" name="mode" value="count"> Fixed relationship</label>
+    </form>
+  </div>
+
+<div id="tooltip" class="hidden">
+  <p><strong id="heading"></strong></p>
+  <p><span id="death"></span></p>
+  <p><span id="media"></span></p>
+</div>
+
+</body>
+<script src="sunburst.js"></script>
+</html>
