@@ -214,7 +214,9 @@ text {
   font-size: 0.7em;
 }*/
 
-
+.mapContainer{
+  margin-bottom: 280px;
+}
 
 .mapButton{
   margin-top: 8px;
@@ -228,6 +230,7 @@ text {
   width: 600px;
   height: 200px;
   padding:20px 10px;
+/*  margin-top: 100px;*/
 }
 
 .deathDescription{

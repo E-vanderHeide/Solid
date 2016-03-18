@@ -52,7 +52,7 @@ var norway = {
 
 var unitedKingdom = {
     "name":"flare",
-    "children"
+    "children":
   [  
    {  
       "name":"communicatable",
