@@ -10,6 +10,7 @@ var minCoverage = 0,
 var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"];
  var color_func = function(d) {
     var myColor = 0;
+    console.log("min = "+minCoverage+" max = "+maxCoverage)
     myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
     console.log(d["coverage"] + " color " + myColor);
     return colorScheme[myColor];
@@ -37,7 +38,8 @@ var arc = d3.svg.arc()
 //add getDataSelectedCountry instead of flare.json to get the data for a specific country
 
 //the root, this has to be changed to instead get the country sent from the map
-  var root = norway;
+  var root = unitedKingdom;
+  // var root = norway;
   var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
@@ -71,7 +73,7 @@ function mousemove(d){
   var dPercentage = (100 * d.value);
   var mValue = (d["coverage"]);
 
-  if (d["name"] !== "Communicatable" && d["name"] !== "non" && d["name"] !== "infectus") {
+  if (d["name"] !== "communicatable" && d["name"] !== "non-communicatable" && d["name"] !== "injuries") {
     d3.select("#tooltip")
     .style("left", d3.event.layerX + "px")
     .style("top", d3.event.layerY + "px");
@@ -111,7 +113,8 @@ function mouseleave(d){
 }
 
 function getValues(d){
-  if (d["name"] == "Communicatable") {
+  console.log("getValues");
+  if (d["name"] == "injuries") {
       minCoverage = d["minCoverage"];
       maxCoverage = d["maxCoverage"];
       totalCoverage = d["totalCoverage"];
