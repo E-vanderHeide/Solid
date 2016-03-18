@@ -70,6 +70,8 @@ var arc = d3.svg.arc()
       .on("mouseleave", mouseleave)
       .each(stash);
 
+      drawLegend();
+
   d3.selectAll("input").on("change", function change() {
     var value = this.value === "size"
         ? function(d) { return d.size; }
@@ -157,6 +159,11 @@ function arcTween(a) {
 d3.select(self.frameElement).style("height", height + "px");
 
 //legend functions
+
+function drawLegend(){
+
+d3.select("#the_legend").remove();  
+
 var ordinal = d3.scale.ordinal()
   .domain([getMinCoverage(),""," ","  ","   ","    ","     ","      ","       ",getMaxCoverage()])
   .range(["#ffe67c", "#ffd25d", "#ffbe3d", "#ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
@@ -166,6 +173,7 @@ var legend2 = d3.select("#legend")
   .append("svg")
   .attr("width", width)
   .attr("height", heightLegend)
+  .attr("id","the_legend");
 
 legend2.append("g")
   .attr("class", "legendOrdinal")
@@ -180,6 +188,8 @@ var legendOrdinal = d3.legend.color()
 
 legend2.select(".legendOrdinal")
   .call(legendOrdinal); 
+
+}
 
 function getMinCoverage()
 {
