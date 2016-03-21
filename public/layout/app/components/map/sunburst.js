@@ -119,7 +119,7 @@ function mousemove(d){
     d3.select("#tooltip").classed("hidden", false);
   }
 
-  d3.selectAll("path")
+  d3.select("#sunburst").selectAll("path")
    .style("opacity", 0.3);
 
   d3.select(this)
