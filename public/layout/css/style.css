@@ -232,14 +232,14 @@ text {
   border-radius: 10px;
   -moz-border-radius:10px;
   width: 600px;
-  height: 400px;
+  /*height: 400px;*/
   padding:20px 10px;
 /*  margin-top: 100px;*/
 }
 
 .deathDescription{
   width: 100%;
-  height: 110px;
+  /*height: 110px;*/
 
 }
 

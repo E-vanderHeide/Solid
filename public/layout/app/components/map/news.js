@@ -34,7 +34,7 @@ function drawNews(dalys)
     });
 
   		//the user has to selected a node before seeing these links displayed
-  		document.getElementById("newsTitle").innerHTML = "Sample News:";
+  		document.getElementById("newsTitle").innerHTML = "News sources:";
 
   		var sessionlist = " ";
   		sessionlist += '<a href="http://www.bbc.co.uk/search?q=' + dalys + '" target="_blank">BBC</a>';
