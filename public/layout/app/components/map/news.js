@@ -1,7 +1,8 @@
 //update news when clicked
 //TO DO: change dalys names on the database to something easier for wkipedia to find?
-function drawNews(dalys)
+function drawNews(dalys, type, dPercentage, mValue, coverage)
   	{
+      //console.log("dPercentage = "+dPercentage+", mValue = "+mValue+", coverage = "+coverage);
   		//API call to Wikipedia to get text about the dalys
   		$.ajax({
         type: "GET",
@@ -24,7 +25,9 @@ function drawNews(dalys)
             // remove cite error
             blurb.find('.mw-ext-cite-error').remove();
 
-            $('#dalyImg').html(image);
+            console.log($(blurb).find('p'));
+
+            $('#dalysImg').html(image);
             //add the info to the text box
             $('#dalysInfo').html($(blurb).find('p'));
         },
@@ -33,6 +36,14 @@ function drawNews(dalys)
         	document.getElementById("dalysInfo").innerHTML = "Sorry, we could not find more information...";
         }
       });
+      
+      var head = "<h4>"+dalys+"</h4>";
+      if (type == "disease"){
+        head += "<h4>DALY: "+dPercentage+"%  Media coverage: "+mValue+"%  ("+coverage+")</h4>";
+      }else{
+        head += "<h4>Average: "+coverage+"</h4>";
+      }
+      $('#dalysHead').html(head);
 
   		//the user has to selected a node before seeing these links displayed
   		document.getElementById("newsTitle").innerHTML = "News sources:";

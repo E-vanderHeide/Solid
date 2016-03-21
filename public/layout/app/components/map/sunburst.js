@@ -14,7 +14,7 @@ var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c",
     myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
     console.log(d["coverage"] + " color " + myColor);*/
     var myColor = logScale(d["coverage"]);
-    console.log("color=" + myColor);
+    //console.log("color=" + myColor);
     return colorScheme[myColor];
   };    
 
@@ -68,12 +68,11 @@ var arc = d3.svg.arc()
       .style("fill-rule", "evenodd")
       .style("opacity", 1)
       //when a node is clicked, news are updated by function drawNews(dalys) in news.js
-      .on("click", function(d){ drawNews(d["name"]); })
+      .on("click", mouseclick)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
       .each(stash)
       ;
-
 
       drawLegend();
 
@@ -89,6 +88,22 @@ var arc = d3.svg.arc()
       .attrTween("d", arcTween);
   });
  }
+
+function mouseclick(d){
+  var dPercentage = (100 * d.size).toFixed(2);
+  var mValue = ((d["coverage"]/getMaxCoverage())*100).toFixed(2);
+
+  if (mValue < 0.01) {
+    mValue = "< 0.01";
+  }
+
+  if (d["name"] !== "communicatable" && d["name"] !== "non-communicatable" && d["name"] !== "injuries") {
+    drawNews(d["name"], "disease" ,dPercentage, mValue, d["coverage"]);
+  }else{
+    drawNews(d["name"], "type" ,0, 0, d["coverage"]);
+  }
+}
+
 function mousemove(d){
   var xPosition = (width*0.5)-290;
   var yPosition = height*0.5+100;
@@ -231,9 +246,9 @@ function logScale(value)
 
 
   var base = Math.pow(getMaxCoverage(),0.1);
-  console.log("base" + base);
+  //console.log("base" + base);
   var position = Math.log(value) / Math.log(base);
-  console.log("position" + position);
+  //console.log("position" + position);
 
   var result = Math.round(position);
 
