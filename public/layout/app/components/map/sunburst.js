@@ -89,23 +89,26 @@ var arc = d3.svg.arc()
 function mousemove(d){
   var xPosition = (width*0.5)-290;
   var yPosition = height*0.5+100;
-  var dPercentage = (100 * d.value);
-  var mValue = (d["coverage"]);
+  var dPercentage = (100 * d.size).toFixed(2);
+  var mValue = ((d["coverage"]/getMaxCoverage())*100).toFixed(2);
+  if (mValue < 0.01) {
+    mValue = "< 0.01";
+  }
 
   if (d["name"] !== "communicatable" && d["name"] !== "non-communicatable" && d["name"] !== "injuries") {
     d3.select("#tooltip")
-    .style("left", d3.event.layerX + "px")
-    .style("top", d3.event.layerY + "px");
-  d3.select("#tooltip #heading")
-    .text(d["name"]);
-  d3.select("#tooltip #death")
-    .text("Death data: " + dPercentage + " % ");
-  d3.select("#tooltip #media")
-    .text("Media Coverage: " + mValue);
-  d3.select("#tooltip").classed("hidden", false);
+      .style("left", d3.event.layerX+40 + "px")
+      .style("top", d3.event.layerY + "px");
+    d3.select("#tooltip #heading")
+      .text(d["name"]);
+    d3.select("#tooltip #death")
+      .text("DALY: " + dPercentage + " %");
+    d3.select("#tooltip #media")
+      .text("Media Coverage: " + mValue + " %" + "(" + d["coverage"] + ")");
+    d3.select("#tooltip").classed("hidden", false);
   }else{
     d3.select("#tooltip")
-    .style("left", d3.event.layerX + "px")
+    .style("left", d3.event.layerX+40 + "px")
     .style("top", d3.event.layerY + "px");
     d3.select("#tooltip #heading")
     .text(d["name"]);
