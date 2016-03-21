@@ -45,8 +45,8 @@ function drawMap(){
     } : null;
   }
    var config = {
-  "color0":"#99ccff",
-  "color1":"#0050A1",
+  "color0":"#ffe67c",
+  "color1":"#98006a",
   "width":580,
   "height":350
   }
