@@ -13,10 +13,8 @@ function drawNews(dalys)
  
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup);
-
             var image = blurb.find('img').addClass("img-responsive");
-            console.log(image);
- 
+            
             // remove links as they will not work
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
  
