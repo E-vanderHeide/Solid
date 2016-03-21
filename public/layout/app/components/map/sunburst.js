@@ -54,6 +54,7 @@ var arc = d3.svg.arc()
     {
        root = unitedKingdom;
     }
+    svgS.datum(root).selectAll("path").data([]).exit().remove();
 
       var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
@@ -70,7 +71,9 @@ var arc = d3.svg.arc()
       .on("click", function(d){ drawNews(d["name"]); })
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
-      .each(stash);
+      .each(stash)
+      ;
+
 
       drawLegend();
 
