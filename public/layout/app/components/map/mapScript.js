@@ -179,19 +179,19 @@ function Country(name, categories){
 
 var CauseIndex = 3;
 
-function changeColorCodingMap()
-{
-  colorCriterium = "D0" + CauseIndex;
-//update();
-  drawMap();
-  CauseIndex ++;
-  if(CauseIndex >7)
-  {
-    CauseIndex = 1;
-  }
+// function changeColorCodingMap()
+// {
+//   colorCriterium = "D0" + CauseIndex;
+// //update();
+//   drawMap();
+//   CauseIndex ++;
+//   if(CauseIndex >7)
+//   {
+//     CauseIndex = 1;
+//   }
 
 
-  //change the domain
+//   //change the domain
 
-  //change selected variable
-}
+//   //change selected variable
+// }
