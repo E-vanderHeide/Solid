@@ -41,6 +41,7 @@ var arc = d3.svg.arc()
     var root = sweden;
   function drawSunBurst(country)
   {
+
     if(country == "Sweden")
     {
       root = sweden;
@@ -61,6 +62,7 @@ var arc = d3.svg.arc()
       .style("fill", color_func)
       .style("fill-rule", "evenodd")
       .style("opacity", 1)
+      .on("click", function(d){ drawNews(d["name"]); })
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
       .each(stash);

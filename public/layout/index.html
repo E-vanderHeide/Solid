@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
+
+
   <!-- BOOTSTRAP -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- jQuery for ajax call -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 
   <!-- GOOGLE FONT -->
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:700italic|Droid+Serif:400,700,400italic|PT+Sans+Narrow' rel='stylesheet' type='text/css'><!-- Without PT Sans Bold  -->
@@ -29,7 +34,7 @@
   
 
   <link href="css/style.css" rel="stylesheet">
-  <title>Solid</title>
+  <title>(Branch Layout) - Solid</title>
 
 </head>
 <body>
@@ -115,40 +120,35 @@
     </div>
 
 
-    <!-- death description -->
+
+    <!-- Info box with links to news -->
     <div class="col-lg-6 col-md-6 newsBox">
-<!--     <div class="newsBox"> -->
 
-      <!-- Death Description -->
+      <!-- Description -->
       <div class="deathDescription">
-        <div class="deathImg col-lg-3 col-md-3 col-sm-3"><img class="img-responsive" src="images/HIV-budding-Color.jpg"></div>
+        <!--div class="deathImg col-lg-3 col-md-3 col-sm-3"><img class="img-responsive" src="images/HIV-budding-Color.jpg"></div-->
         <div class="deathText col-lg-9 col-md-9 col-sm-9">
-              <h4>HIV</h4>
-              <p>The human immunodeficiency virus (HIV) is a lentivirus (a subgroup of retrovirus) that causes HIV infection and over time acquired immunodeficiency syndrome (AIDS).AIDS is a condition in humans in which progressive failure of the immune system allows life-threatening opportunistic infections and cancers to thrive. Without treatment, average survival time after infection with HIV 
-              </p>
-              <div class="more"><a href="https://en.wikipedia.org/wiki/HIV">More</a></div>
-        </div>
+              <span id="dalysInfo">Click on the sunburst to get more detailed information</span>
+              <div class="more"><span id="dalysMore"></span></div>
+     
 
-      </div>
+              <br><br>
+              <div class="sampleNews">
+                <span class="title" id="newsTitle"></span>
+                <span class="tooltipNews" id="bbcNews"><span id="bbcLink"></span>
+                  <span class="tooltiptextNews" id="bbcTooltip">See news from BBC</span>
+                </span>
+
+                <span class="tooltipNews" id="cnnNews"><span id="cnnLink"></span>
+                  <span class="tooltiptextNews" id ="cnnTooltip">See news from CNN</span>
+                </span>
+              </div>
+        </div>
+       </div>
 
 
       <!--  News Collection -->
-      <div class="keyWords">Key Words for Media Coverage Collection: <span>HIV/AIDS +</span></div>
-      <div class="sampleNews">
-        <span class="title">Sample News: </span>
-        <span class="tooltipNews"><a href="http://www.bbc.com/news/magazine-34847703">BBC</a>
-          <span class="tooltiptextNews">Are we winning the fight against HIV?</span>
-        </span>
-
-        <span class="tooltipNews"><a href="http://edition.cnn.com/2015/12/01/health/8-hiv-myths-debunked-by-experts/">CNN</a>
-          <span class="tooltiptextNews">8 dangerous HIV myths debunked by the experts</span>
-        </span>
-
-        <span class="tooltipNews"><a href="http://www.chinadaily.com.cn/china/2015-12/01/content_22595361.htm">China Daily:</a>
-          <span class="tooltiptextNews">China has 575,000 people with HIV/AIDS</span>
-        </span>
-
-      </div>
+      
 <!--     </div> -->
 
     </div>
@@ -283,7 +283,7 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<script src="app/components/map/news.js"></script>
 <script src="app/components/map/sunburst.js"></script>
 <script  type="text/javascript" src="app/components/map/mapScript.js"></script>
 <script  type="text/javascript" src="app/components/map/mapController.js"></script>
