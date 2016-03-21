@@ -9,10 +9,12 @@ var minCoverage = 0,
 
 var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"];
  var color_func = function(d) {
-    var myColor = 0;
+    /*var myColor = 0;
     console.log("min = "+minCoverage+" max = "+maxCoverage)
     myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
-    console.log(d["coverage"] + " color " + myColor);
+    console.log(d["coverage"] + " color " + myColor);*/
+    var myColor = logScale(d["coverage"]);
+    console.log("color=" + myColor);
     return colorScheme[myColor];
   };    
 
@@ -39,6 +41,8 @@ var arc = d3.svg.arc()
 
 //the root, this has to be changed to instead get the country sent from the map
     var root = sweden;
+
+  
   function drawSunBurst(country)
   {
 
@@ -62,6 +66,7 @@ var arc = d3.svg.arc()
       .style("fill", color_func)
       .style("fill-rule", "evenodd")
       .style("opacity", 1)
+      //when a node is clicked, news are updated by function drawNews(dalys) in news.js
       .on("click", function(d){ drawNews(d["name"]); })
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave)
@@ -127,7 +132,6 @@ function mouseleave(d){
 }
 
 function getValues(d){
-  console.log("getValues");
   if (d["name"] == "injuries") {
       minCoverage = d["minCoverage"];
       maxCoverage = d["maxCoverage"];
@@ -211,3 +215,27 @@ function getMaxCoverage()
     });
   return maxCoverage;
 }
+
+function logScale(value)
+{
+
+  if(value == 0) {
+    return 0 ;
+  }
+
+
+  var base = Math.pow(getMaxCoverage(),0.1);
+  console.log("base" + base);
+  var position = Math.log(value) / Math.log(base);
+  console.log("position" + position);
+
+  var result = Math.round(position);
+
+  if(result == 0) {
+    return 0;
+  }
+  else {
+    return result-1;
+  }
+
+} 
