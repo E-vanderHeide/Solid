@@ -47,8 +47,8 @@ function drawMap(){
    var config = {
   "color0":"#ffe67c",
   "color1":"#98006a",
-  "width":580,
-  "height":350
+  "width":600,
+  "height":600
   }
   
   var width = config.width,
