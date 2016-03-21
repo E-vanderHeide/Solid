@@ -13,6 +13,9 @@ function drawNews(dalys)
  
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup);
+
+            var image = blurb.find('img').addClass("img-responsive");
+            console.log(image);
  
             // remove links as they will not work
             blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
@@ -23,15 +26,15 @@ function drawNews(dalys)
             // remove cite error
             blurb.find('.mw-ext-cite-error').remove();
 
+            $('#dalyImg').html(image);
             //add the info to the text box
             $('#dalysInfo').html($(blurb).find('p'));
- 
         },
         //this does not work, because the page is always found, even though the page might not have text
         error: function (errorMessage) {
         	document.getElementById("dalysInfo").innerHTML = "Sorry, we could not find more information...";
         }
-    });
+      });
 
   		//the user has to selected a node before seeing these links displayed
   		document.getElementById("newsTitle").innerHTML = "News sources:";
