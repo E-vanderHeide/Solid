@@ -14,33 +14,68 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
             console.log("data = vvv");
             console.log(data);
 
- 
-            var markup = data.parse.text["*"];
-            var blurb = $('<div></div>').html(markup);
-            var image = blurb.find('img').addClass("img-responsive");
+            // var json = data;
+            // console.log("json = vvv");
             
-            // remove links as they will not work
-            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
- 
-            // remove any references
-            blurb.find('sup').remove();
- 
-            // remove cite error
-            blurb.find('.mw-ext-cite-error').remove();
+            // $.each(data, function(i, v) {
+            //   console.log(v);
+            //     if (v=="error") {
+            //         console.log("error");
+            //         // return;
+            //     }
+            // });
+            var markup;
+            var blurb;
+            var image;
 
-            console.log($(blurb).find('.redirectMsg'));
+            if(data.parse){
+              console.log("PARSE");
 
-            if($(blurb).find('.redirectMsg')){
-              console.log("redirect found");//found both redirect and normmal page
-            } else{
-              console.log("redirect not found"); //NOT WORK
+              markup = data.parse.text["*"];
+
+              blurb = $('<div></div>').html(markup);            
+              
+              // remove links as they will not work
+              blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+   
+              // remove any references
+              blurb.find('sup').remove();
+   
+              // remove cite error
+              blurb.find('.mw-ext-cite-error').remove();
+
+              //add the info to the text box
+              $('#dalysInfo').html($(blurb).find('p').first());
+
+              image = blurb.find('img').addClass("img-responsive");
+            }else{
+              console.log("ERROR");
+
+              markup = data.error["info"];
+              console.log("markup = "+markup);
+
+              blurb = $('<div></div>').html(markup); 
+
+              // remove links as they will not work
+              blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+   
+              // remove any references
+              blurb.find('sup').remove();
+   
+              // remove cite error
+              blurb.find('.mw-ext-cite-error').remove();
+
+              // $('#dalysInfo').html(blurb);
+              $('#dalysInfo').html("The object you specified doesn't exist.");
+
+              image = '<img src="images/logo_130.png" class="img-responsive">';
+              
             }
 
-            //console.log($(markup).find('#info'));
 
+
+            //add image
             $('#dalysImg').html(image);
-            //add the info to the text box
-            $('#dalysInfo').html($(blurb).find('p').first());
         },
         //this does not work, because the page is always found, even though the page might not have text
         error: function (errorMessage) {
@@ -70,10 +105,9 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
   		document.getElementById("cnnLink").innerHTML = sessionlist;
 
   		var sessionlist = " ";
-  		sessionlist += '<a href="https://en.wikipedia.org/wiki/' + dalys + '" target="_blank">More</a>';
+  		sessionlist += '<a href="https://en.wikipedia.org/wiki/' + dalys + '" target="_blank"><i>more on Wikipedia</i></a>';
   		//add Wikipedia reference to the "More" link
   		document.getElementById("dalysMore").innerHTML = sessionlist;
-
   		//TO DO: add more news sources depending on country?
 	}
 

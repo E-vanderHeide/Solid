@@ -262,41 +262,39 @@ text {
 }
 
 .deathImg {
-  padding: 0px;
-  margin: 0px;
+/*  padding: 0px;
+  margin: 0px;*/
   height: 110px;
   float: left;
 }
 
+.deathText {
+  text-align: left;
+}
 
 .deathText h4{
-  text-align: left;
-  margin: 0px;
+  margin-top: 0px;
 }
+
 .deathText p{
 /*  padding: 10px 0px;*/
 /*  float: right;*/
 /*  width: 65%;*/
   margin-bottom: 0px;
   line-height:17px;
-  height: 51px;
-
-  text-align: justify;
-  text-justify:inter-ideograph; 
-
+  /*height: 51px;*/
 
   overflow : hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-
 }
 
 .more{
   float: right;
   text-align: right;
-
+  padding-top: 5px;
 }
 
 
