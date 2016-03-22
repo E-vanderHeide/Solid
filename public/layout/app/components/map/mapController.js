@@ -3,6 +3,7 @@ var mapCountries;
   var COLOR_COUNTS = 11;
    var colors = [];
 drawMap();
+drawSunBurst("Sweden");
 var svg;
 function drawMap(){
   d3.json("assets/Data/data.json", function(err, data) {
