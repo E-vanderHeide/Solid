@@ -169,10 +169,12 @@ d3.select(self.frameElement).style("height", height + "px");
 
 function drawLegend(){
 
+  createScale();
+
 d3.select("#the_legend").remove();  
 
 var ordinal = d3.scale.ordinal()
-  .domain([getMinCoverage(),""," ","  ","   ","    ","     ","      ","       ",getMaxCoverage()])
+  .domain([getMinCoverage(),scaleValues[1],scaleValues[2],scaleValues[3],scaleValues[4],scaleValues[5],scaleValues[6],scaleValues[7],scaleValues[8],getMaxCoverage()])
   .range(["#ffe67c", "#ffd25d", "#ffbe3d", "#ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"]);
 
 
@@ -221,6 +223,23 @@ function getMaxCoverage()
     });
   return maxCoverage;
 }
+
+this.scaleValues = [];
+
+function createScale() {
+
+  var base = Math.pow(getMaxCoverage(),0.1);
+  this.scaleValues[0] = 1;
+  for (i = 1; i < 10; i++){
+    this.scaleValues[i] = this.scaleValues[i-1] * base;
+    }
+  this.scaleValues[0]=0;
+
+  for (i = 1; i < 10; i++){
+    this.scaleValues[i] = Math.round(this.scaleValues[i]);
+    }
+}
+
 
 function logScale(value)
 {
