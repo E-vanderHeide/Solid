@@ -46,6 +46,9 @@ var arc = d3.svg.arc()
   function drawSunBurst(country)
   {
 
+    d3.select("#country")
+      .text(country);
+
     if(country == "Sweden")
     {
       root = sweden;

@@ -10,7 +10,7 @@ var sweden = {
       "minCoverage":0,
       "maxCoverage":5000,
       "coverage":208,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Tuberculosis",
             "depth":2,
@@ -327,7 +327,7 @@ var sweden = {
       "minCoverage":0,
       "maxCoverage":5329,
       "coverage":87,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Other infectious diseases",
             "depth":2,
@@ -908,7 +908,7 @@ var sweden = {
       "minCoverage":0,
       "maxCoverage":11807,
       "coverage":0,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Sudden infant death syndrome",
             "depth":2,
@@ -1023,7 +1023,7 @@ var norway = {
       "minCoverage":0,
       "maxCoverage":5000,
       "coverage":208,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Tuberculosis",
             "depth":2,
@@ -1340,7 +1340,7 @@ var norway = {
       "minCoverage":0,
       "maxCoverage":5329,
       "coverage":87,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Other infectious diseases",
             "depth":2,
@@ -1921,7 +1921,7 @@ var norway = {
       "minCoverage":0,
       "maxCoverage":11807,
       "coverage":0,
-      "subCategories":[  
+      "children":[  
          {  
             "name":"Sudden infant death syndrome",
             "depth":2,

@@ -226,6 +226,24 @@ text {
   margin-top: 8px;
   margin-bottom: 20px;
 }
+
+.chosen {
+
+  position: absolute;
+  top: 245px;
+  left: 270px;
+  width: 150px;
+  color: #666;
+  z-index: -1;
+ 
+  text-align: center;
+
+  font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5em;
+
+}
+
 /*CSS for the death description*/
 .newsBox{
   border:1px solid #a57c80;
