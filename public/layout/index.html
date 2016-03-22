@@ -129,7 +129,7 @@
         <div class="deathImg col-lg-3 col-md-3 col-sm-3" id="dalysImg"><img class="img-responsive" src="images/logo_130.png"></div>
         <div class="deathText col-lg-9 col-md-9 col-sm-9">
               <span id="dalysHead"></span>
-              <span id="dalysInfo" class="deathText"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
+              <span id="dalysInfo"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
               <div class="more"><span id="dalysMore"></span></div>    
               <br>
               <div class="sampleNews">
@@ -191,35 +191,22 @@
     var contentStr;
 
     switch(menuHead) {
-    case "Features":
-        contentStr ='<div class="modalText">'+
-            '<p>This visualization mainly consists of two graphs, one world map and one sunburst. Both of them work as data visualizers and as filters.'+
-            '<div class="col-lg-12">'+
-            '<img src="images/world.png" class="img-responsive center-block modalImg">'+
-            '</div>'+
-            '<p><span class="red">The world map:</span> It is a visual structure showing a world map with all the countries in the world. It can be zoomed in and out using the “pinch” function of a mousepad or a scroll wheel of a mouse. Zooming can be panned with left-clicking in the mouse in one area and dragging it. When mouse over the countries, the name of the country will be shown. When the user left-clicks a country, the sunburst will show the DALY for every kind of disease that that country has.'+
-             '<div class="col-lg-12">'+
-            '<img src="images/sunburst.png" class="img-responsive center-block modalImg">'+
-            '</div>'+
-            '<p><span class="red">The sunburst:</span> When a country is clicked on the world map, the sunburst will show the DALY for every kind of diseases that that country has, the colour of each node represents the media coverage of that disease in the country, so the more saturated the more media coverage, the less saturated the less covered. The size of each node represents the amount of DALY for each disease, as the bigger the size is, the bigger the DALY is. If a user clicks on any node in the sunburst, the world map will show the media coverage of this kind of disease for every country.'+
-           
-            '</div>';
-        break;
-    case "About Solid":
+      case "About Solid":
         contentStr ='<div class="modalText">'+
           '<div class="col-lg-12 divLogo">'+
             '<img src="images/logo_130.png" class="img-responsive center-block">'+
             '</div>'+
-          '<p>Solid is a group created by nine KTH students with the purpose of developing the final project for the course: Information Visualization DH2321. The goal of the project is to create a visualization that should be able to help users to see, understand and create their own discussions of a particular data.'+
-          '<p>Solid’s mission is to help people find common ground by helping them acknowledge their biases by visualising what is actually important in life. For this project we have chosen to visualise the loss of disability-lost-life-years (DALYs) by causes in comparison with media coverage.'+
-          '<p>Although at first we planned to compare causes of death with media coverage, we decided to go with DALYs because the data was easily available and DALYs are more relevant for especially younger people as they do not represent death, which in many cases is unavoidable, but loss in quality of life due to very avoidable causes.'+
+          '<p>Solid is the final project for the course of Information Visualization (DH2321) at KTH. The team consists of nine Master students and our task was to create a visualization to help users to see, understand and create their own discussions about a particular dataset.'+
+          '<p>We created Solid with the mission of helping people to acknowledge their biases by visualising what is actually important in life. For this project we chose to display the loss of disability-lost-life-years (DALYs) in comparison with what media covers.'+
+          '<p>Although at first we planned to compare causes of death with media coverage, we decided to go with DALYs because DALYs are more relevant for younger people as they do not represent death, but loss in quality of life due to very avoidable causes.'+
           '<p>One DALY can be thought of as one lost year of "healthy" life. The sum of these DALYs across the population, or the burden of disease, can be thought of as a measurement of the gap between current health status and an ideal health situation where the entire population lives to an advanced age, free of disease and disability. '+'<a href="http://www.who.int/healthinfo/global_burden_disease/metrics_daly/en/"><i>[Reference]</i></a>'+'</p>'+
-          '<p>Visualisation of the bias will help us acknowledge it, which does not nullify the bias or its effects, but hopefully helps people find a common ground of what is actually important.'+
+          '<p>This visualisation of can help us to learn about the impact of DALYS around the world as well as how much the media is covering certain topics that important to your lives. '+
           '<p>The core values of solid are:'+
-          '<li><span class="red">Commitment:</span>  Committing to great product, service, and other initiatives that impact lives within and outside the group.</li>'+
+          '<li><span class="red">Commitment:</span>  Committing to great product, service, and other initiatives that impact lives within and outside our group.</li>'+
           '<li><span class="red">Community:</span> Contributing to society and demonstrating corporate social responsibility.</li>'+
           '<li><span class="red">Diversity:</span> Respecting the diversity and giving the best of composition thanks to our international profiles.</li>'+
           '<li><span class="red">Innovation:</span>  Pursuing new creative ideas that have the potential to change how things are seen.</li>'+
+          '<li><span class="red">Transparency:</span>  We are by no means trying to influence users or forge ideas into socity, but we rather inform them about data we gathered on reliable sources.</li>'+
           '<li><span class="red">Integrity:</span> Acting with honesty and honor without compromising the truth.</li>'+'<br>'+
           '<div class="row">'+
             '<div class="col-lg-6 col-md-6">'+
@@ -232,6 +219,22 @@
           '</div>'+
           '<p class="caption">Images from <a href="http://www.jamesclear.com"><i>JamesClear.com</i></a></p>';
         break;
+
+    case "Features":
+        contentStr ='<div class="modalText">'+
+            '<p>This visualization mainly consists of two graphs, one world map and one sunburst. Both of them work as data visualizers and as filters.'+
+            '<div class="col-lg-12">'+
+            '<img src="images/world.png" class="img-responsive center-block modalImg">'+
+            '</div>'+
+            '<p><span class="red">The world map:</span> It is a visual structure showing all the countries in the world. It can be zoomed in and out using the “pinch” function of a mousepad or a scroll wheel of a mouse. Zooming can be panned with left-clicking in the mouse in one area and dragging it. When mouse over the countries, the name of the country will be shown, as well as a number which represents the cultural distance. When the user left-clicks a country, a graph (sunburst) will show all the DALYS the selected country has.'+
+             '<div class="col-lg-12">'+
+            '<img src="images/sunburst.png" class="img-responsive center-block modalImg">'+
+            '</div>'+
+            '<p><span class="red">The sunburst:</span> When a country is clicked on the world map, the sunburst will show all the DALYS for that selected country. The size of each node represents how much the DALY affects the life of citzens for that country, so the bigger the size is, the bigger the impact of that DALY is. The colour of each node represents the media coverage of that DALYS, so a more saturated colour means that there is more media coverage, and a less saturated colour means less coverage. If a user clicks on any node in the sunburst, more information is displayed on a box on the right as well as some news from BCC and CNN.'+
+           
+            '</div>';
+        break;
+    
     case "Team":
         contentStr ='<div class="row">'+
           '<div class="col-lg-4 col-md-4 col-sm-6 team">'+
