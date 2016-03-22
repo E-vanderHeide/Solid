@@ -13,6 +13,7 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
         success: function (data, textStatus, jqXHR) {
             console.log("data = vvv");
             console.log(data);
+
  
             var markup = data.parse.text["*"];
             var blurb = $('<div></div>').html(markup);
@@ -27,7 +28,15 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
             // remove cite error
             blurb.find('.mw-ext-cite-error').remove();
 
-            //console.log($(blurb).find('p'));
+            console.log($(blurb).find('.redirectMsg'));
+
+            if($(blurb).find('.redirectMsg')){
+              console.log("redirect found");//found both redirect and normmal page
+            } else{
+              console.log("redirect not found"); //NOT WORK
+            }
+
+            //console.log($(markup).find('#info'));
 
             $('#dalysImg').html(image);
             //add the info to the text box
