@@ -40,7 +40,7 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
 
             $('#dalysImg').html(image);
             //add the info to the text box
-            $('#dalysInfo').html($(blurb).find('p'));
+            $('#dalysInfo').html($(blurb).find('p').first());
         },
         //this does not work, because the page is always found, even though the page might not have text
         error: function (errorMessage) {
