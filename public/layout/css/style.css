@@ -169,6 +169,20 @@ hr{
   padding: 10px 10px 10px 15px;
 }
 
+.navLogo{
+  /*padding: 0px;*/
+  text-align: left;
+}
+
+.navDescription{
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 0px;
+  /*padding: 0px 0px 0px 0px;*/
+   margin-top: -3px;
+}
+
+
 /*Sets the text hover color on navbar*/
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #69010c;  
