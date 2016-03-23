@@ -69,16 +69,65 @@ function Country(name, categories){
         return total;
       };
       this.getCorrelation = function(){
-        // var correlation = 0;
-        // var sum = 0;
-        // var counter = 0;
-        // $.each(this.data, function(index, value){
-        //   sum += Math.abs(value.D - value.M);
-        //   counter++;
-        // });
-        // correlation = sum / counter;
-        // return Math.round(correlation); 
-        return 0;
+        var daly = [];
+        var media = [];
+
+        /** Create the arrays for media and death for calculating the correlation **/
+        $.each(this.categories, function(index, value){
+          for (var i=0; i<value.subCategories.length; i++) {
+            var subCat = value.subCategories[i];
+            daly.push(subCat.size);
+            media.push(subCat.coverage);
+          };
+        });
+
+        console.log(media);
+
+        /** Calcualte the correlation **/
+        
+        var shortestArrayLength = 0;
+     
+        if(daly.length == media.length) {
+            shortestArrayLength = daly.length;
+        } else if(daly.length > media.length) {
+            shortestArrayLength = media.length;
+            console.error('daly has more items in it, the last ' + (daly.length - shortestArrayLength) + ' item(s) will be ignored');
+        } else {
+            shortestArrayLength = daly.length;
+            console.error('media has more items in it, the last ' + (media.length - shortestArrayLength) + ' item(s) will be ignored');
+        }
+
+        var dalyMedia = [];
+        var daly2 = [];
+        var media2 = [];
+  
+        for(var i=0; i<shortestArrayLength; i++) {
+            dalyMedia.push(daly[i] * media[i]);
+            daly2.push(daly[i] * daly[i]);
+            media2.push(media[i] * media[i]);
+        }
+  
+        var sum_media = 0;
+        var sum_daly = 0;
+        var sum_dalyMedia = 0;
+        var sum_daly2 = 0;
+        var sum_media2 = 0;
+  
+        for(var i=0; i< shortestArrayLength; i++) {
+            sum_daly += daly[i];
+            sum_media += media[i];
+            sum_dalyMedia += dalyMedia[i];
+            sum_daly2 += daly2[i];
+            sum_media2 += media2[i];
+        }
+  
+        var step1 = (shortestArrayLength * sum_dalyMedia) - (sum_daly * sum_media);
+        var step2 = (shortestArrayLength * sum_daly2) - (sum_daly * sum_daly);
+        var step3 = (shortestArrayLength * sum_media2) - (sum_media * sum_media);
+        var step4 = Math.sqrt(step2 * step3);
+        var correlation = step1 / step4;
+  
+        return correlation;
       }
     }
 

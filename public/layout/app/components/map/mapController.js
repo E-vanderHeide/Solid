@@ -181,7 +181,7 @@ if(!svg)
     html += d.properties.name;
     html += "</span>";
     html += "<span class=\"tooltip_value\">";
-    html += matchedCountry ? matchedCountry.getTotalAmountOfMedia() : "";
+    html += matchedCountry ? matchedCountry.getCorrelation().toFixed(3) : "";
     html += "";
     html += "</span>";
     html += "</div>";

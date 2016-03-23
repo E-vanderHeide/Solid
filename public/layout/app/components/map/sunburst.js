@@ -94,7 +94,7 @@ var arc = d3.svg.arc()
 
 function mouseclick(d){
   var dPercentage = (100 * d.size).toFixed(2);
-  var mValue = ((d["coverage"]/getMaxCoverage())*100).toFixed(2);
+  var mValue = ((d["coverage"]/totalCoverage)*100).toFixed(2);
 
   if (mValue < 0.01) {
     mValue = "< 0.01";
@@ -111,7 +111,7 @@ function mousemove(d){
   var xPosition = (width*0.5)-290;
   var yPosition = height*0.5+100;
   var dPercentage = (100 * d.size).toFixed(2);
-  var mValue = ((d["coverage"]/getMaxCoverage())*100).toFixed(2);
+  var mValue = ((d["coverage"]/totalCoverage)*100).toFixed(2);
   if (mValue < 0.01) {
     mValue = "< 0.01";
   }
@@ -204,7 +204,18 @@ var legend2 = d3.select("#legend")
 
 legend2.append("g")
   .attr("class", "legendOrdinal")
-  .attr("transform", "translate(20,20)");
+  .attr("transform", "translate(20,20)")  
+  .on('click', function(d){
+    if ($(this).css("opacity") == 1) {
+      console.log("hej hej ");
+      var elemented = document.getElementById(this.id);
+      console.log("hej hej2 " + elemented);
+      d3.select(elemented)
+        .transition()
+        .duration(1000)
+        .style("opacity", 0);
+    };
+  });
 
 var legendOrdinal = d3.legend.color()
   .shapeWidth(55)
