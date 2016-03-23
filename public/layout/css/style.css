@@ -1,4 +1,12 @@
 /*WEB*/
+
+/*COLORS
+MAIN RED: #69010c OR rgb(105, 1, 12)
+SUPPORTING RED: #a57c80 OR rgb(165, 124, 128)
+WHITE BG: #fefcf8 OR rgb(254, 252, 248)
+BLACK TEXT: #333 OR rgb(51, 51, 51)
+*/
+
 html{
     font-size: 100%;
 }
@@ -94,9 +102,11 @@ a:hover {
 }
 
 hr{
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(153, 153, 153, 0), rgba(153, 153, 153, 0.75), rgba(153, 153, 153, 0));
+  /*color: #a57c80;*/
+    border: 0;
+    height: 0;
+    /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
+    border-bottom: 1px solid rgba(165, 124, 128, 1);
 }
 
 .modalText{
@@ -278,7 +288,7 @@ text {
 .deathImg {
 /*  padding: 0px;
   margin: 0px;*/
-  height: 110px;
+  /*height: 110px;*/
   float: left;
 }
 

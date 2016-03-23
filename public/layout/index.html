@@ -65,7 +65,7 @@
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Features">How it works</a></li>
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="About Solid">About Solid</a></li>
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Team">Team</a></li>
-          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Sources">Sources</a></li>
+          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Knowledge">Knowledge</a></li>
           <!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Colour scheme <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -228,7 +228,13 @@
             '</div>'+
           '</div>'+
           '</div>'+
-          '<p class="caption">Images from <a href="http://www.jamesclear.com"><i>JamesClear.com</i></a></p>';
+          '<p class="caption">Images from <a href="http://www.jamesclear.com"><i>JamesClear.com</i></a></p>'+
+          '<hr><h4>Sources</h4>'+
+          '<div class="modalText">'+
+            '<p><span class="red">Media Coverage: </span> Google Custom Search API to get information about different news sites about certain disease or cause of disability: '+ '<a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search</a>'+           
+            '<p><span class="red">Cultural distance:</span> From Global Journal of Economy, article titled '+ '<a href="https://www.dal.ca/content/dam/dalhousie/pdf/faculty/science/economics/FacultyPapers/Cultural%20Distance%20and%20Bilateral%20Trade.pdf" target="_blank">Cultural Distance and Bilateral Trade</a>' +
+            '<p><span class="red">DALYS:</span> Data was gathered from the VizHub Health Data: '+ '<a href="http://vizhub.healthdata.org/gbd-compare/" target="_blank">GBD Compare</a>'+
+            '</div>';
         break;
 
     case "Features":
@@ -286,11 +292,44 @@
           '</div>'+
           '</div>';
         break;
-      case "Sources":
-        contentStr ='<div class="modalText">'+
-            '<p><span class="red">Media Coverage: </span> Google Custom Search API to get information about different news sites about certain disease or cause of disability: '+ '<a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search</a>'+           
-            '<p><span class="red">Cultural distance:</span> From Global Journal of Economy, article titled '+ '<a href="https://www.dal.ca/content/dam/dalhousie/pdf/faculty/science/economics/FacultyPapers/Cultural%20Distance%20and%20Bilateral%20Trade.pdf" target="_blank">Cultural Distance and Bilateral Trade</a>' +
-            '<p><span class="red">DALYS:</span> Data was gathered from the VizHub Health Data: '+ '<a href="http://vizhub.healthdata.org/gbd-compare/" target="_blank">GBD Compare</a>'+
+      case "Knowledge":
+        contentStr ='<h4>Technologies</h4>'+
+          '<div class="modalText">'+
+          '<p>For this project we used a wide variety of different technologies such as API’s, scripts and IDE’s:'+
+          '<li><span class="red">Media data gathering:</span> The code for obtaining the data from different online medias such as CNN or BBC was programmed in C# using the .NET framework helped with the Google REST.</li>'+
+          '<li><span class="red">Visualization:</span> This part includes all the visual structures and all the processes and operations behind it, the visualization was coded mainly using JavaScript, D3, jQuery, JSON, CSS, HTML via the Sublime advanced text editor which helps in scripting tasks.</li>'+
+          '<li><span class="red">News function:</span> This function shows a brief summary about the cause of death or disability when the sunburst is clicked, this function was coded using the Wikipedia API (MediaWiki).</li>'+
+          '<li><span class="red">Design:</span> The graphical elements such as logos and diagrams were created in Adobe Illustrator. Other web graphical elements were made via CSS.</li>'+
+          '</div><hr>'+
+
+          '<h4>Methodologies</h4>'+
+          '<div class="modalText">'+
+          '<p>The methodology used for this project was a SCRUM using the Freedcamp online managing app. During each meeting all the tasks were written in the app and assigned to a responsible. Every week each task was revised during the meeting.'+
+          '<p>The whole group was divided in three subgroups:'+'<ul>'+
+          '<li><span class="red">Data team:</span> data related tasks.</li>'+
+          '<li><span class="red">Design team:</span> design related tasks.</li>'+
+          '<li><span class="red">Programming team:</span> programming related tasks.</li>'+'</ul>'+
+          '<p>The main tool we used for sharing files was Google Drive for the majority of the contents, whereas, for sharing code we used GitHub, a web-based Git repository hosting service to have control over the different versions and states of the code. For the communication between members of the team we created a private Facebook group where we kept track on the tasks, created polls for decision making, and private chat groups.'+
+          '</div><hr>'+
+
+          '<h4>Learning outcomes</h4>'+
+          '<div class="modalText">'+
+          '<p>The main learning outcomes are listed below:'+
+          '<li><span class="red">DALY:</span> As it is stated in the features, we learned how DALY works and why it is more attractive when we compare to the death rates.</li>'+
+          '<li><span class="red">D3:</span> Using D3 was one of the main challenges because we were not expert at it before. We learned how to build the following visual structures:'+
+            '<ul>'+
+            '<li>World maps</li>'+
+            '<li>Sunburst maps</li>'+
+            '<li>Coloring</li>'+
+            '<li>Relation between two graphs</li>'+
+            '<li>Changing data sources</li>'+
+            '<li>Loading data from different files (.json)</li>'+
+            '</ul></li>'+
+          '<li><span class="red">Web Development:</span> JavaScript + jQuery + HTML + CSS + JSON</li>'+
+          '<li><span class="red">Google Custom Search (API):</span> With this tool, we managed to get media data from different online news sites. Our main problem was the limitation of 100 searches a day that this API can offer. We solved this problem by creating a company account which allows us to search for 10000 keywords a day.</li>'+
+          '<li><span class="red">Communication & managing skills:</span> Due to the nature of the numerous group (9 people) we had to manage how we can distribute the tasks and all the works in order to achieve our final goal.</li>'+
+          '<li><span class="red">Searching skills (collecting the data):</span> None of us was familiar with managing huge data sets. We learned how to treat them, transform them and put them into JSON format, in order to ease the process of data loading.</li>'+
+          '<li><span class="red">Team management:</span> It was not easy to manage a team of 9 people, but we learned how to divide tasks and keep track of all responsibilities among the team members.</li>'+            
             '</div>';
         break;
     }
