@@ -125,7 +125,7 @@ function mousemove(d){
     d3.select("#tooltip #death")
       .text("DALY: " + dPercentage + " %");
     d3.select("#tooltip #media")
-      .text("Media Coverage: " + mValue + " %" + "(" + d["coverage"] + ")");
+      .text("Media Coverage: " + mValue + " %" + " (" + d["coverage"] + ")");
     d3.select("#tooltip").classed("hidden", false);
   }else{
     d3.select("#tooltip")
