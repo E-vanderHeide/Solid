@@ -11,30 +11,32 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
         async: false,
         dataType: "json",
         success: function (data, textStatus, jqXHR) {
-            console.log("data = vvv");
-            console.log(data);
+            // console.log("data = vvv");
+            // console.log(data);
 
-            // var json = data;
-            // console.log("json = vvv");
-            
-            // $.each(data, function(i, v) {
-            //   console.log(v);
-            //     if (v=="error") {
-            //         console.log("error");
-            //         // return;
-            //     }
-            // });
             var markup;
             var blurb;
             var image;
 
             if(data.parse){
-              console.log("PARSE");
+              // console.log("PARSE");
 
               markup = data.parse.text["*"];
-
-              blurb = $('<div></div>').html(markup);            
+              //console.log(markup);
               
+              blurb = $('<div></div>').html(markup);
+
+              //console.log(blurb.find('.redirectText').find('a').attr("href")); 
+              //REDIRECT sample url: /w/index.php?title=Injury&amp;redirect=no
+              var redirectText = blurb.find('.redirectText').find('a').attr("href");
+              var newTitle = $.urlParam(redirectText,'title');
+
+              if(redirectText){
+                // console.log("Redirect");
+                // console.log("newTitle = "+newTitle); //new dalys
+                redrawNews(newTitle);
+              }
+
               // remove links as they will not work
               blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
    
@@ -47,12 +49,13 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
               //add the info to the text box
               $('#dalysInfo').html($(blurb).find('p').first());
 
-              image = blurb.find('img').addClass("img-responsive");
+              image = blurb.find('.infobox').find('img').addClass("img-responsive");
+
             }else{
-              console.log("ERROR");
+              // console.log("ERROR");
 
               markup = data.error["info"];
-              console.log("markup = "+markup);
+              // console.log("markup = "+markup);
 
               blurb = $('<div></div>').html(markup); 
 
@@ -66,13 +69,11 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
               blurb.find('.mw-ext-cite-error').remove();
 
               // $('#dalysInfo').html(blurb);
-              $('#dalysInfo').html("The object you specified doesn't exist.");
+              $('#dalysInfo').html("Sorry, we could not find more information...");
 
               image = '<img src="images/logo_130.png" class="img-responsive">';
               
             }
-
-
 
             //add image
             $('#dalysImg').html(image);
@@ -109,6 +110,86 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
   		//add Wikipedia reference to the "More" link
   		document.getElementById("dalysMore").innerHTML = sessionlist;
   		//TO DO: add more news sources depending on country?
-	}
 
+      
+      $.urlParam = function(redirectURL, name){
+        // var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(redirectURL);
+        //console.log("urlParam // results = "+results);
+        if (results==null){
+           return null;
+        }else{
+           return results[1] || 0;
+        }
+      }
+}
+
+function redrawNews(dalys){
+  $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page="  + dalys + "&callback=?",
+        contentType: "application/json; charset=utf-8",
+        async: false,
+        dataType: "json",
+        success: function (data, textStatus, jqXHR) {
+          // console.log(data);
+            var markup;
+            var blurb;
+            var image;
+
+            if(data.parse){
+              // console.log("PARSE");
+
+              markup = data.parse.text["*"];
+             
+              blurb = $('<div></div>').html(markup);
+
+              // remove links as they will not work
+              blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+   
+              // remove any references
+              blurb.find('sup').remove();
+   
+              // remove cite error
+              blurb.find('.mw-ext-cite-error').remove();
+
+              //add the info to the text box
+              $('#dalysInfo').html($(blurb).find('p').first());
+
+              // console.log(blurb);
+
+              image = blurb.find('.infobox').find('img').addClass("img-responsive");
+
+            }else{
+              // console.log("ERROR");
+
+              markup = data.error["info"];
+             
+              blurb = $('<div></div>').html(markup); 
+
+              // remove links as they will not work
+              blurb.find('a').each(function() { $(this).replaceWith($(this).html()); });
+   
+              // remove any references
+              blurb.find('sup').remove();
+   
+              // remove cite error
+              blurb.find('.mw-ext-cite-error').remove();
+
+              // $('#dalysInfo').html(blurb);
+              $('#dalysInfo').html("The selected object doesn't have data on Wikipedia.");
+
+              image = '<img src="images/logo_130.png" class="img-responsive">';
+              
+            }
+
+            //add image
+            $('#dalysImg').html(image);
+        },
+        //this does not work, because the page is always found, even though the page might not have text
+        error: function (errorMessage) {
+          document.getElementById("dalysInfo").innerHTML = "Sorry, we could not find more information...";
+        }
+      });
+}
 
