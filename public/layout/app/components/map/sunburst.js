@@ -1,6 +1,7 @@
 var width = 700,
     height = 700,
-    heightLegend = 100,
+    widthLegend = 200;
+    heightLegend = 170,
     radius = Math.min(width, height) / 2;
 
 var minCoverage = 0,
@@ -198,13 +199,13 @@ var ordinal = d3.scale.ordinal()
 
 var legend2 = d3.select("#legend")
   .append("svg")
-  .attr("width", width)
+  // .attr("width", widthLegend)
   .attr("height", heightLegend)
   .attr("id","the_legend");
 
 legend2.append("g")
   .attr("class", "legendOrdinal")
-  .attr("transform", "translate(20,20)")  
+  .attr("transform", "translate(50,0)")  
   .on('click', function(d){
     if ($(this).css("opacity") == 1) {
       console.log("hej hej ");
@@ -220,8 +221,8 @@ legend2.append("g")
 var legendOrdinal = d3.legend.color()
   .shapeWidth(55)
   .shapePadding(1)
-  .orient('horizontal')
-  .title("Media Coverage (Number of Google matches)")
+  .orient('vertical')
+  // .title("Media Coverage (Number of Google matches)")
   .scale(ordinal);
 
 legend2.select(".legendOrdinal")

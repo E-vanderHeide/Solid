@@ -14,7 +14,7 @@ span{
     font-size: 100%;
 }
 
-body,form {
+body {
   font-family: 'Droid Serif', serif;
   /*font-size: 1em;*/
   margin: auto;
@@ -22,6 +22,12 @@ body,form {
   position: relative;
   text-align: center;
   background-color: #fefcf8;
+}
+
+form{
+  position: relative;
+  padding: 0px 0px 20px 15px;
+  text-align: left;
 }
 
 .container{
@@ -52,14 +58,14 @@ h2 {
 /*  border-bottom: solid #ccc 1px;*/
 }
 
-h3, #country{
+h3{
   font-family: 'PT Sans', sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 1.3em;
 }
 
-h4{
+h4, #country{
   font-family: 'PT Sans', sans-serif;
   font-style: italic;
   font-weight: bold;
@@ -76,6 +82,10 @@ p.caption {
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 0.9em;
   /*color: #999;*/
+}
+
+.left{
+  text-align: left;
 }
 
 .label{
@@ -250,9 +260,9 @@ hr{
   left: 0px;
   width: 600px;
   color: #666;
-  z-index: -1;
+  z-index: -1;*/
  
-  text-align: center;*/
+  text-align: left;
 }
 
 /*CSS for the death description*/
@@ -260,10 +270,27 @@ hr{
   border:1px solid #a57c80;
   border-radius: 10px;
   -moz-border-radius:10px;
-  /*width: 600px;*/
+
+  width: 100%;
   /*height: 400px;*/
-  padding:20px 10px;
-/*  margin-top: 100px;*/
+  padding:10px;
+  margin-left: 0px;
+
+}
+
+.Absolute-Center {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+
+  /*width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;*/
 }
 
 .deathDescription{
@@ -276,15 +303,16 @@ hr{
 /*  padding: 0px;
   margin: 0px;*/
   /*height: 110px;*/
-  float: left;
+  /*float: left;*/
+  text-align: center;
 }
 
 .deathText {
   text-align: left;
 }
 
-.deathText h4{
-  margin-top: 0px;
+.deathText h3{
+  margin-top: 10px;
 }
 
 .deathText p{
@@ -292,7 +320,7 @@ hr{
 /*  float: right;*/
 /*  width: 65%;*/
   margin-bottom: 0px;
-  line-height:17px;
+  /*line-height:17px;*/
   /*height: 51px;*/
 
   overflow : hidden;
@@ -303,9 +331,8 @@ hr{
 }
 
 .more{
-  float: right;
   text-align: right;
-  padding-top: 5px;
+  padding: 5px 0px 10px 0px;
 }
 
 
@@ -320,7 +347,6 @@ hr{
 }
 
 .sampleNews{
-
   text-align: left;
 
 }

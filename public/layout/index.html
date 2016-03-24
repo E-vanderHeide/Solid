@@ -34,7 +34,7 @@
   
 
   <link href="css/style.css" rel="stylesheet">
-  <title>(Branch Layout) - Solid</title>
+  <title>(Branch center) - Solid</title>
 
 </head>
 <body>
@@ -102,79 +102,95 @@
         <input type="radio" name="mode" value="size" checked> Enable size comparision<br>   
         <input type="radio" name="mode" value="count"> Disable size comparision
       </form>
-      <div class="chosen" id="country"></div>
+      <hr>
+
+      <div class="chosen">
+        <p>Chosen country:
+        <span id="country"></span>
+      </div>
+
+      <hr>
+      <p class="left">Media Coverage <br>(Number of Google matches)
+      <div id="legend"></div>
+      <div>
+        <p class="caption left">In tooltips, the percentage of DALYS is... while the percentage of media coverage means...</p>
+      </div>
+      
+      <hr>
+      <p class="left">Correlation
+      <div id="legendMap"></div>
+
+      
     </div>
 
     <div class="col-lg-8 col-md-8 no-padding">
       
-
-      <div id="sunburst"></div>
-      <div id="canvas-map"></div>
-
+      <!-- world map tooltip z-index = 5-->
       <div id="tooltip-container"></div>
+      <!-- sunburst tooltip z-index = 4-->
       <div id="tooltip" class="hidden">
         <p><strong id="heading"></strong></p>
         <p><span id="death"></span></p>
         <p><span id="media"></span></p>
       </div>
 
-      <div id="legend"></div>
-      <div id="legendMap"></div>
-
-      <div>
-        <p class="caption">In tooltips, the percentage of DALYS is... while the percentage of media coverage means...</p>
-      </div>
-
+      <!-- z-index = 2 -->
+      <div id="sunburst"></div>
+      <!-- z-index = 1 or 3 -->
+      <div id="canvas-map"></div>
       
     </div>
 <!-- *** end sunburst + legend *** -->
     
       
 <!-- map -->
-    <div class="col-lg-6 col-md-6">
-
+   <!--  <div class="col-lg-6 col-md-6">
       <div class="row-fluid">
-         <!-- <div class ="col-md-6" id="canvas-map"></div> -->
+         <div class ="col-md-6" id="canvas-map"></div>
       </div>
-       
-
-      <!-- <div id="tooltip-container"></div> -->
-    </div>
+      <div id="tooltip-container"></div>
+    </div> -->
 <!-- *** end map *** -->
 
 
     <!-- Info box with links to news -->
-    <div class="col-lg-6 col-md-6 col-sm-12 newsBox">
-      <!-- Description -->
-      <div class="row-fluid">
-        <div class="deathImg col-lg-3 col-md-3 col-sm-3" id="dalysImg"><img class="img-responsive" src="images/logo_130.png"></div>
-        <div class="deathText col-lg-9 col-md-9 col-sm-9">
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <span id="dalysHead"></span>
-              <span id="dalysInfo"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
-            </div>
+    <div class="col-lg-2 col-md-2 col-sm-12">
+      <div class="Absolute-Center">
+        <!-- Description -->
+        <div class="newsBox row">
 
-            <div class="more col-lg-12 col-md-12 col-sm-12">
+          <div class="deathImg col-lg-12 col-md-12 col-sm-12" id="dalysImg">
+            <img class="img-responsive center-block" src="images/logo_130.png">
+          </div>
+
+          <div class="deathText col-lg-12 col-md-12 col-sm-12 no-padding">
+            <span id="dalysHead"></span>
+            <span id="dalysInfo"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
+              
+
+            <div class="more">
               <p class="caption"><span id="dalysMore"></span></p>
             </div>    
-            
-            <div class="sampleNews col-lg-12 col-md-12 col-sm-12">
-                <span class="title" id="newsTitle"></span>
-                <span class="tooltipNews" id="bbcNews">
-                  <span id="bbcLink"></span>
-                  <span class="tooltiptextNews" id="bbcTooltip">See news from BBC</span>
-                </span>
-
-                <span class="tooltipNews" id="cnnNews"><span id="cnnLink"></span>
-                  <span class="tooltiptextNews" id ="cnnTooltip">See news from CNN</span>
-                </span>
+              
+            <div class="sampleNews">
+              <span class="title" id="newsTitle"></span>
+              <span class="tooltipNews" id="bbcNews">
+                <span id="bbcLink"></span>
+                <span class="tooltiptextNews" id="bbcTooltip">See news from BBC</span>
+              </span>
+              <span class="tooltipNews" id="cnnNews">
+                <span id="cnnLink"></span>
+                <span class="tooltiptextNews" id ="cnnTooltip">See news from CNN</span>
+              </span>
             </div>
+            
           </div>
+        <!--  News Collection -->
         </div>
-      <!--  News Collection -->
       </div>
     </div>
+
+  </div>
 
 <!--    <div class="container-fluid row">
     <div class="col-lg-12">
@@ -187,9 +203,11 @@
     </div>
   </div>
  -->
-<div class="tooltip">Hover over me
+<!-- <div class="tooltip">Hover over me
   <span class="tooltiptext">Tooltip text</span>
-</div>
+</div> -->
+
+
 <script src="https://code.jquery.com/jquery.js"></script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

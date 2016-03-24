@@ -2,7 +2,8 @@ var colorCriterium = "D01",
     mapCountries,
     COLOR_COUNTS = 11,
     colors = [],
-    heightLegend = 100;
+    widthLegend = 200,
+    heightLegend = 170;
 
 drawMap();
 drawSunBurst("Sweden");
@@ -50,8 +51,8 @@ function drawMap(){
    var config = {
   "color0":"#ffe67c",
   "color1":"#98006a",
-  "width":600,
-  "height":600
+  "width":700,
+  "height":700
   }
   
   var width = config.width,
@@ -256,13 +257,13 @@ function drawLegend(){
 
   var legend3 = d3.select("#legendMap")
   .append("svg")
-  .attr("width", width)
+  // .attr("width", widthLegend)
   .attr("height", heightLegend)
   .attr("id","the_legend");
 
   legend3.append("g")
   .attr("class", "legendOrdinal")
-  .attr("transform", "translate(20,20)")  
+  .attr("transform", "translate(50,0)")  
   .on('click', function(d){
     if ($(this).css("opacity") == 1) {
       console.log("hej hej ");
@@ -278,14 +279,13 @@ function drawLegend(){
   var legendOrdinal = d3.legend.color()
   .shapeWidth(55)
   .shapePadding(1)
-  .orient('horizontal')
-  .title("Correlation")
+  .orient('vertical')
+  // .title("Correlation")
   .scale(ordinal);
 
   legend3.select(".legendOrdinal")
   .call(legendOrdinal); 
 }
-
 
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
 }

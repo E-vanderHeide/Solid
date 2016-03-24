@@ -71,7 +71,7 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
               // $('#dalysInfo').html(blurb);
               $('#dalysInfo').html("Sorry, we could not find more information...");
 
-              image = '<img src="images/logo_130.png" class="img-responsive">';
+              image = '<img src="images/logo_130.png" class="img-responsive center-block">';
               
             }
 
@@ -86,9 +86,9 @@ function drawNews(dalys, type, dPercentage, mValue, coverage)
       
       var head = "<h4>"+dalys+"</h4>";
       if (type == "disease"){
-        head += "<h4>DALY: "+dPercentage+"%  Media coverage: "+mValue+"%  ("+coverage+")</h4>";
+        head += "<h3>DALY: "+dPercentage+"%  Media coverage: "+mValue+"%  ("+coverage+")</h3>";
       }else{
-        head += "<h4>Average: "+coverage+"</h4>";
+        head += "<h3>Average: "+coverage+"</h3>";
       }
       $('#dalysHead').html(head);
 
