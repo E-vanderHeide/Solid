@@ -106,7 +106,7 @@
       <div id="sunburst"><div class="chosen" id="country"></div></div>
 
       <div id="legend"></div>
-      <div id="legendMap"></div>
+     
   
       <div id="tooltip" class="hidden">
         <p><strong id="heading"></strong></p>
@@ -124,49 +124,45 @@
          <div class ="col-md-6" id="canvas-map"></div>
          <div class ="col-md-6" id="canvas-bubbles"></div>
       </div>
+       <div id="legendMap"></div>
 <!--       </div> -->
       <div id="tooltip-container"></div>
     </div>
+<!-- *** end map *** -->
 
 
-    <!-- <h3>Solid: visulisation of media coverage and DALYS around the world</h3> -->
     <!-- Info box with links to news -->
     <div class="col-lg-6 col-md-6 col-sm-12 newsBox">
       <!-- Description -->
       <div class="row-fluid">
         <div class="deathImg col-lg-3 col-md-3 col-sm-3" id="dalysImg"><img class="img-responsive" src="images/logo_130.png"></div>
         <div class="deathText col-lg-9 col-md-9 col-sm-9">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
               <span id="dalysHead"></span>
               <span id="dalysInfo"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
-                </div>
+            </div>
 
-              <div class="more col-lg-12 col-md-12 col-sm-12"><p class="caption"><span id="dalysMore"></span></p></div>    
-              <div class="sampleNews col-lg-12 col-md-12 col-sm-12">
+            <div class="more col-lg-12 col-md-12 col-sm-12">
+              <p class="caption"><span id="dalysMore"></span></p>
+            </div>    
+            
+            <div class="sampleNews col-lg-12 col-md-12 col-sm-12">
                 <span class="title" id="newsTitle"></span>
-                <span class="tooltipNews" id="bbcNews"><span id="bbcLink"></span>
+                <span class="tooltipNews" id="bbcNews">
+                  <span id="bbcLink"></span>
                   <span class="tooltiptextNews" id="bbcTooltip">See news from BBC</span>
                 </span>
 
                 <span class="tooltipNews" id="cnnNews"><span id="cnnLink"></span>
                   <span class="tooltiptextNews" id ="cnnTooltip">See news from CNN</span>
                 </span>
-              </div>
+            </div>
+          </div>
         </div>
-       </div>
-
-
       <!--  News Collection -->
-      
-<!--     </div> -->
-
+      </div>
     </div>
-<!-- *** end map *** -->
-
-
-
-  </div>
 
 <!--    <div class="container-fluid row">
     <div class="col-lg-12">
