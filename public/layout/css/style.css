@@ -78,12 +78,6 @@ p.caption {
   /*color: #999;*/
 }
 
-p.data {
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 0.9em;
-  /*color: #fff;*/
-
-}
 .label{
   font-family: 'PT Sans Narrow', sans-serif;
   font-size: 0.9em;
@@ -269,7 +263,7 @@ hr{
   border:1px solid #a57c80;
   border-radius: 10px;
   -moz-border-radius:10px;
-  width: 600px;
+  /*width: 600px;*/
   /*height: 400px;*/
   padding:20px 10px;
 /*  margin-top: 100px;*/

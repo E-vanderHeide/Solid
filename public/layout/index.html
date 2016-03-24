@@ -106,7 +106,9 @@
       <div id="sunburst"><div class="chosen" id="country"></div></div>
 
       <div id="legend"></div>
-      <div id="legendMap"></div>
+      <div>
+        <p class="caption">In tooltips, the percentage of DALYS is... while the percentage of media coverage means...</p>
+      </div>
   
       <div id="tooltip" class="hidden">
         <p><strong id="heading"></strong></p>
@@ -124,49 +126,45 @@
          <div class ="col-md-6" id="canvas-map"></div>
          <div class ="col-md-6" id="canvas-bubbles"></div>
       </div>
+       <div id="legendMap"></div>
 <!--       </div> -->
       <div id="tooltip-container"></div>
     </div>
+<!-- *** end map *** -->
 
 
-    <!-- <h3>Solid: visulisation of media coverage and DALYS around the world</h3> -->
     <!-- Info box with links to news -->
     <div class="col-lg-6 col-md-6 col-sm-12 newsBox">
       <!-- Description -->
       <div class="row-fluid">
         <div class="deathImg col-lg-3 col-md-3 col-sm-3" id="dalysImg"><img class="img-responsive" src="images/logo_130.png"></div>
         <div class="deathText col-lg-9 col-md-9 col-sm-9">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
               <span id="dalysHead"></span>
               <span id="dalysInfo"><br>To see DALYS information about an specific country, click on the map above.<br> To see more details about one specific DALYS, click on the graph on the left.</span>
-                </div>
+            </div>
 
-              <div class="more col-lg-12 col-md-12 col-sm-12"><p class="caption"><span id="dalysMore"></span></p></div>    
-              <div class="sampleNews col-lg-12 col-md-12 col-sm-12">
+            <div class="more col-lg-12 col-md-12 col-sm-12">
+              <p class="caption"><span id="dalysMore"></span></p>
+            </div>    
+            
+            <div class="sampleNews col-lg-12 col-md-12 col-sm-12">
                 <span class="title" id="newsTitle"></span>
-                <span class="tooltipNews" id="bbcNews"><span id="bbcLink"></span>
+                <span class="tooltipNews" id="bbcNews">
+                  <span id="bbcLink"></span>
                   <span class="tooltiptextNews" id="bbcTooltip">See news from BBC</span>
                 </span>
 
                 <span class="tooltipNews" id="cnnNews"><span id="cnnLink"></span>
                   <span class="tooltiptextNews" id ="cnnTooltip">See news from CNN</span>
                 </span>
-              </div>
+            </div>
+          </div>
         </div>
-       </div>
-
-
       <!--  News Collection -->
-      
-<!--     </div> -->
-
+      </div>
     </div>
-<!-- *** end map *** -->
-
-
-
-  </div>
 
 <!--    <div class="container-fluid row">
     <div class="col-lg-12">
@@ -176,7 +174,6 @@
       <h4>This is a small headline (h4)</h4>
       <p>This is normal p. Cras eu arcu nisl. Curabitur eu elit eu felis vestibulum faucibus id in augue. Vivamus eget ultricies felis. <b>It can be bold.Phasellus a tempus mauris, non dictum leo. Mauris facilisis pellentesque lacinia.</b> <i>It can be italic. Nullam consequat vulputate tempor. Duis finibus mauris ex, at tempor diam suscipit quis.</i>
         <p class="caption">*This is sort of caption. Small notes.
-        <p class="data">This is a style for data in charts and diagrams.
     </div>
   </div>
  -->
@@ -207,12 +204,12 @@
           '<div class="col-lg-12 divLogo">'+
             '<img src="images/logo_130.png" class="img-responsive center-block">'+
             '</div>'+
-          '<p>Solid is the final project for the course of Information Visualization (DH2321) at KTH. The team consists of nine Master students and our task was to create a visualization to help users to see, understand and create their own discussions about a particular dataset.'+
+          '<p>Solid is the final project for the course of Information Visualization (DH2321) at KTH. The team consists of nine Master students and our task was to create a visualization to help users to see, understand and create their own discussions about a particular data set.'+
           '<p>We created Solid with the mission of helping people to acknowledge their biases by visualising what is actually important in life. For this project we chose to display the loss of disability-lost-life-years (DALYs) in comparison with what media covers.'+
           '<p>Although at first we planned to compare causes of death with media coverage, we decided to go with DALYs because DALYs are more relevant for younger people as they do not represent death, but loss in quality of life due to very avoidable causes.'+
           '<p>One DALY can be thought of as one lost year of "healthy" life. The sum of these DALYs across the population, or the burden of disease, can be thought of as a measurement of the gap between current health status and an ideal health situation where the entire population lives to an advanced age, free of disease and disability. '+'<a href="http://www.who.int/healthinfo/global_burden_disease/metrics_daly/en/"><i>[Reference]</i></a>'+'</p>'+
-          '<p>This visualisation of can help us to learn about the impact of DALYS around the world as well as how much the media is covering certain topics that important to your lives. '+
-          '<p>The core values of solid are:'+
+          '<p>This visualisation can help us to learn about the impact of DALYS around the world as well as how much the media is covering certain topics that important to your lives. '+
+          '<p>The core values of Solid are:'+
           '<li><span class="red">Commitment:</span>  Committing to great product, service, and other initiatives that impact lives within and outside our group.</li>'+
           '<li><span class="red">Community:</span> Contributing to society and demonstrating corporate social responsibility.</li>'+
           '<li><span class="red">Diversity:</span> Respecting the diversity and giving the best of composition thanks to our international profiles.</li>'+
@@ -234,6 +231,7 @@
             '<p><span class="red">Media Coverage: </span> Google Custom Search API to get information about different news sites about certain disease or cause of disability: '+ '<a href="https://developers.google.com/custom-search/" target="_blank">Google Custom Search</a>'+           
             '<p><span class="red">Cultural distance:</span> From Global Journal of Economy, article titled '+ '<a href="https://www.dal.ca/content/dam/dalhousie/pdf/faculty/science/economics/FacultyPapers/Cultural%20Distance%20and%20Bilateral%20Trade.pdf" target="_blank">Cultural Distance and Bilateral Trade</a>' +
             '<p><span class="red">DALYS:</span> Data was gathered from the VizHub Health Data: '+ '<a href="http://vizhub.healthdata.org/gbd-compare/" target="_blank">GBD Compare</a>'+
+            '<p><span class="red">Correlation:</span> In the world map view, the colours represent the correlation between countries around the world using '+'<a href="https://www.statisticssolutions.com/pearsons-correlation-coefficient/" target="_blank">Pearson\'s correlation coefficient</a>'+
             '</div>';
         break;
 
