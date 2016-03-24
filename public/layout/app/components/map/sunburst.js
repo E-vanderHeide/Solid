@@ -1,5 +1,5 @@
-var width = 600,
-    height = 400,
+var width = 700,
+    height = 700,
     heightLegend = 100,
     radius = Math.min(width, height) / 2;
 

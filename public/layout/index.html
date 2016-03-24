@@ -53,7 +53,7 @@
             <img src="images/logo_30.png">
           </div>
           <div class="col-lg-10 navDescription visible-lg-block hidden-sm">
-            <h4>   &nbsp;&nbsp;&nbsp;&nbsp;Media coverage and DALYS around the world</h4>
+            <h4>Media coverage and DALYS around the world</h4>
           </div>
           <!-- <span>Visulisation of media coverage and DALYS around the world</span> -->
         </div>
@@ -94,41 +94,51 @@
     </div>
   </div>
 
+
   <div class="container-fluid row">
 <!-- Sunburst + legend -->
-    <div class="col-lg-6 col-md-6">
-      <div>
+    <div class="col-lg-2 col-md-2">
       <form>
         <input type="radio" name="mode" value="size" checked> Enable size comparision<br>   
         <input type="radio" name="mode" value="count"> Disable size comparision
       </form>
-      </div>
-      <div id="sunburst"><div class="chosen" id="country"></div></div>
+      <div class="chosen" id="country"></div>
+    </div>
 
-      <div id="legend"></div>
-      <div>
-        <p class="caption">In tooltips, the percentage of DALYS is... while the percentage of media coverage means...</p>
-      </div>
-  
+    <div class="col-lg-8 col-md-8 no-padding">
+      
+
+      <div id="sunburst"></div>
+      <div id="canvas-map"></div>
+
+      <div id="tooltip-container"></div>
       <div id="tooltip" class="hidden">
         <p><strong id="heading"></strong></p>
         <p><span id="death"></span></p>
         <p><span id="media"></span></p>
       </div>
+
+      <div id="legend"></div>
+      <div id="legendMap"></div>
+
+      <div>
+        <p class="caption">In tooltips, the percentage of DALYS is... while the percentage of media coverage means...</p>
+      </div>
+
+      
     </div>
 <!-- *** end sunburst + legend *** -->
     
       
 <!-- map -->
     <div class="col-lg-6 col-md-6">
-<!--       <div style="width:80%; height:20"> -->
-        <div class="row-fluid">
-         <div class ="col-md-6" id="canvas-map"></div>
-         <div class ="col-md-6" id="canvas-bubbles"></div>
+
+      <div class="row-fluid">
+         <!-- <div class ="col-md-6" id="canvas-map"></div> -->
       </div>
-       <div id="legendMap"></div>
-<!--       </div> -->
-      <div id="tooltip-container"></div>
+       
+
+      <!-- <div id="tooltip-container"></div> -->
     </div>
 <!-- *** end map *** -->
 

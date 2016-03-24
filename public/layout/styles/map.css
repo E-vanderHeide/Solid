@@ -1,3 +1,6 @@
+#canvas-map{
+  pointer-events:auto !important;
+}
 
 .land {
   fill: #222;

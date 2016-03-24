@@ -148,6 +148,10 @@ hr{
   margin-right: auto;
 }
 
+.no-padding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
 
 /*MODAL*/
 .modal-content{
@@ -162,6 +166,7 @@ hr{
   color: #a57c80;
 }
 
+
 /*NAVBAR*/
 .navbar{
   border: none;
@@ -175,12 +180,13 @@ hr{
 
 .navLogo{
   /*padding: 0px;*/
+  padding-left: 0px;
   text-align: left;
 }
 
 .navDescription{
   text-align: left;
-  padding-left: 0px;
+  padding-left: 10px;
   padding-right: 0px;
   /*padding: 0px 0px 0px 0px;*/
    margin-top: -3px;
@@ -229,7 +235,6 @@ hr{
    color: #a57c80; 
 }
 
-
 .mapContainer{
   margin-bottom: 280px;
 }
@@ -240,22 +245,14 @@ hr{
 }
 
 .chosen {
-  position: absolute;
-  /*top: 200px;
-  left: 270px;
-  width: 150px;*/
+  /*position: absolute;
   top: 190px;
   left: 0px;
   width: 600px;
   color: #666;
   z-index: -1;
  
-  text-align: center;
-
-  /*font-weight: bold;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 1.5em;*/
-
+  text-align: center;*/
 }
 
 /*CSS for the death description*/
