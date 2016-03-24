@@ -221,7 +221,7 @@ var legendOrdinal = d3.legend.color()
   .shapeWidth(55)
   .shapePadding(1)
   .orient('horizontal')
-  .title("Media Coverage")
+  .title("Media Coverage (Number of Google matches)")
   .scale(ordinal);
 
 legend2.select(".legendOrdinal")
