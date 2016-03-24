@@ -1,5 +1,4 @@
 #canvas-map{
-  /*pointer-events:auto !important;*/
   margin: auto;
   position: absolute;
   width: 400px;
@@ -14,6 +13,12 @@
   transform: translateY(37.5%);
   -webkit-transform: translateY(37.5%);
   -ms-transform: translateY(37.5%);
+
+  /*position: relative; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;   
+  overflow:hidden;
 }
 
 .land {

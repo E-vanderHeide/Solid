@@ -209,12 +209,12 @@ if(!svg)
     if (d3.event.pageX < map_width / 2) {
       d3.select("#tooltip-container")
       .style("top", (d3.event.layerY + 15) + "px")
-      .style("left", (d3.event.layerX + 15) + "px")
+      .style("left", (d3.event.pageX - map_width / 2) + "px")
     } else {
       var tooltip_width = $("#tooltip-container").width();
       d3.select("#tooltip-container")
       .style("top", (d3.event.layerY + 15) + "px")
-      .style("left", (d3.event.layerX - tooltip_width - 30) + "px")
+      .style("left", (d3.event.pageX -map_width / 2 ) + "px")
     }
   })
   .on("mouseout", function() {
