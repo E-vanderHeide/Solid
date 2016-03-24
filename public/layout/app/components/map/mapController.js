@@ -1,7 +1,9 @@
-var colorCriterium = "D01";
-var mapCountries;
-  var COLOR_COUNTS = 11;
-   var colors = [];
+var colorCriterium = "D01",
+    mapCountries,
+    COLOR_COUNTS = 11,
+    colors = [],
+    heightLegend = 100;
+
 drawMap();
 drawSunBurst("Sweden");
 var svg;
@@ -142,6 +144,8 @@ if(!svg)
 
     var country = g.selectAll(".country").data(mapCountries);
 
+    drawLegend();
+
     country.enter().insert("path")
     .attr("class", "country")
     .attr("d", path)
@@ -242,5 +246,46 @@ if(!svg)
 
 	   g.attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
+
+//legend functions
+function drawLegend(){
+
+  var ordinal = d3.scale.ordinal()
+  .domain([-1,""," ","  ","   ","    ","     ","      ","       ",1])
+  .range(["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"]);
+
+  var legend3 = d3.select("#legendMap")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", heightLegend)
+  .attr("id","the_legend");
+
+  legend3.append("g")
+  .attr("class", "legendOrdinal")
+  .attr("transform", "translate(20,20)")  
+  .on('click', function(d){
+    if ($(this).css("opacity") == 1) {
+      console.log("hej hej ");
+      var elemented = document.getElementById(this.id);
+      console.log("hej hej2 " + elemented);
+      d3.select(elemented)
+      .transition()
+      .duration(1000)
+      .style("opacity", 0);
+    };
+  });
+
+  var legendOrdinal = d3.legend.color()
+  .shapeWidth(55)
+  .shapePadding(1)
+  .orient('horizontal')
+  .title("Correlation")
+  .scale(ordinal);
+
+  legend3.select(".legendOrdinal")
+  .call(legendOrdinal); 
+}
+
+
   d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
 }

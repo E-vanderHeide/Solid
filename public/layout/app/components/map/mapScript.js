@@ -81,8 +81,6 @@ function Country(name, categories){
           };
         });
 
-        console.log(media);
-
         /** Calcualte the correlation **/
         
         var shortestArrayLength = 0;
