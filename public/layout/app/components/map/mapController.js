@@ -13,6 +13,13 @@ function drawMap(){
   countries = getDataForCountries(data);  
 });
 
+  // Function that we could use for coloring the map
+  var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"];
+  var color_funcMap = function(d) {
+    var matchedCountry = getCountryByName(countries, d.properties.name);
+    var myColorMap = logScaleMap(matchedCountry.getCorrelation());
+    return colorSchemeMap[myColorMap];
+  }; 
 
   function Interpolate(start, end, steps, count) {
     var s = start,
@@ -227,7 +234,8 @@ if(!svg)
   .attr("class", "boundary")
   .attr("d", path);
 
-  svg.attr("height", config.height * 2.2 / 3);
+  // svg.attr("height", config.height * 2.2 / 3);
+  svg.attr("height", config.height);
   });
   
   //function that zooms and pan with limits (cannot go outside the map)
@@ -251,8 +259,10 @@ if(!svg)
 //legend functions
 function drawLegend(){
 
+  createScale();
+
   var ordinal = d3.scale.ordinal()
-  .domain([-1,""," ","  ","   ","    ","     ","      ","       ",1])
+  .domain([-1,scaleValuesMap[8],scaleValuesMap[7],scaleValuesMap[6],scaleValuesMap[5],scaleValuesMap[4],scaleValuesMap[3],scaleValuesMap[2],scaleValuesMap[1],1])
   .range(["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"]);
 
   var legend3 = d3.select("#legendMap")
@@ -287,5 +297,42 @@ function drawLegend(){
   .call(legendOrdinal); 
 }
 
-  d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+this.scaleValuesMap = [];
+function createScale() 
+{
+  var posArray = [];
+  var base = 22.22;
+  this.scaleValuesMap[0] = 100;
+  var temp = 100;
+  for (i = 1; i < 5; i++){
+    temp = temp - base;
+    this.scaleValuesMap[i] = (temp * 0.01).toFixed(2);
+    }
+  this.scaleValuesMap[0] = 1;
+  for (i = 5; i < 9; i++){
+    temp = temp - base;
+    this.scaleValuesMap[i] = (temp * 0.01).toFixed(2);
+    }
+  this.scaleValuesMap[9] = -1;
+}
+
+function logScale(value)
+{
+
+  if(value == 0) {
+    return 0 ;
+  }
+
+  var position = value.toFixed(2);
+
+  if(result == 0) {
+    return 0;
+  }
+  else {
+    return position;
+  }
+}
+
+  // d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+  d3.select(self.frameElement).style("height", (height) + "px");
 }
