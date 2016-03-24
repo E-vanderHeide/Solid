@@ -14,7 +14,7 @@ span{
     font-size: 100%;
 }
 
-body,form {
+body{
   font-family: 'Droid Serif', serif;
   /*font-size: 1em;*/
   margin: auto;
@@ -22,6 +22,11 @@ body,form {
   position: relative;
   text-align: center;
   background-color: #fefcf8;
+}
+
+form{
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .container{
@@ -230,7 +235,6 @@ hr{
    color: #a57c80; 
 }
 
-
 .mapContainer{
   margin-bottom: 280px;
 }
@@ -238,6 +242,12 @@ hr{
 .mapButton{
   margin-top: 8px;
   margin-bottom: 20px;
+}
+
+#canvas-map{
+  border:1px solid #a57c80;
+  width: 600px;
+  margin: auto;
 }
 
 .chosen {
@@ -264,9 +274,11 @@ hr{
   border:1px solid #a57c80;
   border-radius: 10px;
   -moz-border-radius:10px;
+
   /*width: 600px;*/
   /*height: 400px;*/
-  padding:20px 10px;
+  padding:20px;
+  margin: 0px 10px 0px 10px;
 /*  margin-top: 100px;*/
 }
 

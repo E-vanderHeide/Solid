@@ -59,7 +59,7 @@ function drawMap(){
   "color0":"#ffe67c",
   "color1":"#98006a",
   "width":600,
-  "height":600
+  "height":400
   }
   
   var width = config.width,
@@ -234,7 +234,8 @@ if(!svg)
   .attr("class", "boundary")
   .attr("d", path);
 
-  svg.attr("height", config.height * 2.2 / 3);
+  // svg.attr("height", config.height * 2.2 / 3);
+  svg.attr("height", config.height);
   });
   
   //function that zooms and pan with limits (cannot go outside the map)
@@ -332,5 +333,6 @@ function logScale(value)
   }
 }
 
-  d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+  // d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
+  d3.select(self.frameElement).style("height", (height) + "px");
 }
