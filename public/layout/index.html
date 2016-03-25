@@ -62,7 +62,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Features">How it works</a></li>
+          <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="How it works">How it works</a></li>
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="About Solid">About Solid</a></li>
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Team">Team</a></li>
           <li><a href="#" role="button" data-toggle="modal" data-target="#mainModal" data-menu="Knowledge">Knowledge</a></li>
@@ -239,8 +239,12 @@
             '</div>';
         break;
 
-    case "Features":
-        contentStr ='<div class="modalText">'+
+    case "How it works":
+        contentStr =
+            '<div class="embed-responsive embed-responsive-16by9">'+
+            '<iframe src="http://player.vimeo.com/video/160360957"></iframe>'+
+            '</div>'+
+            '<div class="modalText">'+
             '<p>This visualization mainly consists of two graphs, one world map and one sunburst. Both of them work as data visualizers and as filters.'+
             '<div class="col-lg-12">'+
             '<img src="images/world.png" class="img-responsive center-block modalImg">'+
