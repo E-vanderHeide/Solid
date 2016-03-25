@@ -124,22 +124,24 @@
       <!-- END left column -->
 
       <!-- middle column = sunburst and world map -->
-      <div class="col-lg-8 col-md-8 no-padding">
-        <!-- world map tooltip z-index = 5-->
+      <div class="col-lg-8 col-md-8 no-padding">        
+        <div class="graph-wrapper">
 
-        <div id="tooltip-container"></div>
-        <!-- sunburst tooltip z-index = 4-->
-        <div id="tooltip" class="hidden">
-          <p><strong id="heading"></strong></p>
-          <p><span id="death"></span></p>
-          <p><span id="media"></span></p>
+          <!-- world map tooltip z-index = 5-->
+          <div id="tooltip-container"></div>
+          <!-- sunburst tooltip z-index = 4-->
+          <div id="tooltip" class="hidden">
+            <p><strong id="heading"></strong></p>
+            <p><span id="death"></span></p>
+            <p><span id="media"></span></p>
+          </div>
+
+          <!-- z-index = 2 -->
+          <div id="sunburst"></div>
+          <!-- z-index = 1 or 3 -->
+          <div id="canvas-map"></div>
+
         </div>
-
-        <!-- z-index = 2 -->
-        <div id="sunburst"></div>
-        <!-- z-index = 1 or 3 -->
-        <div id="canvas-map"></div>
-
       </div>
       <!-- END middle column -->
 
