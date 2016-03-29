@@ -1,9 +1,13 @@
 var colorCriterium = "D01",
     mapCountries,
-    COLOR_COUNTS = 11,
+    COLOR_COUNTS = 10,
     colors = [],
     widthLegend = 200,
-    heightLegend = 170;
+    heightLegend = 170,
+    width = 400,
+    height = 400;
+
+var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"];
 
 drawMap();
 drawSunBurst("Sweden");
@@ -13,21 +17,13 @@ function drawMap(){
   countries = getDataForCountries(data);  
 });
 
-  // Function that we could use for coloring the map
-  var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"];
-  var color_funcMap = function(d) {
-    var matchedCountry = getCountryByName(countries, d.properties.name);
-    var myColorMap = logScaleMap(matchedCountry.getCorrelation());
-    return colorSchemeMap[myColorMap];
-  }; 
-
   function Interpolate(start, end, steps, count) {
     var s = start,
     e = end,
     final = s + (((e - s) / steps) * count);
     return Math.floor(final);
   }
-
+/*
   function Color(_r, _g, _b) {
     var r, g, b;
     var setColors = function(_r, _g, _b) {
@@ -55,16 +51,9 @@ function drawMap(){
       b: parseInt(result[3], 16)
     } : null;
   }
-   var config = {
-  "color0":"#f9f1a9",
-  "color1":"#053158",
-  "width":400,
-  "height":400
-  }
+  */
   
-  var width = config.width,
-  height = config.height;
-
+/*
   var COLOR_FIRST = config.color0, COLOR_LAST = config.color1;
 
   var rgb = hexToRgb(COLOR_FIRST);
@@ -84,6 +73,8 @@ function drawMap(){
     var b = Interpolate(startColors.b, endColors.b, COLOR_COUNTS, i);
     colors.push(new Color(r, g, b));
   }
+  */
+  
   var projection = d3.geo.mercator()
   .scale((width + 1) / 2 / Math.PI)
   .translate([width / 2, height / 2])
@@ -159,11 +150,17 @@ if(!svg)
     .attr("d", path)
     .attr("id", function(d,i) { return d.id; })
     .attr("title", function(d) { return d.properties.name; })
+    //.style("fill", color_funcMap)
     .style("fill", function(d) {
       var matchedCountry = getCountryByName(countries, d.properties.name);
 
       if(matchedCountry)
       {
+        console.log(matchedCountry.getCorrelation());
+        var myColorMap = logScaleMap(matchedCountry.getCorrelation());
+        return colorSchemeMap[myColorMap];
+        
+/*
         // var extreme = $.grep(extremes, function(e){ return e.Cause == "02"})[0];
         // console.log("Extreme: " + extreme.D);
         // var domain = generateColorScale(0, extreme.D+1 ,9);
@@ -175,6 +172,7 @@ if(!svg)
         d.properties.color = co;
 
         return "rgb("+co.r + ","+co.g+","+co.b+")";
+        */
 
        } 
        else {
@@ -182,6 +180,7 @@ if(!svg)
        }
             
     })
+
 
   /* When the mouse is howered over a country */
   .on("mousemove", function(d) {
@@ -259,7 +258,7 @@ if(!svg)
 //legend functions
 function drawLegend(){
 
-  createScale();
+  createScaleMap();
 
   var ordinal = d3.scale.ordinal()
   .domain([-1,scaleValuesMap[8],scaleValuesMap[7],scaleValuesMap[6],scaleValuesMap[5],scaleValuesMap[4],scaleValuesMap[3],scaleValuesMap[2],scaleValuesMap[1],1])
@@ -298,7 +297,7 @@ function drawLegend(){
 }
 
 this.scaleValuesMap = [];
-function createScale() 
+function createScaleMap() 
 {
   var posArray = [];
   var base = 22.22;
@@ -316,20 +315,22 @@ function createScale()
   this.scaleValuesMap[9] = -1;
 }
 
-function logScale(value)
+function logScaleMap(value)
 {
-
   if(value == 0) {
     return 0 ;
   }
 
+  //To get all of the values positive, before rangeing between -1 and 1
+  value += 1;
   var position = value.toFixed(2);
+  position = (position * 10)/2;
 
-  if(result == 0) {
+  if(position == 0) {
     return 0;
   }
   else {
-    return position;
+    return position.toFixed(0) -1;
   }
 }
 
