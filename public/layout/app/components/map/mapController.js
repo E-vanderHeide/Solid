@@ -234,7 +234,7 @@ if(!svg)
   .attr("d", path);
 
   // svg.attr("height", config.height * 2.2 / 3);
-  svg.attr("height", config.height);
+  svg.attr("height", height);
   });
   
   //function that zooms and pan with limits (cannot go outside the map)
