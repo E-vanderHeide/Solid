@@ -7,7 +7,7 @@ var colorCriterium = "D01",
     width = 400,
     height = 400;
 
-var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"];
+var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#aad59b", "#85ba95", "#5fa08f", "#438484", "#276878", "#10496a", "#053158"];
 
 drawMap();
 drawSunBurst("Sweden");
@@ -207,13 +207,13 @@ if(!svg)
 
     if (d3.event.pageX < map_width / 2) {
       d3.select("#tooltip-container")
-      .style("top", (d3.event.layerY + 15) + "px")
+      .style("top", (d3.event.layerY + 150) + "px")
       .style("left", (d3.event.pageX - map_width / 2) + "px")
     } else {
       var tooltip_width = $("#tooltip-container").width();
       d3.select("#tooltip-container")
-      .style("top", (d3.event.layerY + 15) + "px")
-      .style("left", (d3.event.pageX -map_width / 2 ) + "px")
+      .style("top", (d3.event.layerY + 150) + "px")
+      .style("left", (d3.event.pageX - map_width / 2 ) + "px")
     }
   })
   .on("mouseout", function() {
@@ -262,7 +262,7 @@ function drawLegend(){
 
   var ordinal = d3.scale.ordinal()
   .domain([-1,scaleValuesMap[8],scaleValuesMap[7],scaleValuesMap[6],scaleValuesMap[5],scaleValuesMap[4],scaleValuesMap[3],scaleValuesMap[2],scaleValuesMap[1],1])
-  .range(["#f9f1a9", "#e5f0a5", "#d0efa1", "#a9daaa", "#7bbc9b", "#5da191", "#3e8686", "#276878", "#10496a", "#053158"]);
+  .range(["#f9f1a9", "#e5f0a5", "#d0efa1", "#aad59b", "#85ba95", "#5fa08f", "#438484", "#276878", "#10496a", "#053158"]);
 
   var legend3 = d3.select("#legendMap")
   .append("svg")

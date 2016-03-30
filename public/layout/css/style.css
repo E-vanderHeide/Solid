@@ -23,6 +23,7 @@ body {
   text-align: center;
   background-color: #fefcf8;
   padding: 0px;
+  min-width:775px
 }
 
 form{
