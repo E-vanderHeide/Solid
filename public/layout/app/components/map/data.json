@@ -1013,7 +1013,7 @@
 {
   "name":"Norway",
   "children": 
-  [{}
+  [{
     "name":"communicatable",
       "depth":1,
       "size":0.07473695,
