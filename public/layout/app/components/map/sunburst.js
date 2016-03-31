@@ -58,6 +58,7 @@ var arc = d3.svg.arc()
     {
        root = unitedKingdom;
     }
+
     svgS.datum(root).selectAll("path").data([]).exit().remove();
 
       var path = svgS.datum(root).selectAll("path")

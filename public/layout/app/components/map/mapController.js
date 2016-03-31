@@ -156,7 +156,6 @@ if(!svg)
 
       if(matchedCountry)
       {
-        console.log(matchedCountry.getCorrelation());
         var myColorMap = logScaleMap(matchedCountry.getCorrelation());
         return colorSchemeMap[myColorMap];
         
@@ -223,6 +222,7 @@ if(!svg)
   //action when clicking with the mouse on a country
   .on("click", function(d){
     selectedCountry = getCountryByName(countries, d.properties.name);
+    console.log("selectedCountry: " + selectedCountry.name);
     drawSunBurst(selectedCountry.name);
   
 
