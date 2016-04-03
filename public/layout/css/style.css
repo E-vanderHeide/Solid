@@ -28,7 +28,7 @@ body {
 
 form{
   position: relative;
-  padding: 0px 0px 20px 15px;
+  padding: 0px 0px 15px 15px;
   text-align: left;
 }
 
@@ -113,6 +113,8 @@ hr{
     height: 0;
     /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
     border-bottom: 1px solid rgba(165, 124, 128, 1);
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .modalText{
@@ -184,6 +186,7 @@ hr{
   border: none;
   border-bottom: 1px solid #a57c80;
   border-radius: 0px;
+  margin-bottom: 15px;
 }
 
 .navbar-brand{
