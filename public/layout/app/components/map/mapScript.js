@@ -1,24 +1,26 @@
-function SuperCategory(name, size, meanCoverage, maxCoverage, minCoverage, totalCoverage, subCategories){
+function SuperCategory(name, size, meanCoverage, maxCoverage, minCoverage, totalCoverage, children){
   this.name = name;
+  this.depth = 1;
   this.size = size;
-  this.meanCoverage = meanCoverage;
+  this.coverage = meanCoverage;
   this.maxCoverage = maxCoverage;
   this.minCoverage = minCoverage;
   this.totalCoverage = totalCoverage;
-  this.subCategories = subCategories;
+  this.children = children;
 }
 
 function Category(name, size, coverage)
 {
   this.name = name;
   this.size = size;
+   this.depth = 2;
   this.coverage = coverage;
 }
 
 function Country(name, categories){
       this.name = name;
 
-      this.categories = categories;
+      this.children = categories;
 
 
       this.getColorCriteriumValue = function(criterium)
@@ -52,7 +54,7 @@ function Country(name, categories){
 
         var total = 0;
 
-        $.each(this.categories, function(index, value){
+        $.each(this.children, function(index, value){
 
           total += value.size;
         });
@@ -62,7 +64,7 @@ function Country(name, categories){
 
         var total = 0;
 
-        $.each(this.categories, function(index, value){
+        $.each(this.children, function(index, value){
 
           total += value.totalCoverage;
         });
@@ -73,9 +75,9 @@ function Country(name, categories){
         var media = [];
 
         /** Create the arrays for media and death for calculating the correlation **/
-        $.each(this.categories, function(index, value){
-          for (var i=0; i<value.subCategories.length; i++) {
-            var subCat = value.subCategories[i];
+        $.each(this.children, function(index, value){
+          for (var i=0; i<value.children.length; i++) {
+            var subCat = value.children[i];
             daly.push(subCat.size);
             media.push(subCat.coverage);
           };
@@ -136,14 +138,14 @@ function Country(name, categories){
     for(var i=0; i<data.children.length; i++)
     {
       var value = data.children[i];
-      var subCategories = [];
-      for(var j = 0; j<value.subCategories.length; j++)
+      var children = [];
+      for(var j = 0; j<value.children.length; j++)
       {
-        var subCat = value.subCategories[j];
-        subCategories.push(new Category(subCat.name, subCat.size, subCat.coverage));
+        var subCat = value.children[j];
+        children.push(new Category(subCat.name, subCat.size, subCat.coverage));
 
       }
-      superCategories.push(new SuperCategory(value.name, value.size, value.coverage, value.maxCoverage, value.minCoverage, value.totalCoverage, subCategories));
+      superCategories.push(new SuperCategory(value.name, value.size, value.coverage, value.maxCoverage, value.minCoverage, value.totalCoverage, children));
     }
 
     // var countryData = [];

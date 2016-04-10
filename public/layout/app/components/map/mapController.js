@@ -10,7 +10,7 @@ var colorCriterium = "D01",
 var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#aad59b", "#85ba95", "#5fa08f", "#438484", "#276878", "#10496a", "#053158"];
 
 drawMap();
-drawSunBurst("Sweden");
+//drawSunBurst("Sweden");
 var svg;
 function drawMap(){
   d3.json("assets/Data/data.json", function(err, data) {
@@ -223,7 +223,7 @@ if(!svg)
   .on("click", function(d){
     selectedCountry = getCountryByName(countries, d.properties.name);
     console.log("selectedCountry: " + selectedCountry.name);
-    drawSunBurst(selectedCountry.name);
+    drawSunBurst(selectedCountry);
   
 
   });
