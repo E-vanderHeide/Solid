@@ -10,12 +10,7 @@ var minCoverage = 0,
 
 var colorScheme = ["ffe67c", "ffd25d", "ffbe3d", "ffa12c", "#ff841b", "#ff633c", "#f34145", "#e81858", "#c40667", "#98006a"];
  var color_func = function(d) {
-    /*var myColor = 0;
-    console.log("min = "+minCoverage+" max = "+maxCoverage)
-    myColor = Math.round((d["coverage"]-minCoverage)/(maxCoverage-minCoverage)*9);
-    console.log(d["coverage"] + " color " + myColor);*/
     var myColor = logScale(d["coverage"]);
-    //console.log("color=" + myColor);
     return colorScheme[myColor];
   };    
 
@@ -36,9 +31,6 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.sqrt(d.y); })
     .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-//getDataSelectedCountry("sweden");
-
-//add getDataSelectedCountry instead of flare.json to get the data for a specific country
 
 //the root, this has to be changed to instead get the country sent from the map
     var root;
@@ -47,19 +39,7 @@ var arc = d3.svg.arc()
   function drawSunBurst(country)
   {
 
-   
-    // if(country == "Sweden")
-    // {
-    //   root = sweden;
-    // }
-    // if(country == "United Kingdom")
-    // {
-    //    root = unitedKingdom;
-    // }
-  //  var country2 = sweden;
-
-    root = country;// JSON.stringify(country);
-   // var arr = $.map(country, function(el) { return el });
+    root = country;
 
     d3.select("#country")
       .text(country.name);
@@ -72,7 +52,6 @@ var arc = d3.svg.arc()
       .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
       .attr("d", arc)
 
-      .each(getValues)
       .style("stroke", "#fff")
       .style("fill", color_func)
       .style("fill-rule", "evenodd")
@@ -162,14 +141,6 @@ function mouseleave(d){
     .style("opacity", 1);
 }
 
-function getValues(d){
-  // if (d["name"] == "injuries") {
-  //     minCoverage = d["minCoverage"];
-  //     maxCoverage = d["maxCoverage"];
-  //     totalCoverage = d["totalCoverage"];
-  // }
-}
-
 // Stash the old values for transition.
 function stash(d) {
   d.x0 = d.x;
@@ -205,7 +176,6 @@ var ordinal = d3.scale.ordinal()
 
 var legend2 = d3.select("#legend")
   .append("svg")
-  // .attr("width", widthLegend)
   .attr("height", heightLegend)
   .attr("id","the_legend");
 
@@ -228,7 +198,6 @@ var legendOrdinal = d3.legend.color()
   .shapeWidth(55)
   .shapePadding(1)
   .orient('vertical')
-  // .title("Media Coverage (Number of Google matches)")
   .scale(ordinal);
 
 legend2.select(".legendOrdinal")

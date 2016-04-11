@@ -10,7 +10,6 @@ var colorCriterium = "D01",
 var colorSchemeMap = ["#f9f1a9", "#e5f0a5", "#d0efa1", "#aad59b", "#85ba95", "#5fa08f", "#438484", "#276878", "#10496a", "#053158"];
 
 drawMap();
-//drawSunBurst("Sweden");
 var svg;
 function drawMap(){
   d3.json("assets/Data/data.json", function(err, data) {
@@ -24,58 +23,7 @@ function drawMap(){
     final = s + (((e - s) / steps) * count);
     return Math.floor(final);
   }
-/*
-  function Color(_r, _g, _b) {
-    var r, g, b;
-    var setColors = function(_r, _g, _b) {
-      r = _r;
-      g = _g;
-      b = _b;
-    };
-    
-    setColors(_r, _g, _b);
-    this.getColors = function() {
-      var colors = {
-        r: r,
-        g: g,
-        b: b
-      };
-      return colors;
-    }; 
-  }
 
-  function hexToRgb(hex) {
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    } : null;
-  }
-  */
-  
-/*
-  var COLOR_FIRST = config.color0, COLOR_LAST = config.color1;
-
-  var rgb = hexToRgb(COLOR_FIRST);
-
-  var COLOR_START = new Color(rgb.r, rgb.g, rgb.b);
-
-  rgb = hexToRgb(COLOR_LAST);
-  var COLOR_END = new Color(rgb.r, rgb.g, rgb.b);
-
-  var startColors = COLOR_START.getColors(),
-  endColors = COLOR_END.getColors();
-
- 
-  for (var i = 0; i < COLOR_COUNTS; i++) {
-    var r = Interpolate(startColors.r, endColors.r, COLOR_COUNTS, i);
-    var g = Interpolate(startColors.g, endColors.g, COLOR_COUNTS, i);
-    var b = Interpolate(startColors.b, endColors.b, COLOR_COUNTS, i);
-    colors.push(new Color(r, g, b));
-  }
-  */
-  
   var projection = d3.geo.mercator()
   .scale((width + 1) / 2 / Math.PI)
   .translate([width / 2, height / 2])
@@ -160,20 +108,6 @@ if(!svg)
         var myColorMap = logScaleMap(matchedCountry.getCorrelation());
         return colorSchemeMap[myColorMap];
         
-/*
-        // var extreme = $.grep(extremes, function(e){ return e.Cause == "02"})[0];
-        // console.log("Extreme: " + extreme.D);
-        // var domain = generateColorScale(0, extreme.D+1 ,9);
-        // console.log("Domain: " + domain);
-        //make this domain dynamic
-        //var c = d3.scale.threshold().domain(domain).range(colors);
-        var c = d3.scale.threshold().domain(generateColorScale(0, 1 , COLOR_COUNTS)).range(colors);
-        var co =  c(matchedCountry.getColorCriteriumValue(colorCriterium)).getColors();
-        d.properties.color = co;
-
-        return "rgb("+co.r + ","+co.g+","+co.b+")";
-        */
-
        } 
        else {
         return "#ccc";
@@ -234,7 +168,6 @@ if(!svg)
   .attr("class", "boundary")
   .attr("d", path);
 
-  // svg.attr("height", config.height * 2.2 / 3);
   svg.attr("height", height);
   });
   
@@ -267,7 +200,6 @@ function drawLegend(){
 
   var legend3 = d3.select("#legendMap")
   .append("svg")
-  // .attr("width", widthLegend)
   .attr("height", heightLegend)
   .attr("id","the_legend");
 
@@ -334,7 +266,5 @@ function logScaleMap(value)
     return position.toFixed(0) -1;
   }
 }
-
-  // d3.select(self.frameElement).style("height", (height * 2.3 / 3) + "px");
   d3.select(self.frameElement).style("height", (height) + "px");
 }
