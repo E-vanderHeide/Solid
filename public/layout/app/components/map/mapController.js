@@ -14,7 +14,8 @@ drawMap();
 var svg;
 function drawMap(){
   d3.json("assets/Data/data.json", function(err, data) {
-  countries = getDataForCountries(data);  
+  countries = getDataForCountries(data);
+  drawSunBurst(countries[0]);
 });
 
   function Interpolate(start, end, steps, count) {

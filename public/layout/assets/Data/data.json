@@ -907,7 +907,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -1918,7 +1918,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -2929,7 +2929,7 @@
       "totalCoverage":18620566,
       "minCoverage":341,
       "maxCoverage":8863278,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -3042,7 +3042,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -3940,7 +3940,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -4052,7 +4052,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -4950,7 +4950,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -5062,7 +5062,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -5960,7 +5960,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -6072,7 +6072,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -6970,7 +6970,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -7082,7 +7082,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -7980,7 +7980,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -8092,7 +8092,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -8990,7 +8990,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -9102,7 +9102,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -10000,7 +10000,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -10112,7 +10112,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -11010,7 +11010,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -11122,7 +11122,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -12020,7 +12020,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -12132,7 +12132,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -13030,7 +13030,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -13142,7 +13142,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -14040,7 +14040,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -14152,7 +14152,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -15050,7 +15050,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -15162,7 +15162,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -16060,7 +16060,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -16172,7 +16172,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -17070,7 +17070,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -17182,7 +17182,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -17272,7 +17272,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -18080,7 +18080,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -18192,7 +18192,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -19090,7 +19090,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -19202,7 +19202,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -20100,7 +20100,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -20212,7 +20212,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -21110,7 +21110,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -21222,7 +21222,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -22120,7 +22120,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -22232,7 +22232,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -23130,7 +23130,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -23242,7 +23242,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -24140,7 +24140,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -24252,7 +24252,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -25150,7 +25150,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -25262,7 +25262,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -26160,7 +26160,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -26272,7 +26272,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -27170,7 +27170,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -27282,7 +27282,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -28180,7 +28180,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -29190,7 +29190,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -30202,7 +30202,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -31214,7 +31214,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -32226,7 +32226,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -33238,7 +33238,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -34250,7 +34250,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -35262,7 +35262,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -36274,7 +36274,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -37286,7 +37286,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -38298,7 +38298,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -39310,7 +39310,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -39424,7 +39424,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -40322,7 +40322,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -40434,7 +40434,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -41332,7 +41332,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -41444,7 +41444,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -42342,7 +42342,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -42454,7 +42454,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -43352,7 +43352,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -43464,7 +43464,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -44362,7 +44362,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -44474,7 +44474,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -45372,7 +45372,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -45484,7 +45484,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -46382,7 +46382,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -46494,7 +46494,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -47392,7 +47392,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -47504,7 +47504,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -48402,7 +48402,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -48514,7 +48514,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -49412,7 +49412,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -49524,7 +49524,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -50422,7 +50422,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -50534,7 +50534,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -51432,7 +51432,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -51544,7 +51544,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -52442,7 +52442,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -52554,7 +52554,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -53452,7 +53452,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -53564,7 +53564,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -54462,7 +54462,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -54574,7 +54574,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -55472,7 +55472,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -55584,7 +55584,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -56482,7 +56482,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -56594,7 +56594,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -57492,7 +57492,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -57604,7 +57604,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -58502,7 +58502,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -58614,7 +58614,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -59512,7 +59512,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -59624,7 +59624,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -60522,7 +60522,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -60634,7 +60634,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -61532,7 +61532,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -61644,7 +61644,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -62542,7 +62542,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -62654,7 +62654,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -63552,7 +63552,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -63664,7 +63664,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -64562,7 +64562,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -64674,7 +64674,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -65572,7 +65572,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -65684,7 +65684,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -66582,7 +66582,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -66694,7 +66694,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -67592,7 +67592,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -67704,7 +67704,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -68602,7 +68602,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -68714,7 +68714,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -69612,7 +69612,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -69724,7 +69724,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -70622,7 +70622,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -70734,7 +70734,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -71632,7 +71632,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -71744,7 +71744,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -72642,7 +72642,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -72754,7 +72754,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -73652,7 +73652,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -73764,7 +73764,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -74662,7 +74662,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -74774,7 +74774,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -75672,7 +75672,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -75784,7 +75784,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -76682,7 +76682,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -76794,7 +76794,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -77692,7 +77692,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -77804,7 +77804,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -78702,7 +78702,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -78814,7 +78814,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -79712,7 +79712,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -79824,7 +79824,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -80722,7 +80722,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -80834,7 +80834,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -81732,7 +81732,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -81844,7 +81844,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -82742,7 +82742,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -82854,7 +82854,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -83752,7 +83752,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -83864,7 +83864,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -84762,7 +84762,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -84874,7 +84874,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -85772,7 +85772,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -85884,7 +85884,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -86782,7 +86782,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -86894,7 +86894,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -87792,7 +87792,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -87904,7 +87904,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -88802,7 +88802,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -88914,7 +88914,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -89812,7 +89812,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -89924,7 +89924,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -90822,7 +90822,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -90934,7 +90934,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -91832,7 +91832,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -91944,7 +91944,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -92842,7 +92842,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -92954,7 +92954,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -93852,7 +93852,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -93964,7 +93964,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -94862,7 +94862,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -94974,7 +94974,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -95064,7 +95064,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -95872,7 +95872,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -95984,7 +95984,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -96074,7 +96074,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -96882,7 +96882,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -96994,7 +96994,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -97084,7 +97084,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -97892,7 +97892,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -98004,7 +98004,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -98094,7 +98094,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -98902,7 +98902,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -99014,7 +99014,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -99104,7 +99104,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -99912,7 +99912,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -100024,7 +100024,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -100114,7 +100114,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -100922,7 +100922,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -101034,7 +101034,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -101124,7 +101124,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -101932,7 +101932,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -102044,7 +102044,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -102134,7 +102134,7 @@
             "name":"Malaria",
             "depth":2,
             "size":50,
-            "coverage":915000
+            "coverage":91500
          },
          {  
             "name":"Chagas disease",
@@ -102942,7 +102942,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -103952,7 +103952,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -104964,7 +104964,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -105976,7 +105976,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -106988,7 +106988,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -108000,7 +108000,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -109012,7 +109012,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -110024,7 +110024,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -111036,7 +111036,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -112048,7 +112048,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -113060,7 +113060,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -114072,7 +114072,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -115084,7 +115084,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -116096,7 +116096,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -117108,7 +117108,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -118120,7 +118120,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -119132,7 +119132,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -120144,7 +120144,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -121156,7 +121156,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":11807,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -121270,7 +121270,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -122168,7 +122168,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -122280,7 +122280,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -123178,7 +123178,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -123290,7 +123290,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -124188,7 +124188,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -124300,7 +124300,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -125198,7 +125198,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -125310,7 +125310,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -126208,7 +126208,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -126320,7 +126320,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -127218,7 +127218,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -127330,7 +127330,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -128228,7 +128228,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -128340,7 +128340,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -129238,7 +129238,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -129350,7 +129350,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -130248,7 +130248,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -130360,7 +130360,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -131258,7 +131258,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -131370,7 +131370,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -132268,7 +132268,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -132380,7 +132380,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -133278,7 +133278,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -133390,7 +133390,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -134288,7 +134288,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -134400,7 +134400,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -135298,7 +135298,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -135410,7 +135410,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -136308,7 +136308,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -136420,7 +136420,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -137318,7 +137318,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -137430,7 +137430,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -138328,7 +138328,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -138440,7 +138440,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -139338,7 +139338,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -139450,7 +139450,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -140348,7 +140348,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",
@@ -140460,7 +140460,7 @@
       "totalCoverage":106250,
       "minCoverage":0,
       "maxCoverage":5000,
-      "coverage":2080000000000,
+      "coverage":208,
       "children":[  
          {  
             "name":"Tuberculosis",
@@ -141358,7 +141358,7 @@
       "totalCoverage":20762,
       "minCoverage":0,
       "maxCoverage":118070,
-      "coverage":0,
+      "coverage":1298,
       "children":[  
          {  
             "name":"Sudden infant death syndrome",

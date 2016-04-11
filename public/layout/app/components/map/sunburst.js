@@ -69,7 +69,7 @@ var arc = d3.svg.arc()
       var path = svgS.datum(root).selectAll("path")
       .data(partition.nodes(root))
       .enter().append("path")
-      .attr("display", function(d) { return 2;})//d.depth ? null : "none"; }) // hide inner ring
+      .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
       .attr("d", arc)
 
       .each(getValues)
@@ -163,11 +163,11 @@ function mouseleave(d){
 }
 
 function getValues(d){
-  if (d["name"] == "injuries") {
-      minCoverage = d["minCoverage"];
-      maxCoverage = d["maxCoverage"];
-      totalCoverage = d["totalCoverage"];
-  }
+  // if (d["name"] == "injuries") {
+  //     minCoverage = d["minCoverage"];
+  //     maxCoverage = d["maxCoverage"];
+  //     totalCoverage = d["totalCoverage"];
+  // }
 }
 
 // Stash the old values for transition.
